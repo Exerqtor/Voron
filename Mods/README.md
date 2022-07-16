@@ -26,5 +26,5 @@ like so:
 | Creator | Mod title | Description | V0 | V1.8 | V2.4 | VSW | Trident |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |Exerqtor|[Revo nozzle storage skirt](./revo_nozzle_storage_skirt)| Revo nozzle storage that can hold 7 nozzles, for the side skirt(s). |:x:|:x:|:x:|:x:|:heavy_check_mark:|
-||[StealthBurner / CW2 style LGX Lite mount](./stealthburner_cw2_style_lgx_lite_mount)| Huvud rear mount for Clockwork or LGX that supports a cable chain. |:x:|:grey_question:|:heavy_check_mark:|:grey_question:|:heavy_check_mark:|
+||[StealthBurner / CW2 style LGX Lite mount](./stealthburner_cw2_style_lgx_lite_mount)| A lightweight Bondtech LGX lite mount for StealthBurner / CW2 carriage with detection filament sensor .|:x:|:grey_question:|:heavy_check_mark:|:grey_question:|:heavy_check_mark:|
 
