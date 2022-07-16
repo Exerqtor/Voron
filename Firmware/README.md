@@ -25,7 +25,7 @@ like so:
 ## RepRapFirmware
 
 | Creator | Config title | Description | V0 | V1.8 | V2.4 | VSW | VT |
-| --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Exerqtor | [Duet 3 Config](./reprapfirmware/) | RRF 3.3 example config | :x: | :x: | :heavy_check_mark: | :x: | :x: |
 
 ---
