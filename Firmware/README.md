@@ -3,12 +3,6 @@
 Firmware Configurations for Voron 3D printers, separated by firmware.
 Remember to update this README when uploading new firmware configurations!
 
-## Legacy printers
-
-Configurations for legacy printers can be found [here](../legacy_printers/firmware_configurations). 
-If one of your configurations applies to a current generation Voron printer, contact the admins in 
-Discord to have your mod moved to this folder.
-
 ## Table structure
 
 Update the following table with the information about your mod:
