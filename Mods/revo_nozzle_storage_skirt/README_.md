@@ -25,7 +25,7 @@ This is ONLY for the left side on a 350mm Trident!
 - ADXL tests will follow, need to fix my printer first again, my accelerations made some screws and inserts falling out xD 
 
 ###### Pictures:
-![](./Screw_Version-Assembly.jpg)
+![](./pics/7n_350mm_2c.png)
 ![](./Misumi_RBPB5-1.jpg)
 ![](./Misumi_RBPB5-3.jpg)
 ![](./Misumi_RBPB5-4.jpg)
