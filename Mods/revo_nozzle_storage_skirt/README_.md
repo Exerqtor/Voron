@@ -1,24 +1,19 @@
 # UPDATE
-- 16.07.2022: Initial release, this is NOT the finished or polished "product" but it works! I will update the design and publish the CAD (with updated STL's ofc) as soon as i can! 
+- 16.07.2022: Initial release, this is NOT the finished or polished "product" but it works! I will update the design and publish the CAD (with updated STL's ofc) as soon as i can!
+This is ONLY for the left side on a 350mm Trident!
 
 ## Revo nozzle storage skirt
 ##### Credits:
-- @hartk1213 [Original GE5C Mod](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/Voron%202/2.4/Voron2.4_GE5C "Original GE5C Mod") (He has too much nice things, please visit his Github Page)
+- Voron Discord channel user Andre#7463 (So I says...), he was the one who made the initial design and supplied the CAD that i worked of for the skirt part.
 - His Design is made for GE5C and Igus ELGM-05
 - He inspired me for this here and many more things :-)
 
 ###### Printing:
 - Default voron settings, correct orientation, no supports needed!
 
-###### Bom: (Multiply with 4 for all corners)
-- 1x Misumi RBPB5
-- 1x DIN433-M5 (Shim) (DIN125 will work either, but DIN433 are slightly smaller shims, those allow more tilting!)
-- 1x M5x22 (BHCS/ISO 7380)
-- 1x M3x12 SHCS
-- 4x M3x16 SHCS
-- 4x 6x3 Magnets (Magnetic Version)
-
-- The M5x22 doesn't exists. So buy an M5x25 and grind it down to 22! Optionally (i recommend) to thind the screwhead down to 8-8.5mm diameter, this will allow more tilting! Simply put the screw on your drilling machine, turn it on and use a drehmel to grind the head down. Its easy!
+###### Bom:
+- 2x M3x8 SHCS
+- 2x 6x3 Magnets
 
 ###### Description:
 - The whole reason for this is, that GE5C bearings have some play in them. Igus ELGM05 are a lot better, but i wanted something Gucci and even stiffer with more tilting.
