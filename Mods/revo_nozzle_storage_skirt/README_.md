@@ -1,7 +1,7 @@
 # UPDATE
-- 16.07.2022: Initial release, this is NOT the finished or polished "product" but it works! I will update the design and publish the CAD (with updated STL's) as soon as i can! 
+- 16.07.2022: Initial release, this is NOT the finished or polished "product" but it works! I will update the design and publish the CAD (with updated STL's ofc) as soon as i can! 
 
-## Misumi RBPB5 (Gucci GE5C)
+## Revo nozzle storage skirt
 ##### Credits:
 - @hartk1213 [Original GE5C Mod](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/Voron%202/2.4/Voron2.4_GE5C "Original GE5C Mod") (He has too much nice things, please visit his Github Page)
 - His Design is made for GE5C and Igus ELGM-05
