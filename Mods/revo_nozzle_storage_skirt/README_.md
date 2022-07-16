@@ -12,7 +12,7 @@ This is ONLY for the left side on a 350mm Trident!
 
 ###### Bom:
 - 2x M3x8 SHCS
-- 2x 6x3 Magnets
+- 2x 6x3mm Magnets
 
 ###### Description:
 - I've been planning to make a solution to store the Revo nozzles on my VT since i joined the pre-order, but hav been putting it off until "So I says..." posted he's take mod in discord.
