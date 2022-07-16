@@ -22,6 +22,6 @@ using allready, so I got to work putting this together into something usefull. A
 ###### Pictures:
 ![](./pics/7n_350mm_2c.png)
 ###### To-do List
--Add a "stopper" for the nozzle holder so that it stops in the middle of the opening.
--Improve on some tolerances.
--Add support for 300mm & 250mm printers.
+- Add a "stopper" for the nozzle holder so that it stops in the middle of the opening.
+- Improve on some tolerances.
+- Add support for 300mm & 250mm printers.
