@@ -6,7 +6,6 @@ This is ONLY for the left side on a 350mm Trident!
 ##### Credits:
 - Voron Discord channel user Andre#7463 (So I says...), he was the one who made the initial design and supplied the CAD that i worked of for the skirt part.
 - Printables.com user Fabian, for his awesome take on retaintng the nozzles on the ["E3D Revo Nozzle Organizer (Bosch Pick & Click)"](https://www.printables.com/model/102698-e3d-revo-nozzle-organizer-bosch-pick-click) 
-- He inspired me for this here and many more things :-)
 
 ###### Printing:
 - Default voron settings, correct orientation, no supports needed!
