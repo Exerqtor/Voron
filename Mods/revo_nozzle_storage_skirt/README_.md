@@ -16,17 +16,9 @@ This is ONLY for the left side on a 350mm Trident!
 - 2x 6x3 Magnets
 
 ###### Description:
-- The whole reason for this is, that GE5C bearings have some play in them. Igus ELGM05 are a lot better, but i wanted something Gucci and even stiffer with more tilting.
-- Misumi mentions in the specsheets max 0,035mm axial play. Igus and GE5C have no axial play specifications. (But igus have actually no play)
-- This means for me, that with some Grease (Mobilux EP1/EP2), should remove almost all play and the uneven Gantry (it will always press the bearings outside/inside), will do the rest.
-
-###### Update:
-- After a lot of iterations and a lot of headaches, its finally done. Now i can finally tell the difference, why you probably want to do this either: you will get a lot stiffer gantry that is able to tilt freely.
-- ADXL tests will follow, need to fix my printer first again, my accelerations made some screws and inserts falling out xD 
+- I've been planning to make a solution to store the Revo nozzles on my VT since i joined the pre-order, but hav been putting it off until "So I says..." posted he's take mod in discord.
+When i saw he's mod i finally got some creative juices flowing and jumped on it. I've allready come across a nice design on Printables for the nozzle retention part that i  had planned on
+using allready, so I got to work putting this together into something usefull. And well, this is how it ended up. The 350mm variant can store 7 Revo nozzles (only 350mm avalible at the time of writing this).
 
 ###### Pictures:
 ![](./pics/7n_350mm_2c.png)
-![](./Misumi_RBPB5-1.jpg)
-![](./Misumi_RBPB5-3.jpg)
-![](./Misumi_RBPB5-4.jpg)
-![](./Screw_Version-Rendering.jpg)
