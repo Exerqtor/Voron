@@ -25,13 +25,13 @@
 
 ;  3.  Save your the changes you've done to this file.
 
-;        Note: We set RED and BLUE to 255 to make it easier for users and supporters to detect 
-;              misconfigurations or miswiring. The default color format is for Neopixels with a dedicated 
+;        Note: The RED and BLUE are set to 255 to make it easier for users and supporters to detect
+;              misconfigurations or miswiring. The default color format is for Neopixels with a dedicated
 ;              white LED. On startup, all three SB LEDs should light up a bright pink color.
 
-;              If you get random colors across your LEDs, change the "X" parameter bellow according to 
-;              the duet docs and save the changes you've made. Once you've found the correct X parameneter 
-;              all LED's to be a steady bright pink. If your NEOPIXEL's aren't RGBW omit the W for each 
+;              If you get random colors across your LEDs, change the "X" parameter bellow according to
+;              the duet docs and save the changes you've made. Once you've found the correct X parameneter
+;              all LED's to be a steady bright pink. If your NEOPIXEL's aren't RGBW omit the W for each
 ;              status farther down.
 
 ;              If you get MAGENTA, your  color order is correct. If you get CYAN, you need to use RGBW. If
