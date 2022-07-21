@@ -13,7 +13,6 @@
 ; How to use all this stuff:
 
 ;  1.  Make a new folder inside /sys/ with the name "lib", then copy this .g file into the "lib" directory.
-;      While inside /sys/lib/ copy "init.g" into the directory as well.
 
 ;  2.  Define and setup your LEDs by editing the settings below
 
