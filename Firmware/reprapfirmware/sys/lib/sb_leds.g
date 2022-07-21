@@ -51,7 +51,7 @@
 ;              on your printer already. Mine depends on a loop triggered by the variable global.RunDeamon
 ;              so that you don't have to rename it two times each time you want to stop or edit the file.
 ;              This on the other hand also means you have to add; global RunDeamon = True to the end of  your config.g.
-;              And then copy the macro: Toggle deamon to your system, or make your own variant if you want to.
+;              And then add the macro: "Toggle deamon" , or make your own variant if you want to.
 
 ;              The "daemon.g" attached here is setup to loop once second. If you're unsure what "daemon.g" is 
 ;              read up in here: https://docs.duet3d.com/en/User_manual/Tuning/Macros#daemong
