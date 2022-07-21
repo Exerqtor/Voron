@@ -1,6 +1,6 @@
 ; nozzle_scrub.g  (v2.2)
-; Called when "M98 P"/sys/lib/nozzle_scrub.g"" is sent
-; Used to clean and purge (alternatively) the nozzle
+; Called when "M98 P"/sys/lib/nozzle_scrub.g" is sent
+; Used to clean and (alternatively) purge the nozzle
 
 ;--------------------------------------------------------------------------------------------------------------------------------------
 
