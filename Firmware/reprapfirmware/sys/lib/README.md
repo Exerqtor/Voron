@@ -5,4 +5,4 @@ Abbreviation for library
 
 #### Use
 - Everything contained inside this folder can be accessed by an M98 command, just add /sys/lib/ to the path.
-- Example: M98 P"sys/lib/init.g"
+- Example: M98 P"sys/lib/init.g" or M98 P"sys/lib/goto/goto_bed_center.g" etc.
