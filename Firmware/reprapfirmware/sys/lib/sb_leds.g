@@ -51,11 +51,11 @@
 ;      macros called up...which means adding them to your existing gcode macros.  NOTHING will happen unless
 ;      you add: set global.sb_leds = "?????" to your existing gcode macros
 
-;        Example: add; set global.sb_leds = "leveling" to the beginning of your QGL gcode macro, and then
-;                 add; set global.sb_leds = "ready"to the end of it to set the logo LED and nozzle LEDs back to the `ready` state.
+;        Example: add `set global.sb_leds = "leveling"` to the beginning of your QGL gcode macro, and then
+;                 add `set global.sb_leds = "ready"` to the end of it to set the logo LED and nozzle LEDs back to the `ready` state.
 
-;#           Example: add STATUS_CLEANING to the beginning of your nozzle-cleaning macro, and then STATUS_READY
-;#                    to the end of it to return the LEDs back to `ready` state.
+;        Example: add set global.sb_leds = "cleaning"` to the beginning of your nozzle-cleaning macro, and then `set global.sb_leds = "ready"`
+;                 to the end of it to return the LEDs back to `ready` state.
 
 ;#     5.  Feel free to change colors of each macro, create new ones if you have a need to.  The macros provided below
 ;#         are just an example of what is possible.  If you want to try some more complex animations, you will most
