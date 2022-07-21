@@ -1,4 +1,4 @@
-# Macros
+# macros
 
 ## Manually called macros
 - This is the macros i use, i generally try to keep these "manually called" ones to a bare minimum.
