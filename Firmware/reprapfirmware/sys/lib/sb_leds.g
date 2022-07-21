@@ -84,8 +84,8 @@ if !exists(global.sb_leds_l)
 if !exists(global.sb_leds_n)
   global sb_leds_n      = "none"
 
-var logo = "none"
-var nozzle = "none"
+var logo                = "none"
+var nozzle              = "none"
 
 var l_r                 = 0
 var l_u                 = 0
