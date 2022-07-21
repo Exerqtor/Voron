@@ -1,4 +1,4 @@
-; /sys/lib/sb_leds.g  (v2)
+; /sys/lib/sb_leds.g  (v2.1)
 ; Called by daemon.g
 ; Used for setting the status leds on the Voron StealthBurner toolhead (or for any neopixel-type leds).
 
@@ -102,53 +102,53 @@ var n_w                 = 0
 ; ====================
 
 if global.sb_leds_n = "Turned On"
-  set global.sb_leds = "n/a"
+  set global.sb_leds    = "n/a"
 
-if global.sb_leds       = "off"
+if global.sb_leds = "off"
   set global.sb_leds_l  = "off"
   set global.sb_leds_n  = "off"
 
-if global.sb_leds       = "ready"
+if global.sb_leds = "ready"
   set global.sb_leds_l  = "standby"
   set global.sb_leds_n  = "standby"
 
-if global.sb_leds       = "busy"
+if global.sb_leds = "busy"
   set global.sb_leds_l  = "busy"
   set global.sb_leds_n  = "on"
 
-if global.sb_leds       = "heating"
+if global.sb_leds = "heating"
   set global.sb_leds_l  = "heating"
   set global.sb_leds_n  = "heating"
 
-if global.sb_leds       = "leveling"
+if global.sb_leds = "leveling"
   set global.sb_leds_l  = "leveling"
   set global.sb_leds_n  = "on"
 
-if global.sb_leds       = "homing"
+if global.sb_leds = "homing"
   set global.sb_leds_l  = "homing"
   set global.sb_leds_n  = "on"
 
-if global.sb_leds       = "cleaning"
+if global.sb_leds = "cleaning"
   set global.sb_leds_l  = "cleaning"
   set global.sb_leds_n  = "on"
 
-if global.sb_leds       = "meshing"
+if global.sb_leds = "meshing"
   set global.sb_leds_l  = "meshing"
   set global.sb_leds_n  = "on"
 
-if global.sb_leds       = "calibrating_z"
+if global.sb_leds = "calibrating_z"
   set global.sb_leds_l  = "calibrating_z"
   set global.sb_leds_n  = "on"
 
-if global.sb_leds       = "printing"
+if global.sb_leds = "printing"
   set global.sb_leds_l  = "printing"
   set global.sb_leds_n  = "on"
 
-if global.sb_leds       = "hot"
+if global.sb_leds = "hot"
   set global.sb_leds_l  = "hot"
   set global.sb_leds_n  = "hot"
 
-if global.sb_leds       = "cold"
+if global.sb_leds = "cold"
   set global.sb_leds_l  = "cold"
   set global.sb_leds_n  = "cold"
 
@@ -216,122 +216,122 @@ if global.sb_leds       = "cold"
 ; P=Brightness
 
 ; Colors for logo states
-if global.sb_leds_l     = "none"                                               ; R255 U0 B255 W0 / Pink with full brightness
+if global.sb_leds_l = "none"                                                   ; R255 U0 B255 W0 / Pink with full brightness
   set var.l_r           = 255                                                  ; Red
   set var.l_u           = 0                                                    ; Green
   set var.l_b           = 255                                                  ; Blue
   set var.l_w           = 0                                                    ; White
 
-if global.sb_leds_l     = "off"                                                ; R0 U0 B0 W0 / Off
+if global.sb_leds_l = "off"                                                    ; R0 U0 B0 W0 / Off
   set var.l_r           = 0
   set var.l_u           = 0
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_leds_l     = "standby"                                            ; R3 U3 B3 W3 / Dim gray
+if global.sb_leds_l = "standby"                                                ; R3 U3 B3 W3 / Dim gray
   set var.l_r           = 3
   set var.l_u           = 3
   set var.l_b           = 3
   set var.l_w           = 3
 
-if global.sb_leds_l     = "busy"                                               ; R102 U0 B0 W0 / Light red
+if global.sb_leds_l = "busy"                                                   ; R102 U0 B0 W0 / Light red
   set var.l_r           = 102
   set var.l_u           = 0
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_leds_l     = "cleaning"                                           ; R0 U51 B128 W0 / Light blue
+if global.sb_leds_l = "cleaning"                                               ; R0 U51 B128 W0 / Light blue
   set var.l_r           = 0
   set var.l_u           = 51
   set var.l_b           = 128
   set var.l_w           = 0
 
-if global.sb_leds_l     = "calibrating_z"                                      ; R204 U0 B89 W0 / Strong pink
+if global.sb_leds_l = "calibrating_z"                                          ; R204 U0 B89 W0 / Strong pink
   set var.l_r           = 204
   set var.l_u           = 0
   set var.l_b           = 89
   set var.l_w           = 0
 
-if global.sb_leds_l     = "heating"                                            ; R77 U46 B0 W0 / Yellow
+if global.sb_leds_l = "heating"                                                ; R77 U46 B0 W0 / Yellow
   set var.l_r           = 77
   set var.l_u           = 46
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_leds_l     = "homing"                                             ; R0 U153 B51 W0 / Teal
+if global.sb_leds_l = "homing"                                                 ; R0 U153 B51 W0 / Teal
   set var.l_r           = 0
   set var.l_u           = 153
   set var.l_b           = 51
   set var.l_w           = 0
 
-if global.sb_leds_l     = "leveling"                                           ; R128 U26 B102 W0 / Light Pink
+if global.sb_leds_l = "leveling"                                               ; R128 U26 B102 W0 / Light Pink
   set var.l_r           = 128
   set var.l_u           = 26
   set var.l_b           = 102
   set var.l_w           = 0
 
-if global.sb_leds_l     = "meshing"                                            ; R51 U255 B0 W0 / Green
+if global.sb_leds_l = "meshing"                                                ; R51 U255 B0 W0 / Green
   set var.l_r           = 51
   set var.l_u           = 255
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_leds_l     = "printing"                                           ; R255 U0 B0 W0 / Red
+if global.sb_leds_l = "printing"                                               ; R255 U0 B0 W0 / Red
   set var.l_r           = 255
   set var.l_u           = 0
   set var.l_b           = 0
   set var.l_w           = 0
   
-if global.sb_leds_l     = "hot"                                                ; R255 U0 B0 W0 / Bright Red
+if global.sb_leds_l = "hot"                                                    ; R255 U0 B0 W0 / Bright Red
   set var.l_r           = 255
   set var.l_u           = 0
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_leds_l     = "cold"                                               ; R77 U0 B77 W0 / Light Pink
+if global.sb_leds_l = "cold"                                                   ; R77 U0 B77 W0 / Light Pink
   set var.l_r           = 77
   set var.l_u           = 0
   set var.l_b           = 77
   set var.l_w           = 0
 
 ; Colors for nozzle states
-if global.sb_leds_n     = "none"                                               ; R255 U0 B255 W0 / Pink with full brightness
+if global.sb_leds_n = "none"                                                   ; R255 U0 B255 W0 / Pink with full brightness
   set var.n_r           = 255
   set var.n_u           = 0
   set var.n_b           = 255
   set var.n_w           = 0
 
-if global.sb_leds_n     = "off"                                                ; R0 U0 B0 W0 / Off
+if global.sb_leds_n = "off"                                                    ; R0 U0 B0 W0 / Off
   set var.n_r           = 0
   set var.n_u           = 0
   set var.n_b           = 0
   set var.n_w           = 0
 
-if global.sb_leds_n     = "on"                                                 ; R204 U204 B204 W255 / White
+if global.sb_leds_n = "on"                                                     ; R204 U204 B204 W255 / White
   set var.n_r           = 204
   set var.n_u           = 204
   set var.n_b           = 204
   set var.n_w           = 255
 
-if global.sb_leds_n     = "standby"                                            ; R153 U0 B0 W0 / Red
+if global.sb_leds_n = "standby"                                                ; R153 U0 B0 W0 / Red
   set var.n_r           = 153
   set var.n_u           = 0
   set var.n_b           = 0
   set var.n_w           = 0
 
-if global.sb_leds_n     = "heating"                                            ; R204 U89 B0 W0 / Yellow
+if global.sb_leds_n = "heating"                                                ; R204 U89 B0 W0 / Yellow
   set var.n_r           = 204
   set var.n_u           = 89
   set var.n_b           = 0
   set var.n_w           = 0
 
-if global.sb_leds_n     = "hot"                                                ; R255 U0 B0 W0 / Bright Red
+if global.sb_leds_n = "hot"                                                    ; R255 U0 B0 W0 / Bright Red
   set var.n_r           = 255
   set var.n_u           = 0
   set var.n_b           = 0
   set var.n_w           = 0
 
-if global.sb_leds_n     = "cold"                                               ; R77 U0 B77 W0 / Light Pink
+if global.sb_leds_n = "cold"                                                   ; R77 U0 B77 W0 / Light Pink
   set var.n_r           = 77
   set var.n_u           = 0
   set var.n_b           = 77
