@@ -1,9 +1,10 @@
-; (macros/Toggle daemon.g on / off
+; /macros/Toggle daemon
+; Used to toggle daemon.g on / off
 
 ;Check if daemon.g is already enabled/running or not, and act accordingly
-if global.RunDaemon     = true
+if global.RunDaemon = true
   set global.RunDaemon  = false
   echo "daemon.g disabled"
-elif global.RunDaemon   = false
+elif global.RunDaemon = false
   set global.RunDaemon  = true
   echo "daemon.g enabled"
