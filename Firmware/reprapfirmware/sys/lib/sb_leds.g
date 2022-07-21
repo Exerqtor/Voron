@@ -1,4 +1,4 @@
-; /sys/lib/sb_leds.g  (v2.1)
+; /sys/lib/sb_leds.g  (v2.2)
 ; Called by daemon.g
 ; Used for setting the status leds on the Voron StealthBurner toolhead (or for any neopixel-type leds).
 
@@ -12,7 +12,11 @@
 ; ====================
 ; How to use all this stuff:
 
-;  1.  Make a new folder inside /sys/ with the name "lib", then copy this .g file into the "lib" directory.
+;  1.  Navigate to the /sys/lib/ folder on your printer and add this file (sb_leds.g) to the directory.
+
+;        Note: If you haven't got /sys/lib/ yet simply make a new folder inside /sys/ with the name "lib"
+;              before you do the step above. Why i choose to use /sys/lib/ is explained in my GIT:
+;              https://github.com/Exerqtor/Voron/tree/main/Firmware/reprapfirmware/sys/lib
 
 ;  2.  Define and setup your LEDs by editing the settings below
 
@@ -43,7 +47,12 @@
 ;        Note: To edit "daemon.g" while running on the machine you have to first rename the file, open it, add the
 ;              and save the changes needed, close the file and rename it back to "daemon.g".
 
-;              The attached "daemon.g" is intended to be used If you haven't got "deamon.g" setup already.
+;              The "daemon.g" that's part of my RRF setup can be used If you haven't got "deamon.g" running 
+;              on your printer already. Mine depends on a loop triggered by the variable global.RunDeamon
+;              so that you don't have to rename it two times each times you want to stop or edit it.
+;              This on the other hand also means you have to add; global RunDeamon = True to the end of  your config.g.
+;              And then copy the macro: Toggle deamon to your system, or make your own variant if you want to.
+
 ;              The "daemon.g" attached here is setup to loop once second. If you're unsure what "daemon.g" is 
 ;              read up in here: https://docs.duet3d.com/en/User_manual/Tuning/Macros#daemong
 
@@ -51,16 +60,16 @@
 ;      macros called up...which means adding them to your existing gcode macros.  NOTHING will happen unless
 ;      you add: set global.sb_leds = "?????" to your existing gcode macros
 
-;        Example: add `set global.sb_leds = "leveling"` to the beginning of your QGL gcode macro, and then
-;                 add `set global.sb_leds = "ready"` to the end of it to set the logo LED and nozzle LEDs back to the `ready` state.
+;        Example: add: set global.sb_leds = "leveling" to the beginning of your QGL gcode macro, and then
+;                 add: set global.sb_leds = "ready" to the end of it to set the logo LED and nozzle LEDs back to the `ready` state.
 
-;        Example: add set global.sb_leds = "cleaning"` to the beginning of your nozzle-cleaning macro, and then `set global.sb_leds = "ready"`
+;        Example: add: set global.sb_leds = "cleaning" to the beginning of your nozzle-cleaning macro, and then; set global.sb_leds = "ready"
 ;                 to the end of it to return the LEDs back to `ready` state.
 
-;#     5.  Feel free to change colors of each macro, create new ones if you have a need to.  The macros provided below
-;#         are just an example of what is possible.  If you want to try some more complex animations, you will most
-;#         likely have to use WLED with Moonraker and a small micro-controller (please see the LED thread for help inside
-;#         of the stealthburner_beta channel on Discord).
+;#  5.  Feel free to change colors of each macro, create new ones if you have a need to.  The macros provided below
+;#      are just an example of what is possible.  If you want to try some more complex animations, you will most
+;#      likely have to use WLED with Moonraker and a small micro-controller (please see the LED thread for help inside
+;#      of the stealthburner_beta channel on Discord).
 ; ====================
 ; End of Instructions
 ; ====================---------------------------------------------------------
@@ -83,9 +92,6 @@ if !exists(global.sb_leds_l)
 if !exists(global.sb_leds_n)
   global sb_leds_n      = "none"
 
-var logo                = "none"
-var nozzle              = "none"
-
 var l_r                 = 0
 var l_u                 = 0
 var l_b                 = 0
@@ -99,9 +105,6 @@ var n_w                 = 0
 ; ====================---------------------------------------------------------
 ; Status dependant configuration
 ; ====================
-
-if global.sb_leds_n = "Turned On"
-  set global.sb_leds    = "n/a"
 
 if global.sb_leds = "off"
   set global.sb_leds_l  = "off"
@@ -280,7 +283,7 @@ if global.sb_leds_l = "printing"                                               ;
   set var.l_u           = 0
   set var.l_b           = 0
   set var.l_w           = 0
-  
+
 if global.sb_leds_l = "hot"                                                    ; R255 U0 B0 W0 / Bright Red
   set var.l_r           = 255
   set var.l_u           = 0
@@ -343,11 +346,8 @@ if global.sb_leds_n = "cold"                                                   ;
 ; ====================---------------------------------------------------------
 ; Activate leds according to selected status / mode
 ; ====================
-
-;if !global.sb_leds_l = "none"
   ; Logo LED
   M150 R{var.l_r} U{var.l_u} B{var.l_b} W{var.l_w} S1 F1
 
  ; Nozzle LEDs
-;if !global.sb_leds_n = "none"
   M150 R{var.n_r} U{var.n_u} B{var.n_b} W{var.n_w} S2
