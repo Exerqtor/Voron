@@ -52,8 +52,8 @@
 ;      macros called up...which means adding them to your existing gcode macros.  NOTHING will happen unless
 ;      you add: set global.sb_leds = "?????" to your existing gcode macros
 
-;#       Example: add; set global.sb_leds = "leveling" to the beginning of your QGL gcode macro, and then
-;#                add; set global.sb_leds = "ready"to the end of it to set the logo LED and nozzle LEDs back to the `ready` state.
+;        Example: add; set global.sb_leds = "leveling" to the beginning of your QGL gcode macro, and then
+;                 add; set global.sb_leds = "ready"to the end of it to set the logo LED and nozzle LEDs back to the `ready` state.
 
 ;#           Example: add STATUS_CLEANING to the beginning of your nozzle-cleaning macro, and then STATUS_READY
 ;#                    to the end of it to return the LEDs back to `ready` state.
