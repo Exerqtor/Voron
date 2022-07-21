@@ -49,7 +49,7 @@
 
 ;              The "daemon.g" that's part of my RRF setup can be used If you haven't got "deamon.g" running 
 ;              on your printer already. Mine depends on a loop triggered by the variable global.RunDeamon
-;              so that you don't have to rename it two times each times you want to stop or edit it.
+;              so that you don't have to rename it two times each time you want to stop or edit the file.
 ;              This on the other hand also means you have to add; global RunDeamon = True to the end of  your config.g.
 ;              And then copy the macro: Toggle deamon to your system, or make your own variant if you want to.
 
