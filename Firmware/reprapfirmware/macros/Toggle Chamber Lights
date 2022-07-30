@@ -1,8 +1,8 @@
-; /macros/Toggle Lights
-; Used to Toggle build camber LED lights on / off
+; /macros/Toggle Chamber Lights
+; Used to toggle build camber LEDs on / off
 
 ;Check if the LEDs are on or off, and act accordingl
 if state.gpOut[0].pwm = 0
   M42 P0 S1                                                                    ; Swith GPIO port 2 on
-elif state.gpOut[0].pwm = 1
+else state.gpOut[0].pwm = 1
   M42 P0 S0                                                                    ; Swith GPIO port 2 off

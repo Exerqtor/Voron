@@ -1,0 +1,21 @@
+; /macros/Toggle Chamber Lights v1.0
+; Used to toggle build camber LEDs on / off
+
+;Check if the LEDs are on or off, and act accordingly
+if global.sb_nozzle = "off"
+  set global.sb_leds    = "n-on"
+
+elif global.sb_nozzle = "standby"
+  set global.sb_leds    = "n-on"
+
+elif global.sb_nozzle = "heating"
+  set global.sb_leds    = "n-on"
+
+elif global.sb_nozzle = "hot"
+  set global.sb_leds    = "n-on"
+
+elif global.sb_nozzle = "cold"
+  set global.sb_leds    = "n-on"
+
+else global.sb_nozzle = "on"
+  set global.sb_leds    = "n-off"
