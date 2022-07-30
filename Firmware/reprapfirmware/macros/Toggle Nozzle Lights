@@ -1,4 +1,4 @@
-; /macros/Toggle Chamber Lights v1.0
+; /macros/Toggle Chamber Lights  v1.0
 ; Used to toggle build camber LEDs on / off
 
 ;Check if the LEDs are on or off, and act accordingly
