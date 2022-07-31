@@ -1,8 +1,9 @@
 ; /sys/lib/led/sb_leds.g  v3.1
 ; Called by daemon.g
-; Used for setting the status leds on the Voron StealthBurner toolhead (or for any neopixel-type leds).
+; Used for setting the status leds on the Voron StealthBurner toolhead.
 
-; NOTE THAT THIS IS A WORK IN PROGRESS AND I AM STILL NOT DONE "CONVERTING" IT TO RRF IN THIS VERSION!
+; NOTE THAT THIS IS BASED ON THE KLIPPER MACRO, BUT MORE OR LESS BUILT UP FROM SCRATCH TO FIT RRF! 
+; SOME BUGGS MIGHT STILL EXSIST, LET ME KNOW IF YOU FIND ANY OR IF YOU HAVE ANY IDEAS FOR IMPROVEMENT!
 
 ; You will need to configure a neopixel (or other addressable led, such as dotstar).
 ; See "https://docs.duet3d.com/User_manual/Reference/Gcodes#m150-set-led-colours" for configuration details.
@@ -15,7 +16,7 @@
 ;  1.  Navigate to the /sys/lib/led/ folder on your printer and add this file (sb_leds.g) to the directory.
 
 ;        Note: If you haven't got /sys/lib/led/ yet simply make a new folder inside /sys/ with the name
-;              "lib" open the newly created "lib" folder and creat yet another folder inside it called 
+;              "lib" open the newly created "lib" folder and creat yet another folder inside it called
 ;              "led" before you do the step above. Why i choose to use /sys/lib/ is explained in my
 ;              github page: https://github.com/Exerqtor/Voron/tree/main/Firmware/reprapfirmware/sys/lib
 
