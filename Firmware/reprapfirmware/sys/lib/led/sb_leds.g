@@ -128,7 +128,7 @@ var n_w                 = 0
 ; This section can be played with "as you please"
 ;--------------------------------------------------------------------------------------------------------------------------------------
 ; ====================---------------------------------------------------------
-; Avalible tatuses to use in macros etc.
+; Avalible statuses to use in macros etc.
 ; ====================
 
 ; The following statuses are available (these go inside of your macros):
