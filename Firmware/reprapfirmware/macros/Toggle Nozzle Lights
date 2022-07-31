@@ -16,9 +16,7 @@ if global.sb_leds = "n-off"                                                    ;
   M98 P"/sys/lib/led/sb_leds-restore.g"                                        ; restore the sb_leds status from before they got manually turned off
 
 elif global.sb_leds = "n-on"                                                   ; nozzle LEDs manually turned on
-  set global.sb_leds    = "n-off"                                              ; set status to manually turned off
-  set global.sb_nozzle  = "off"                                                ; turn off nozzle LEDs
+  set global.sb_leds    = "n-off"                                              ; set status to nozzle LEDs manually turned off
 
 else                                                                           ; what ever status other than manually on or off
-  set global.sb_leds    = "n-on"                                               ; set status to manually turnedon
-  set global.sb_nozzle  = "on"                                                 ; turn on nozzle LEDs
+  set global.sb_leds    = "n-on"                                               ; set status to nozzle LEDs manually turned on
