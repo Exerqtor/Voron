@@ -39,10 +39,6 @@
 ;              all LED's to be a steady bright pink. If your NEOPIXEL's aren't RGBW omit the W for each
 ;              status farther down.
 
-;              If you get MAGENTA, your  color order is correct. If you get CYAN, you need to use RGBW. If
-;              you get YELLOW, you need to use BRGW (note that BRG is only supported in the latest Klipper
-;              version).
-
 ;  4.  Now go to /sys/ and open "daemon.g" and copy "M98 P"/sys/lib/led/sb_leds.g" ; Run Stealthburner Neopixel macro"
 ;      to the end of the file and save it.
 
