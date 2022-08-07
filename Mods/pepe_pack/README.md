@@ -1,7 +1,7 @@
 # UPDATE
 - 07.08.2022: Initial release, mostly so that smooshworx can have a look at the cad.
 
-## LGX Lite mount for CW2 X carrier and stealthburner
+## Pepe Pack "v2.1"
 ##### Credits:
 - smooshworx here on gitub made a ["mod of the fanny/funny pack,"](https://github.com/Eytecz/LGX_Lite_Stealthburner_CW2_style_mount), and i've done some further work on it together with him.
 
