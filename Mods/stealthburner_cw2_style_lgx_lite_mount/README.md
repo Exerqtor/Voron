@@ -21,8 +21,8 @@
 
 ###### Pictures:
 ![](./pics/1.png)
-![](./pics/2.jpg)
-![How it looks with my 1LC mount](./pics/3.jpg)
+![](./pics/2.png)
+![How it looks with my 1LC mount](./pics/3.png)
 
 ###### To-do List
 - Update it "work" with the Stealthburner RC1.
