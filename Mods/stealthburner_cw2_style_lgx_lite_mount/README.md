@@ -28,4 +28,4 @@ Paired with my 1LC mount
 ![How it looks with my 1LC mount](./pics/3.png)
 
 ###### To-do List
-- Update it "work" with the Stealthburner RC1.
+- Check so that i'm 100% sure it works with Stealthburner RC1.
