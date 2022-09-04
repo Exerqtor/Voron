@@ -1,9 +1,8 @@
 ; /sys/lib/led/sb_leds.g  v3.1
 ; Called by daemon.g
-; Used for setting the status leds on the Voron StealthBurner toolhead.
+; Used for setting the status leds on the Voron StealthBurner toolhead (or for any neopixel-type leds).
 
-; NOTE THAT THIS IS BASED ON THE KLIPPER MACRO, BUT MORE OR LESS BUILT UP FROM SCRATCH TO FIT RRF! 
-; SOME BUGGS MIGHT STILL EXSIST, LET ME KNOW IF YOU FIND ANY OR IF YOU HAVE ANY IDEAS FOR IMPROVEMENT!
+; NOTE THAT THIS IS A WORK IN PROGRESS AND I AM STILL NOT DONE "CONVERTING" IT TO RRF IN THIS VERSION!
 
 ; You will need to configure a neopixel (or other addressable led, such as dotstar).
 ; See "https://docs.duet3d.com/User_manual/Reference/Gcodes#m150-set-led-colours" for configuration details.
@@ -16,7 +15,7 @@
 ;  1.  Navigate to the /sys/lib/led/ folder on your printer and add this file (sb_leds.g) to the directory.
 
 ;        Note: If you haven't got /sys/lib/led/ yet simply make a new folder inside /sys/ with the name
-;              "lib" open the newly created "lib" folder and creat yet another folder inside it called
+;              "lib" open the newly created "lib" folder and creat yet another folder inside it called 
 ;              "led" before you do the step above. Why i choose to use /sys/lib/ is explained in my
 ;              github page: https://github.com/Exerqtor/Voron/tree/main/Firmware/reprapfirmware/sys/lib
 
@@ -38,6 +37,10 @@
 ;              the duet docs and save the changes you've made. Once you've found the correct X parameneter
 ;              all LED's to be a steady bright pink. If your NEOPIXEL's aren't RGBW omit the W for each
 ;              status farther down.
+
+;              If you get MAGENTA, your  color order is correct. If you get CYAN, you need to use RGBW. If
+;              you get YELLOW, you need to use BRGW (note that BRG is only supported in the latest Klipper
+;              version).
 
 ;  4.  Now go to /sys/ and open "daemon.g" and copy "M98 P"/sys/lib/led/sb_leds.g" ; Run Stealthburner Neopixel macro"
 ;      to the end of the file and save it.
@@ -124,7 +127,7 @@ var n_w                 = 0
 ; This section can be played with "as you please"
 ;--------------------------------------------------------------------------------------------------------------------------------------
 ; ====================---------------------------------------------------------
-; Avalible statuses to use in macros etc.
+; Avalible tatuses to use in macros etc.
 ; ====================
 
 ; The following statuses are available (these go inside of your macros):
