@@ -3,7 +3,7 @@
 
 ## Pepe Pack "v2.1"
 ##### Credits:
-- smooshworx here on gitub made a ["mod of the fanny/funny pack,"](https://github.com/Eytecz/LGX_Lite_Stealthburner_CW2_style_mount), and i've done some further work on it together with him.
+- smooshworx here on gitub made a ["mod of the fanny/funny pack,"](https://github.com/smooshworx/pepe-pack), and i've done some further work on it together with him.
 
 ###### Printing:
 - Default voron settings, correct orientation, no supports needed!
