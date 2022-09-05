@@ -72,7 +72,7 @@ while var.temp2 >= 0.004
   G90                                                                          ; absolute pos
   M400                                                                         ; wait for moves to finish
 
-  ; sace first probe result
+  ; save first probe result
   set var.temp0 = sensors.probes[1].lastStopHeight
 
   ;probe klicky body on Z-pin again
