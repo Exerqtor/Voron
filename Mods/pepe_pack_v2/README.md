@@ -36,6 +36,12 @@
 
 ###### Pictures:
 ![](./pics/1.png)
+![](./pics/2.png)
+![](./pics/3.png)
+![](./pics/4.png)
+![](./pics/5.png)
+![](./pics/6.png)
+![](./pics/7.png)
 
 ###### To-do List
-- Add the re-worked carbon baskets as soon as they get released by smooshworx.
+- Nothing more to do here, finish up "Fume pack" and get it released next.
