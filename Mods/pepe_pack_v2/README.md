@@ -1,5 +1,5 @@
 # UPDATE
-- As of November 28th 2022, this mod will not be recieve further updates. An all new version will be released called "Fume Pack" (yeah really nailed the name right ?lol)
+- As of November 28th 2022, this mod will not be recieve further updates. An all new version will be released called "fume pack" (yeah really nailed the name right ?lol)
 - 28.11.2022: Rather extensive rework of the basket, made a 5-bolt version, added gaskets for the fan intakes, cleaning up model+++ (read description for a more complete list).
 - 07.08.2022: Initial release, mostly so that smooshworx can have a look at the cad.
 
@@ -44,4 +44,4 @@
 ![](./pics/7.png)
 
 ###### To-do List
-- Nothing more to do here, finish up "Fume pack" and get it released next.
+- Nothing more to do here, finish up "fume pack" and get it released next.
