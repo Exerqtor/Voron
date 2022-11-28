@@ -22,12 +22,11 @@ Then move place print_purge.g inside the /sys/lib/print/.
 
 When thats done, restart your printer and make sure the globals have been created.
 With the globals created, you have to make your slicer (only going to explain for SuperSlicer/PrusaSlicer as of now) and add the following to the very start of your start g-code section:
-;` Define print area
+; Define print area
 - set global.pamMinX = {first_layer_print_min[0]}
 - set global.pamMaxX = {first_layer_print_max[0]}
 - set global.pamMinY = {first_layer_print_min[1]}
 - set global.pamMaxY = {first_layer_print_max[1]}
-`
 
 ###### Pictures:
 ![](./pics/1.png)
