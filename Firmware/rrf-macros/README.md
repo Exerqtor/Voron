@@ -20,6 +20,6 @@ like so:
 
 | Creator | Config title | Description | V0 | V1.8 | V2.4 | VSW | VT |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Exerqtor | [Duet 3 Config](./reprapfirmware/) | My RRF 3.4 config | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| Exerqtor | [Adaptive Purge](./adaptive_purge/) | Purges a Voron logo right next to the print | :x: | :x: | :x: | :x: | - |
 
 ---
