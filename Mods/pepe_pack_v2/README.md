@@ -1,7 +1,9 @@
 # UPDATE
+- As of November 28th 2022, this mod will not be recieve further updates. An all new version will be released called "Fume Pack" (yeah really nailed the name right ?lol)
+- 28.11.2022: Rather extensive rework of the basket, made a 5-bolt version, added gaskets for the fan intakes, cleaning up model, etc. etc. etc.
 - 07.08.2022: Initial release, mostly so that smooshworx can have a look at the cad.
 
-## Pepe Pack "v2.1"
+## Pepe Pack "v2.2"
 ##### Credits:
 - smooshworx here on gitub made a ["mod of the fanny/funny pack,"](https://github.com/smooshworx/pepe-pack), and i've done some further work on it together with him.
 
