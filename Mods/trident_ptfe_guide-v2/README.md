@@ -17,7 +17,7 @@
 ###### Description:
 - Added a gearing at the pivot to make for smoother movement.
 - Redid the PTFE path on the arm pluss widened the whole a little bit so the PTFE tube won't get squished.
-- Added a flute on the guide arm, mostly for looks (but it might help stiffen it a tiny bit too lol).
+- Added a flutes / design on the guide arm, mostly for looks (but it might help stiffen it a tiny bit too lol).
 
 ###### Pictures:
 ![](./pics/1.png)
