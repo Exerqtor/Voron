@@ -1,4 +1,4 @@
-# UPDATE
+# CHANGELOG
 - 07.08.2022: Initial release, this is based on the Stealthburner beta files, a new one will be made for the RC1 files (or newer, what ever's out when i get time).
 
 ## LGX Lite mount for CW2 X carrier and stealthburner

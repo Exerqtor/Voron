@@ -1,4 +1,4 @@
-# UPDATE
+# CHANGELOG
 - 28.11.2022: Initial release.
 
 ## RRF 3.4.x Adaptive Purge macro

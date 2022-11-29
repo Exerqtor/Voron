@@ -1,4 +1,4 @@
-# UPDATE
+# CHANGELOG
 - 16.07.2022: Initial release, this is NOT the finished or polished "product" but it works! I will update the design and publish the CAD (with updated STL's ofc) as soon as i can!
 This is ONLY for the left side on a 350mm Trident!
 
