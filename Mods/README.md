@@ -29,4 +29,6 @@ like so:
 ||[StealthBurner / CW2 style LGX Lite mount](./stealthburner_cw2_style_lgx_lite_mount)| A lightweight Bondtech LGX lite mount for StealthBurner / CW2 carriage with detection filament sensor .|:x:|:grey_question:|:heavy_check_mark:|:grey_question:|:heavy_check_mark:|
 ||[Pepe pack v2](./pepe_pack_v2)| A rear mounted alternative to the Nevermore filter .|:x:|:grey_question:|:heavy_check_mark:|:x:|:heavy_check_mark:|
 ||[Quick release exhaust mount](./quick_release_exhaust_mount)| Quick release system ("Annex-style") for the exhaust housing on the rear panel.|:x:|:heavy_check_mark:|:heavy_check_mark:|:grey_question:|:heavy_check_mark:|
+||[Trident PTFE Guide-v2](./trident_ptfe_guide-v2)| PTFE guide arm to mount on the top rear extrusion on a Trident, WITH bearing.|:x:|:x:|:x:|:x:|:heavy_check_mark:|
+||[MGN12H rear Z carrier for Trident(./mgn12h_rear_z)| Rear Z carrier that allowes for the use of a MGN12H rail instead of MGN9H.|:x:|:x:|:x:|:x:|:heavy_check_mark:|
 
