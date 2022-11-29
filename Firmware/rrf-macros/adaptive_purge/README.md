@@ -7,7 +7,7 @@
 
 ###### Description:
 - Rather than having a static purge line (or what ever), this macro makes a littel Voron logo right beside the actual print. 
-- Enabling / disabling of the macro is done with global.Adaptive_Purge. true = enabled, false = disabled. When disabled the logo get's purged the same place each time (X/Y by default).
+- Enabling / disabling of the macro is done with global.Adaptive_Purge. true = enabled, false = disabled. When disabled the logo get's purged the same place each time (X/Y 10 by default).
 
 ###### Instalation and dependencies:
 - Create a folder structure like shown here ( sys/lib/print).
