@@ -1,6 +1,6 @@
-# Firmware Configurations
+# Firmware
 
-Firmware Configurations for Voron 3D printers, separated by firmware.
+Firmware Configurations and Macros for Voron 3D printers, separated by firmware.
 Remember to update this README when uploading new firmware configurations!
 
 ## Table structure
