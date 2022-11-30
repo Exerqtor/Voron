@@ -1,7 +1,7 @@
 # CHANGELOG
 - 29.11.2022: Initial release.
 
-## Trident PTFE guide
+## Trident PTFE support
 ##### Credits:
 - GalvanicGlaze for sharing the CAD for his  ["PTFE bowden tube guide for Trident"](https://github.com/GalvanicGlaze/Voron_Mods/tree/main/Trident%20Bowden%20tube%20PTFE%20guide),.
 
