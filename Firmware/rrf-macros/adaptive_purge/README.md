@@ -18,7 +18,7 @@
 
 At the bottom of your config.g add `M98 P"/sys/lib/init.g"` . 
 When that's done make sure you add init.g and globals.g in your /sys/lib/ folder (if you allready have these files make sure to add the lines from this macro setup).
-Then move place print_purge.g inside the /sys/lib/print/.
+Then move print_purge.g inside the /sys/lib/print/.
 
 When thats done, restart your printer and make sure the globals have been created.
 With the globals created, you have to make your slicer (only going to explain for SuperSlicer/PrusaSlicer as of now) and add the following to the very start of your start g-code section:
