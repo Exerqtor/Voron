@@ -12,7 +12,9 @@
 ###### Description:
 - Modifed Voron Triden r1 rear Z carrier to house a MGN12H block instead of MGN9H.
 - One version for IGUS chains (2bolt), and one version for the generic Chinese ones (3bolt).
-You will loose a tiny bit of Z travel, otherwise it's not much to say.
+- Rail stop that's been sized to accommodate for a MGN12.
+
+You will loose a tiny bit of Z travel, otherwise it's not much to "negative".
 
 ###### Pictures:
 ![](./pics/1.png)
