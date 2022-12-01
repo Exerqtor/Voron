@@ -24,7 +24,8 @@ Since the "fume pack" is directly dervied from "Pepe Pack v2.2" i'll only mentio
 - Redesign of the fan lid, with deeper holes in the main body to accept 8mm bolts.
 
 I want to point out that the fans need to be cut up to work as intended(for those who didn't know). 
-- ["This is how the fans is supposed to look after cutting"](https://github.com/Exerqtor/Voron/blob/main/Mods/fume_pack/pics/fancut1.png). 
+- ["This is how the fans is supposed to look after cutting"](https://raw.githubusercontent.com/Exerqtor/Voron/main/Mods/fume_pack/pics/fancut1.png). 
+
 Regarding cutting the fans i will try to either make a little guide, or at least a cuting guide so you can mark of where to cut them correctly.
 
 And as allways, if you have any ideas for new features or improvement give me a ding!
