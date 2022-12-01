@@ -30,7 +30,7 @@ Since the "fume pack" is directly dervied from "Pepe Pack v2.2" i'll only mentio
 - With the new cartridge there the carbon abmount to be used is more or less halfed compared to "pepe pack".
 - Redesign of the fan lid, with deeper holes in the main body to accept 8mm bolts.
 
-#It shouldn't need to be mentioned, BUT before someone tears me a new one for "being at fault for them fucking up their back panel with to many holes": MAKE SURE YOU DRILL ONLY THE HOLES NEEDED FOR YOUR PARTICULAR APPLICATION!!
+# It shouldn't need to be mentioned, BUT before someone tears me a new one for "being at fault for them fucking up their back panel with to many holes": MAKE SURE YOU DRILL ONLY THE HOLES NEEDED FOR YOUR PARTICULAR APPLICATION!!
 
 - If you choose to use the fan gaskets or not is totally up to you, i don't think they have THAT much of an effect but hey. Just for gods sake print them in a soft TPU, nothing "solid".
 - Same goes for bolting down the fans, the fan lid is designed to firmly hold the fans in place. But how well that works depends on your fans!
