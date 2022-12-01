@@ -30,7 +30,7 @@ Since the "fume pack" is directly dervied from "Pepe Pack v2.2" i'll only mentio
 - With the new cartridge there the carbon abmount to be used is more or less halfed compared to "pepe pack".
 - Redesign of the fan lid, with deeper holes in the main body to accept 8mm bolts.
 
-# It shouldn't need to be mentioned, BUT before someone tears me a new one for "being at fault for them fucking up their back panel with to many holes": MAKE SURE YOU DRILL ONLY THE HOLES NEEDED FOR YOUR PARTICULAR APPLICATION
+#It shouldn't need to be mentioned, BUT before someone tears me a new one for "being at fault for them fucking up their back panel with to many holes": MAKE SURE YOU DRILL ONLY THE HOLES NEEDED FOR YOUR PARTICULAR APPLICATION!!
 
 - If you choose to use the fan gaskets or not is totally up to you, i don't think they have THAT much of an effect but hey. Just for gods sake print them in a soft TPU, nothing "solid".
 - Same goes for bolting down the fans, the fan lid is designed to firmly hold the fans in place. But how well that works depends on your fans!
@@ -39,6 +39,8 @@ I want to point out that the fans need to be cut up to work as intended(for thos
 - ["This is how the fans is supposed to look after cutting"](https://raw.githubusercontent.com/Exerqtor/Voron/main/Mods/fume_pack/pics/fancut1.png). 
 
 Regarding cutting the fans i will try to either make a little guide, or at least a cuting guide so you can mark of where to cut them correctly.
+
+## And finally, choose the main body who suits your needs the best, both "5-bolt" and "13-bolt" version have three variants with PTFE holes either on all three sides, both sides OR rear only (like stock Voron) 
 
 And as allways, if you have any ideas for new features or improvement give me a ding!
 
@@ -55,3 +57,4 @@ And as allways, if you have any ideas for new features or improvement give me a 
 
 ###### To-do List
 - Make a better readme / instructions.
+- MAYBE a simple filament runnout sensor attachment.
