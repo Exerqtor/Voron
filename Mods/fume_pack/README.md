@@ -1,6 +1,7 @@
 # fume pack
 
 ## CHANGELOG
+- 02.12.2022: Moved the wire routing holes that exit right bellow the rear gantry extrusion (VT) down a little bit, this efects all "main bodies" & the drill template.
 - 01.12.2022: Initial release, refere to description..
 
 ###### Description:
