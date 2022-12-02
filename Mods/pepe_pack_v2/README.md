@@ -7,7 +7,7 @@
 - 07.08.2022: Initial release, mostly so that smooshworx can have a look at the cad.
 
 ###### Description:
-Main changes from it's ["predecessors "](https://github.com/Exerqtor/Voron/tree/main/Mods/pepe_pack_v2#credits) and new features is the following:
+Main changes from it's [predecessors](https://github.com/Exerqtor/Voron/tree/main/Mods/pepe_pack_v2#credits) and new features is the following:
 - Added two new cable chanels that tuck in right under the rear extrusion on a Trident..
 - Totally re-worked the drill template so that it's more printer and OCD friendly, with the added holes for those who want to use "my" cable channels.
 - Added side entry PTFE coupling points.
