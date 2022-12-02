@@ -6,7 +6,7 @@
 
 ## Pepe Pack "v2.2"
 ##### Credits:
-- smooshworx here on gitub made a ["mod of the fanny/funny pack,"](https://github.com/smooshworx/pepe-pack), and i've done some further work on it together with him.
+- I worked of `smooshworx's` mod called ["pepe-pack,"](https://github.com/smooshworx/pepe-pack) and it's CAD. Pepe pack is based on `thiagolocatelli's` ["Funny Pack,"](https://github.com/3DPrintingMods/Voron/tree/master/Mods/funny_pack). Fanny Pack is then again based on `oab1's `FannyPack ["FannyPack,"](https://github.com/oab1/VoronMods/tree/main/v2.2%20Recirculating%20Filter)
 
 ###### Printing:
 - Default voron settings, correct orientation, no supports needed!
