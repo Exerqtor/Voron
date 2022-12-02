@@ -31,7 +31,9 @@ And as allways, if you have any ideas for new features or improvement give me a 
 ![](./pics/2.png)
 
 ###### Bom:
-- 3x Stepper to leadscrew couplers - The ones you end up needing must be correct for the stepper shafts and leadscrews. I used steppers witht he standard 5mm shaft and 8mm leadscrews and went with these solid couplers : 
+- 3x Stepper to leadscrew couplers - The ones you end up needing must be correct for the stepper shafts and leadscrews. I used steppers witht he standard 5mm shaft and 8mm leadscrews and went with these solid couplers : https://www.aliexpress.com/item/32327704645.html?spm=a2g0o.order_list.order_list_main.258.21ef1802Bc9PnK
+- 3x Nema 16 stepper motors (max 40mm tall ones).
+- 3x T8 Leadscrews (I prefer 2mm pitch and 4mm lead, these will give you a rock solid bed that don't droop when powered off).
 
 ###### Printing:
 - Default voron settings, correct orientation, no additional supports needed!
