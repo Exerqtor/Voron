@@ -6,15 +6,8 @@
 
 ## Pepe Pack "v2.2"
 
-###### Printing:
-- Default voron settings, correct orientation, no supports needed!
-
-###### Bom:
-- 15x M3x8mm BHCS - if you choose to use all the mounting points!
-- 15x M3x5x4mm Heat sets - if you choose to use all the mounting points!
-- 8x 6x3mm Magnets - to hold the basket
-
 ###### Description:
+Main changes from it's predecessor and new features is the following:
 - Added two new cable chanels that tuck in right under the rear extrusion on a Trident..
 - Totally re-worked the drill template so that it's more printer and OCD friendly, with the added holes for those who want to use "my" cable channels.
 - Added side entry PTFE coupling points.
@@ -41,6 +34,15 @@
 ![](./pics/5.png)
 ![](./pics/6.png)
 ![](./pics/7.png)
+
+
+###### Bom:
+- 15x M3x8mm BHCS - if you choose to use all the mounting points!
+- 15x M3x5x4mm Heat sets - if you choose to use all the mounting points!
+- 8x 6x3mm Magnets - to hold the basket
+
+###### Printing:
+- Default voron settings, correct orientation, no supports needed!
 
 ###### To-do List
 - Nothing more to do here, finish up "fume pack" and get it released next.
