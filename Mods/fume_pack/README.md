@@ -15,7 +15,7 @@ Since the "fume pack" is directly dervied from ["Pepe pack v2.2"](https://github
 - Same goes for bolting down the fans, the fan lid is designed to firmly hold the fans in place. But how well that works depends on your fans!
 
 I want to point out that the fans need to be cut up to work as intended(for those who didn't know). 
-- ["This is how the fans is supposed to look after cutting"](https://raw.githubusercontent.com/Exerqtor/Voron/main/Mods/fume_pack/pics/fancut1.png). 
+- [This is how the fans is supposed to look after cutting](https://raw.githubusercontent.com/Exerqtor/Voron/main/Mods/fume_pack/pics/fancut1.png). 
 
 Regarding cutting the fans i will try to either make a little guide, or at least a cuting guide so you can mark of where to cut them correctly.
 
