@@ -5,8 +5,6 @@
 - 07.08.2022: Initial release, mostly so that smooshworx can have a look at the cad.
 
 ## Pepe Pack "v2.2"
-##### Credits:
-- I worked of `smooshworx's` mod called ["pepe-pack,"](https://github.com/smooshworx/pepe-pack) and it's CAD. Pepe pack is based on `thiagolocatelli's` ["Funny Pack,"](https://github.com/3DPrintingMods/Voron/tree/master/Mods/funny_pack). Fanny Pack is then again based on `oab1's ` ["FannyPack,"](https://github.com/oab1/VoronMods/tree/main/v2.2%20Recirculating%20Filter)
 
 ###### Printing:
 - Default voron settings, correct orientation, no supports needed!
@@ -46,3 +44,6 @@
 
 ###### To-do List
 - Nothing more to do here, finish up "fume pack" and get it released next.
+
+##### Credits:
+- I worked of `smooshworx's` mod called ["pepe-pack,"](https://github.com/smooshworx/pepe-pack) and it's CAD. Pepe pack is based on `thiagolocatelli's` ["Funny Pack,"](https://github.com/3DPrintingMods/Voron/tree/master/Mods/funny_pack). Fanny Pack is then again based on `oab1's ` ["FannyPack,"](https://github.com/oab1/VoronMods/tree/main/v2.2%20Recirculating%20Filter)
