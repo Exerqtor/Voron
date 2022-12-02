@@ -2,7 +2,7 @@
 
 ## CHANGELOG
 - 01.12.2022: One last little update, made the holes in the main bodies that the fan lid screw into a little deeper. So now they also use M3x8 BHCS botls. 
-- As of November 28th 2022, this mod will not recieve further updates. An all new version will be released called "fume pack" (yeah really nailed the name right ?lol)
+- As of November 28th 2022, this mod will not be developed further (bug fixed will be done if needed). An new version has been released called [fume pack](https://github.com/Exerqtor/Voron/tree/main/Mods/fume_pack), and that's going to get all the new stuff going forrward.
 - 28.11.2022: v2.2 realease - Rather extensive rework of the basket, made a 5-bolt version, added gaskets for the fan intakes, cleaning up model+++ (read description for a more complete list).
 - 07.08.2022: Initial release, mostly so that smooshworx can have a look at the cad.
 
