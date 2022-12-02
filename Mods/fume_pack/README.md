@@ -6,7 +6,7 @@
 ###### Description:
 Since the "fume pack" is directly dervied from ["Pepe pack v2.2"](https://github.com/Exerqtor/Voron/tree/main/Mods/pepe_pack_v2) I will only mention the changes done from that point and forrward:
 - Ground-up rework of the carbon container/cartridge/basket (what ever you eant to call it) to closer resemble the Nevermore Micro V5 Duo.  In other words should "fume pack" do the job exactly like a stock V5 Duo, if not better since the basket has a somewhat larger surface area of carbon for the air to pass thru.
-- With the new cartridge there the carbon abmount to be used is more or less halfed compared to "pepe pack".
+- With the new cartridge the carbon abmount is roughly cut in two compared to "pepe pack" and now pretty much the same as aevermore Micro V5 Duo.
 - Redesign of the fan lid, with deeper holes in the main body to accept 8mm bolts.
 
 # It shouldn't need to be mentioned, BUT before someone tears me a new one for "being at fault for them fucking up their back panel with to many holes": MAKE SURE YOU DRILL ONLY THE HOLES NEEDED FOR YOUR PARTICULAR APPLICATION!!
@@ -54,6 +54,7 @@ And as allways, if you have any ideas for new features or improvement give me a 
 
 ###### To-do List
 - Make a better readme / instructions.
+- Different cartridges with HEPA filters, echaust feature etc. time will show.
 - MAYBE a simple filament runnout sensor attachment.
 
 ##### Credits:
