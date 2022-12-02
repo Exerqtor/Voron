@@ -7,7 +7,7 @@
 ## Pepe Pack "v2.2"
 
 ###### Description:
-Main changes from it's predecessor and new features is the following:
+Main changes from it's predecessors and new features is the following:
 - Added two new cable chanels that tuck in right under the rear extrusion on a Trident..
 - Totally re-worked the drill template so that it's more printer and OCD friendly, with the added holes for those who want to use "my" cable channels.
 - Added side entry PTFE coupling points.
