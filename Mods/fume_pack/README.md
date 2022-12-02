@@ -51,7 +51,7 @@ And as allways, if you have any ideas for new features or improvement give me a 
 - 8x 6x3mm Magnets (N35 works, but N52 is the best way to go) - to hold the basket on to the main body.
 
 ###### Printing:
-- Default voron settings, correct orientation, no supports needed!
+- Default voron settings, correct orientation, no additional supports needed (other than the build in ones)!
 
 ###### To-do List
 - Make a better readme / instructions.
