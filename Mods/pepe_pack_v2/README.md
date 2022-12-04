@@ -49,4 +49,4 @@ Main changes from it's [predecessors](https://github.com/Exerqtor/Voron/tree/mai
 - Nothing more to do here, finish up "fume pack" and get it released next.
 
 ##### Credits:
--  `smooshworx`'s mod called ["pepe-pack"](https://github.com/smooshworx/pepe-pack) and it's CAD. Pepe pack is based on `thiagolocatelli`'s ["Funny Pack"](https://github.com/3DPrintingMods/Voron/tree/master/Mods/funny_pack). Fanny Pack is then again based on `oab1`'s ["FannyPack"](https://github.com/oab1/VoronMods/tree/main/v2.2%20Recirculating%20Filter)
+-  `smooshworx`'s mod called ["pepe-pack"](https://github.com/smooshworx/pepe-pack) and it's CAD. Pepe pack is based on `DoubleT`'s ["Funny Pack"](https://github.com/3DPrintingMods/Voron/tree/master/Mods/funny_pack). Fanny Pack is then again based on `oab1`'s ["FannyPack"](https://github.com/oab1/VoronMods/tree/main/v2.2%20Recirculating%20Filter)
