@@ -64,5 +64,5 @@ And as allways, if you have any ideas for new features or improvement give me a 
 - MAYBE a simple filament runnout sensor attachment.
 
 ##### Credits:
-- [Pepe pack v2's](https://github.com/Exerqtor/Voron/tree/main/Mods/pepe_pack_v2) predecessor `smooshworx`'s mod called ["pepe-pack"](https://github.com/smooshworx/pepe-pack) and it's CAD. Pepe pack is based on `thiagolocatelli`'s ["Funny Pack"](https://github.com/3DPrintingMods/Voron/tree/master/Mods/funny_pack). Fanny Pack is then again based on `oab1`'s ["FannyPack"](https://github.com/oab1/VoronMods/tree/main/v2.2%20Recirculating%20Filter)
+- [Pepe pack v2's](https://github.com/Exerqtor/Voron/tree/main/Mods/pepe_pack_v2) predecessor `smooshworx`'s mod called ["pepe-pack"](https://github.com/smooshworx/pepe-pack) and it's CAD. Pepe pack is based on `DoubleT`'s ["Funny Pack"](https://github.com/3DPrintingMods/Voron/tree/master/Mods/funny_pack). Fanny Pack is then again based on `oab1`'s ["FannyPack"](https://github.com/oab1/VoronMods/tree/main/v2.2%20Recirculating%20Filter)
 - The ["Nevermore Micro V5 Duo,"](https://github.com/nevermore3d/Nevermore_Micro), who the fume pack is heavily moved back to when it comes to specifically the cartridge design. 
