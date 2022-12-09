@@ -3,8 +3,6 @@
 - 28.11.2022: Initial release.
 
 ## RRF 3.4.x Adaptive Purge macro
-##### Credits:
-- kyleisah here on gitub for the ["Klipper Adaptive Meshing and Purging,"](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) that i've based this on.
 
 ###### Description:
 - Rather than having a static purge line (or what ever), this macro makes a littel Voron logo right beside the actual print. 
@@ -47,3 +45,5 @@ set global.paMaxY = "N/A"
 - Update the Readme with some better instructions and take some pictures.
 - Iron out bugs (if any).
 
+##### Credits:
+- kyleisah here on gitub for the ["Klipper Adaptive Meshing and Purging,"](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) that i've based this on.
