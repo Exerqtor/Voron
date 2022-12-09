@@ -46,4 +46,4 @@ set global.paMaxY = "N/A"
 - Iron out bugs (if any).
 
 ##### Credits:
-- kyleisah for the ["Klipper Adaptive Meshing and Purging,"](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) that i've based this on.
+- kyleisah for the ["Klipper Adaptive Meshing and Purging,"](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) that I've based this on.
