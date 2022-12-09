@@ -9,17 +9,17 @@
 ; ====================
 
 ; setup the variables for min/max print area
-if !exists(global.pamMinX)
-  global pamMinX = "N/A"
+if !exists(global.paMinX)
+  global paMinX = "N/A"
   
-if !exists(global.pamMaxX)
-  global pamMaxX = "N/A"
+if !exists(global.paMaxX)
+  global paMaxX = "N/A"
 
-if !exists(global.pamMinY)
-  global pamMinY = "N/A"
+if !exists(global.paMinY)
+  global paMinY = "N/A"
 
-if !exists(global.pamMaxY)
-  global pamMaxY = "N/A"
+if !exists(global.paMaxY)
+  global paMaxY = "N/A"
 
 ; ====================---------------------------------------------------------
 ; misc

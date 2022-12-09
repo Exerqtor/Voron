@@ -1,4 +1,4 @@
-; /sys/lib/print/print_purge.g
+; /sys/lib/print/print_purge.g  (v1.3)
 ; Called when "M98 P"/sys/lib/print/print_purge.g" is sent
 ; Used to purge the nozzle close to the actual print area
 
@@ -21,16 +21,16 @@
 
 ; To enable adaptive purging "global.Adaptive_Purging" must be declared and true.
 
-var z_height              = 0.4                      ; Height above the bed to purge
-var prime_dist            = {global.unload_length}   ; Distance between filament tip and nozzle tip before purge (this might require some tuning)
-var purge_amount          = 40                       ; Amount of filament to purge
-var flow_rate             = 10                       ; Desired flow rate in mm3/s
-var x_default             = 10                       ; X location to purge, overwritten if adaptive is True
-var y_default             = 10                       ; Y location to purge, overwritten if adaptive is True
-var size                  = 15                       ; Size of the logo in mm
-var distance_to_object_x  = 15                       ; Distance in x to the print area
-var distance_to_object_y  = 0                        ; Distance in y to the print area
-var travel_speed          = 300                      ; Travel speed
+var z_height              = 0.4                            ; Height above the bed to purge
+var prime_dist            = {global.unload_length + 1}     ; Distance between filament tip and nozzle tip before purge (this might require some tuning)
+var purge_amount          = 20                             ; Amount of filament to purge
+var flow_rate             = 10                             ; Desired flow rate in mm3/s
+var x_default             = 10                             ; X location to purge, overwritten if adaptive is True
+var y_default             = 10                             ; Y location to purge, overwritten if adaptive is True
+var size                  = 10                             ; Size of the logo in mm
+var distance_to_object_x  = 15                             ; Distance in x to the print area
+var distance_to_object_y  = 0                              ; Distance in y to the print area
+var travel_speed          = 300                            ; Travel speed
 
 ; Placeholders:
 var x_origin = "N/A"
@@ -42,8 +42,12 @@ var consoleMessage = "N/A"
 ; ====================
 
 if global.Adaptive_Purge
-  set var.x_origin = {global.pamMinX - var.distance_to_object_x - var.size}
-  set var.y_origin = {global.pamMinY - var.distance_to_object_y - var.size}
+  if global.paMinX = "N/A"
+    set var.x_origin = var.x_default
+    set var.y_origin = var.y_default
+  else
+    set var.x_origin = {global.paMinX - var.distance_to_object_x - var.size}
+    set var.y_origin = {global.paMinY - var.distance_to_object_y - var.size}
 else
   set var.x_origin = var.x_default
   set var.y_origin = var.y_default
@@ -61,7 +65,7 @@ M118 P3 S{var.consoleMessage}  ; send used probe grid to DWC console
 ; Purging code
 ; ====================
 
-;LED status
+; LED status
 set global.sb_leds = "pink"
 
 G92 E0
@@ -88,5 +92,5 @@ G1 E-.5 F2100                                                                   
 G92 E0                                                                                                                 ; Reset extruder distance
 G0 Z{var.z_height * 2}                                                                                                 ; Z hop
 
-;LED status
+; LED status
 set global.sb_leds = "ready"

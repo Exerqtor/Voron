@@ -1,4 +1,5 @@
 # CHANGELOG
+- 09.12.2022: v1.3 - Changed the of the globals that define the print area from `pamMinY` to `paMinY` etc. Also added an extra "layer of security" if for some reason the print area haven't been declared and the gloabals are still set to "N/A" it will purge at the default position. Updated the instalation "how-to" so it calls out for the globals to be set to "N/A" at the end of a print.
 - 28.11.2022: Initial release.
 
 ## RRF 3.4.x Adaptive Purge macro
@@ -24,10 +25,19 @@ When thats done, restart your printer and make sure the globals have been create
 With the globals created, you have to make your slicer (only going to explain for SuperSlicer/PrusaSlicer as of now) and add the following to the very start of your start g-code section:
 ```
 ; Define print area
-set global.pamMinX = {first_layer_print_min[0]}
-set global.pamMaxX = {first_layer_print_max[0]}
-set global.pamMinY = {first_layer_print_min[1]}
-set global.pamMaxY = {first_layer_print_max[1]}
+set global.paMinX = {first_layer_print_min[0]}
+set global.paMaxX = {first_layer_print_max[0]}
+set global.paMinY = {first_layer_print_min[1]}
+set global.paMaxY = {first_layer_print_max[1]}
+```
+
+And in the end gcode or your end macro put the following:
+```
+; Reset printarea
+set global.paMinX = "N/A"
+set global.paMaxX = "N/A"
+set global.paMinY = "N/A"
+set global.paMaxY = "N/A"
 ```
 
 ###### Pictures:
