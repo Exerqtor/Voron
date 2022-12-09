@@ -1,5 +1,5 @@
 # CHANGELOG
-- 09.12.2022: v1.3 - Changed the of the globals that define the print area from `pamMinY` to `paMinY` etc. Also added an extra "layer of security" if for some reason the print area haven't been declared and the gloabals are still set to "N/A" it will purge at the default position. Updated the instalation "how-to" so it calls out for the globals to be set to "N/A" at the end of a print.
+- 09.12.2022: v1.3 - Changed the of the globals that define the print area from `pamMinY` to `paMinY` etc. Also added an extra "layer of security" if for some reason the print area haven't been declared and `paMinX`  is still set to "0" it will purge at the default position. 
 - 28.11.2022: Initial release.
 
 ## RRF 3.4.x Adaptive Purge macro
@@ -31,11 +31,11 @@ set global.paMaxY = {first_layer_print_max[1]}
 
 And in the end gcode or your end macro put the following:
 ```
-; Reset printarea
-set global.paMinX = "N/A"
-set global.paMaxX = "N/A"
-set global.paMinY = "N/A"
-set global.paMaxY = "N/A"
+; Reset print area
+set global.paMinX = 0
+set global.paMaxX = {global.bed_x}
+set global.paMinY = 0
+set global.paMaxY = {global.bed_y}
 ```
 
 ###### Pictures:

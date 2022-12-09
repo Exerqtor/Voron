@@ -5,6 +5,18 @@
 ; global declarations and defaults values
 
 ; ====================---------------------------------------------------------
+; Bed
+; ====================
+
+; Define the bed size on x-axis(print area from 0 to max) change this tho where your KNOWN max print size
+if !exists(global.bed_x)
+  global bed_x = 350
+  
+; Define the bed size on y-axis(print area from 0 to max) change this tho where your KNOWN max print size
+if !exists(global.bed_y)
+  global bed_y = 350
+
+; ====================---------------------------------------------------------
 ; print area
 ; ====================
 

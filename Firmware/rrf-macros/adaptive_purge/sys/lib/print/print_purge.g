@@ -42,10 +42,10 @@ var consoleMessage = "N/A"
 ; ====================
 
 if global.Adaptive_Purge
-  if global.paMinX = "N/A"
+  if global.paMinX = 0
     set var.x_origin = var.x_default
     set var.y_origin = var.y_default
-  else
+  elif global.paMinX >= 1
     set var.x_origin = {global.paMinX - var.distance_to_object_x - var.size}
     set var.y_origin = {global.paMinY - var.distance_to_object_y - var.size}
 else
