@@ -22,13 +22,13 @@ if !exists(global.bed_y)
 
 ; setup the variables for min/max print area
 if !exists(global.paMinX)
-  global paMinX = "0"
+  global paMinX = 0
   
 if !exists(global.paMaxX)
   global paMaxX = {global.bed_x}
 
 if !exists(global.paMinY)
-  global paMinY = "0"
+  global paMinY = 0
 
 if !exists(global.paMaxY)
   global paMaxY = {global.bed_y}
