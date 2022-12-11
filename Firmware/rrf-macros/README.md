@@ -21,5 +21,5 @@ like so:
 | Creator | Config title | Description | V0 | V1.8 | V2.4 | VSW | VT |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Exerqtor | [Adaptive Purge](./adaptive_purge/) | Purges a Voron logo right next to the print | - | - | - | - | - |
-
+|  | [Nozzle Scrub](./nozzle_scrub/) | Script to clean your nozzle on a brush| - | - | - | - | - |
 ---
