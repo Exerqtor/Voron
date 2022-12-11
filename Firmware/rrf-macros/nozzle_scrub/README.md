@@ -1,5 +1,5 @@
 # CHANGELOG
-- 28.11.2022: Initial release.
+- 11.12.2022: Initial release.
 
 ## RRF 3.4.x Nozzle scrub macro
 
