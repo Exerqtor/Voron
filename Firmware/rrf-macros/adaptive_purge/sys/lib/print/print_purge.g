@@ -66,7 +66,7 @@ M118 P3 S{var.consoleMessage}  ; send used probe grid to DWC console
 ; ====================
 
 ; LED status
-set global.sb_leds = "pink"
+set global.sb_leds = "cleaning"
 
 G92 E0
 G0 F{var.travel_speed * 60}                                                                                            ; Set travel speed
