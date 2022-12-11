@@ -22,4 +22,4 @@ like so:
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Exerqtor | [Adaptive Purge](./adaptive_purge/) | Purges a Voron logo right next to the print | - | - | - | - | - |
 |  | [Nozzle Scrub](./nozzle_scrub/) | Script to clean your nozzle on a brush| - | - | - | - | - |
----
+
