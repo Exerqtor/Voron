@@ -34,6 +34,5 @@ if !exists(global.paMaxY)
 ; MISC
 ; ====================
 
-  
 if !exists(global.Adaptive_Purge)
   global Adaptive_Purge = true
