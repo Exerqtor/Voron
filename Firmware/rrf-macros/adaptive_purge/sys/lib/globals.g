@@ -2,39 +2,36 @@
 ; Called by init.g
 ; Used to initialize global variables
 
-; global declarations and defaults values
+; Global declarations and defaults values
 
 ; ====================---------------------------------------------------------
 ; Bed
 ; ====================
 
-; Define the bed size on x-axis(print area from 0 to max) change this to your KNOWN max print size
-if !exists(global.bed_x)
-  global bed_x = 350
-  
-; Define the bed size on y-axis(print area from 0 to max) change this to your KNOWN max print size
+if !exists()
+  global bed_x = 350                                                           ; Defines the bed size on x-axis(print area from 0 to max) change this to your KNOWN max print size
+
 if !exists(global.bed_y)
-  global bed_y = 350
+  global bed_y = 350                                                           ; Define the bed size on y-axis(print area from 0 to max) change this to your KNOWN max print size
 
 ; ====================---------------------------------------------------------
-; print area
+; Print area
 ; ====================
 
-; setup the variables for min/max print area
 if !exists(global.paMinX)
-  global paMinX = 0
+  global paMinX = 0                                                            ; The X axis print area minimum
   
 if !exists(global.paMaxX)
-  global paMaxX = {global.bed_x}
+  global paMaxX = {global.bed_x}                                               ; The X axis print area maximum
 
 if !exists(global.paMinY)
-  global paMinY = 0
+  global paMinY = 0                                                            ; The Y axis print area minimum
 
 if !exists(global.paMaxY)
-  global paMaxY = {global.bed_y}
+  global paMaxY = {global.bed_y}                                               ; The Y axis print area maximum
 
 ; ====================---------------------------------------------------------
-; misc
+; MISC
 ; ====================
 
   
