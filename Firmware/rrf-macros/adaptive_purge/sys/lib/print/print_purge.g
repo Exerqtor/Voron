@@ -1,4 +1,4 @@
-; /sys/lib/print/print_purge.g  (v1.3)
+; /sys/lib/print/print_purge.g  (v1.4)
 ; Called when "M98 P"/sys/lib/print/print_purge.g" is sent
 ; Used to purge the nozzle close to the actual print area
 
@@ -66,7 +66,7 @@ M118 P3 S{var.consoleMessage}  ; send used probe grid to DWC console
 ; ====================
 
 ; LED status
-set global.sb_leds = "cleaning"
+set global.sb_leds = "pink"
 
 G92 E0
 G0 F{var.travel_speed * 60}                                                                                            ; Set travel speed
@@ -91,6 +91,7 @@ G1 X{var.x_origin + var.size} Y{var.y_origin + var.size / 2}  E{var.purge_amount
 G1 E-.5 F2100                                                                                                          ; Retract
 G92 E0                                                                                                                 ; Reset extruder distance
 G0 Z{var.z_height * 2}                                                                                                 ; Z hop
+M400                                                                                                                   ; Wait for moves to finish
 
 ; LED status
 set global.sb_leds = "ready"
