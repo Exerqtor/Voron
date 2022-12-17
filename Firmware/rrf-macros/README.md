@@ -22,5 +22,5 @@ like so:
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Exerqtor | [Adaptive Purge](./adaptive_purge/) | Purges a Voron logo right next to the print | - | - | - | - | - |
 |  | [Nozzle Scrub](./nozzle_scrub/) | Script to clean your nozzle on a brush| - | - | - | - | - |
-|  | [TAP Temp Controll(./tap_temp_control/) | Script to make sure the nozzle is bellow 150°C when probing| - | - | - | - | - |
+|  | [TAP Temp Control](./tap_temp_control/) | Script to make sure the nozzle is bellow 150°C when probing| - | - | - | - | - |
 
