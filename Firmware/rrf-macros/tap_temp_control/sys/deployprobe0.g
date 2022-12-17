@@ -19,17 +19,21 @@ if var.Target_Temp > (var.Probe_Temp)
   if global.nospam = false
     echo "Extruder temperature target of " ^ var.Target_Temp ^ "°C is too high, lowering to " ^ var.Probe_Temp ^ "°C"
     set global.nospam = true
+    G10 S{var.Probe_Temp} P0                                                   ; Set hotend temperature to var.Probe_Temp
+    M116 H1                                                                    ; Wait hotend to reach it's temperature
   else
     ; Don't echo!
-  G10 S{var.Probe_Temp} P0                                                     ; Set hotend temperature to var.Probe_Temp
-  M116 H1                                                                      ; Wait hotend to reach it's temperature
+    G10 S{var.Probe_Temp} P0                                                   ; Set hotend temperature to var.Probe_Temp
+    M116 H1                                                                    ; Wait hotend to reach it's temperature
 
 ; Temperature target is already low enough, but nozzle may still be too hot
 if var.Actual_Temp > (var.Max_Temp)
-    if !global.nospam
+  if global.nospam = false
     echo "Extruder temperature " ^ var.Actual_Temp ^ "°C is still too high, waiting until below " ^ var.Max_Temp ^ "°C"
     set global.nospam = true
+    G10 S{var.Probe_Temp} P0                                                   ; Set hotend temperature to var.Probe_temp
+    M116 H1 S5                                                                 ; Wait hotend to reach it's temperature +-5°C reach it's temperature +-5°C
   else
     ; Don't echo!
     G10 S{var.Probe_Temp} P0                                                   ; Set hotend temperature to var.Probe_temp
-    M116 H1 S5                                                                 ; Wait hotend to reach it's temperature +-5°C
+    M116 H1 S5                                                                 ; Wait hotend to reach it's temperature +-5°C reach it's temperature +-5°C
