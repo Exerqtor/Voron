@@ -1,5 +1,5 @@
 # CHANGELOG
-- 17.12.2022; v1.1 Made a fix for the echo spamming in the initial release.
+- 17.12.2022; v1.1 Made a fix for the echo spaming in the initial release.
 - 17.12.2022: Initial release.
 
 ## RRF 3.4.x TAP Temp control
