@@ -13,7 +13,7 @@
 - Place the two files in the /sys/ folder on your printer.
 - Add the following two lines at  the end of all your macro's that in some shape way or form probes with K0 (homeall.g, homez.g, bed,g, mesh,g etc...)
 ```
-set global.nospam = false
+set global.probing = false
 M402 P0                                 ; Return the hotend to the temperature it had before probing
 ```
 
