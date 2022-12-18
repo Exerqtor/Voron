@@ -12,8 +12,10 @@
 - This assumes that your TAP probe is defined to be K0 / Probe0! If for some reason it's defined to be some other number swap out the "0" at the end of the files according to the probe number you have it configered to be!
 - Place the two files in the /sys/ folder on your printer.
 - Add the following two lines at  the end of all your macro's that in some shape way or form probes with K0 (homeall.g, homez.g, bed,g, mesh,g etc...)
-`set global.nospam = false` 
-`M402 P0                                                                        ; Return the hotend to the temperature it had before probing`
+```
+set global.nospam = false
+M402 P0                                                                        ; Return the hotend to the temperature it had before probing
+```
 
 ###### To-do List
 - Iron out bugs (if any).
