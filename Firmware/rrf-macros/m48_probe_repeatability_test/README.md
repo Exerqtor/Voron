@@ -15,7 +15,9 @@
 - Add `global.TAP_clearance = 0.2` (I've made the macro for my Voron TAP equiped machine, hence the specific naming) to where ever you define your globals.
 - Uncomment or remove all the lines under "currents, speed & accel" sections.
 - Manually input the follwing command bellow the `M98 P"/sys/lib/goto/bed_center.g"  ; Move to bed center` line, and then uncomment or remove `M98 P"/sys/lib/goto/bed_center.g"  ; Move to bed center`.
-- `G1 X"bed center in X axis" Y"bed center in XYaxis" F6000  ; Move to the center of the bed` input the coordinates relevant to your printer.
+```
+G1 X"bed center in X axis" Y"bed center in Y axis" F6000  ; Move to the center of the bed (input the coordinates relevant to your printer)
+```
 - In line 94, check out the "A" values and input your Z probes standard probing speeds there.
 - If you're not running my StealthBurner LED light or TAP Temp Control macros you need to uncomment or remove all  instances off `set global.sb_leds`  & `set global.Probing`from within the macro.
 When the above changes has been done you should be all good to test out the macro. Keep a finger on the "killswitch" the first time you run it just in case!
