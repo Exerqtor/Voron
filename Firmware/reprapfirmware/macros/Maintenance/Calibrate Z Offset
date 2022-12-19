@@ -1,7 +1,0 @@
-; /macros/Maintenance/Calibrate Z Offset
-; Used to manually re-calibrate the Z offsett between the Nozzle and buildplate.
-
-; Ask before execution, incase missklick
-M291 S3 R"Calibrate Z Offset" P"Are you sure you want to re-calibrate the Z offset?"
-
-M98 P"/sys/lib/z_cal.g"

@@ -1,0 +1,4 @@
+; /macros/Maintenance/Disable steppers/Disable XY
+; called to the disable (idle hold) X & Y steppers
+
+M84 X Y                                                                        ; Stop idle hold

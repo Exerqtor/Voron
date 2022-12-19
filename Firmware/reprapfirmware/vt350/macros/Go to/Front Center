@@ -1,0 +1,4 @@
+; /macros/Go To/Front Center
+; used to move the nozzle to front center
+
+M98 P"/sys/lib/goto/front_center.g"                                            ; move printhead to front center macro

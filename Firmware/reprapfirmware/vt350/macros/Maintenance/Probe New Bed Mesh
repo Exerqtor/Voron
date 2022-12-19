@@ -1,0 +1,14 @@
+; /macros/Probe New Bed Mesh
+; called to probe for new bed mesh
+;
+M291 S3 R"Mesh Probing" P"This will replace the existing bed mesh. Are you sure??" S3  ; want to probe or not
+
+M291 P"Is the bed heated and printer heat soaked?" S3                          ; give one last chance to cancel...
+
+G29                                                                            ; probe a new bed mesh!
+
+;M98 P"/macros/System/Home/leave_klicky.g"                                      ; put the klicky probe back in the dock 
+
+;G28 Z                                                                          ; probe nozzle and establish Z=0
+
+;M291 R"Mesh Probing" P"Done" T0                                                ; mesh probing done

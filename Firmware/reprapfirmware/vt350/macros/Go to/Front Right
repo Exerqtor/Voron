@@ -1,0 +1,4 @@
+; /macros/Go To/Front Right
+; used to move the nozzle to front right
+
+M98 P"/sys/lib/goto/front_right.g"                                              ; move printhead to front right

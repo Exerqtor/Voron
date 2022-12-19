@@ -1,0 +1,4 @@
+; /macros/Maintenance/Disable steppers/Disable Z
+; called to the disable (idle hold) Z steppers
+
+M84 Z                                                                          ; Stop idle hold

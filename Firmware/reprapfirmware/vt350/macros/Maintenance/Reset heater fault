@@ -1,0 +1,4 @@
+; /macros/Maintenance/Reset heater fault
+; Used to reset all heater faults
+
+M562                                                                           ;Reset heater faults
