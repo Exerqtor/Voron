@@ -18,7 +18,7 @@
 
 ###### Instalation and dependencies:
 - Read through and understand every file and make the changes needed for your printer (i can't stress this enough).
-- Copy everything from `/sys/` to your printers SD-card.
+- Copy everything to your printers SD-card.
 
 ###### To-do List
 - Keep everything up-to-date.
