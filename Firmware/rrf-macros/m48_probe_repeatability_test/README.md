@@ -13,7 +13,7 @@
 - Now you should be all sett to run the macro by sending `M48` on either DWC or PanelDue.
 # If your running my RRF config or something based on it, you should be good to go at this point. But if you're running some other setup you must fix the following:
 - Add `global.TAP_clearance = 0.2` (I've made the macro for my Voron TAP equiped machine, hence the specific naming) to where ever you define your globals.
-- Uncomment or remove all the lines under "currents, speed & accel"
+- Uncomment or remove all the lines under "currents, speed & accel" sections.
 - Manually input the follwing command bellow the `M98 P"/sys/lib/goto/bed_center.g"  ; Move to bed center` line, and then uncomment or remove `M98 P"/sys/lib/goto/bed_center.g"  ; Move to bed center`.
 `G1 X"bed center in X axis" Y"bed center in XYaxis" F6000  ; Move to the center of the bed` input the coordinates relevant to your printer.
 - In line 94, check out the "A" values and input your Z probes standard probing speeds there.
