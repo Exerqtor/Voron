@@ -1,4 +1,4 @@
-; /sys/deployprobe.g  v2.0
+; /sys/deployprobe.g  v2.1
 ; Used to controll nozzle temps while probing with Voron TAP
 
 ; ====================---------------------------------------------------------
@@ -28,17 +28,15 @@ if global.probing = false
 ; ====================
 
 ; Temperature target is higher than Probing temperature
-if var.Target_Temp > (var.Probe_Temp)
-  if global.probing = false
-    echo "Extruder temperature target of " ^ var.Target_Temp ^ "°C is too high, lowering to " ^ var.Probe_Temp ^ "°C"
-    set global.probing  = true
-    G10 S{var.Probe_Temp} P0                                                   ; Set hotend temperature to var.Probe_Temp
-    M116 H1                                                                    ; Wait for the hotend to reach probing temperature
+if var.Target_Temp > (var.Probe_Temp) && global.probing = false
+  echo "Extruder temperature target of " ^ var.Target_Temp ^ "°C is too high, lowering to " ^ var.Probe_Temp ^ "°C"
+  set global.probing  = true
+  G10 S{var.Probe_Temp} P0                                                   ; Set hotend temperature to var.Probe_Temp
+  M116 H1                                                                    ; Wait for the hotend to reach probing temperature
 
 ; Temperature target is already low enough, but nozzle may still be too hot
-if var.Actual_Temp > (var.Max_Temp)
-  if global.probing     = false
-    echo "Extruder temperature " ^ var.Actual_Temp ^ "°C is still too high, waiting until below " ^ var.Max_Temp ^ "°C"
-    set global.probing  = true
-    G10 S{var.Probe_Temp} P0                                                   ; Set hotend temperature to var.Probe_temp
-    M116 H1 S{var.Tolerance}                                                   ; Wait for the hotend to reach var.Max_Temp
+if var.Actual_Temp > (var.Max_Temp) && global.probing = false
+  echo "Extruder temperature " ^ var.Actual_Temp ^ "°C is still too high, waiting until below " ^ var.Max_Temp ^ "°C"
+  set global.probing  = true
+  G10 S{var.Probe_Temp} P0                                                   ; Set hotend temperature to var.Probe_temp
+  M116 H1 S{var.Tolerance}                                                   ; Wait for the hotend to reach var.Max_Temp
