@@ -133,7 +133,7 @@ G90                                                                            ;
 G1 Z{global.Nozzle_CL} F2400                                                   ; Move to Z global.Nozzle_CL
 
 ; If using Voron TAP, report that probing is completed
-if exists global.TAPPING
+if exists(global.TAPPING)
   set global.TAPPING = false
   M402 P0                                                                      ; Return the hotend to the temperature it had before probing
 

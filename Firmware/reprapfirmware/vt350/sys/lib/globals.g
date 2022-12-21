@@ -99,10 +99,6 @@ if !exists(global.Print_Probe)
   global Print_Probe = false
 
 
-if !exists(global.Adaptive_Probing)
-  global Adaptive_Probing = false
-  
-  
 if !exists(global.Adaptive_Purge)
   global Adaptive_Purge = true
 

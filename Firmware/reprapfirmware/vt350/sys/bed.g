@@ -125,7 +125,7 @@ G1 Z5 F2400                                                                    ;
 M291 R"Bed leveling" P"Done" T5                                                ; Bed leveling done message
 
 ; If using Voron TAP, report that probing is completed
-if exists global.TAPPING
+if exists(global.TAPPING)
   set global.TAPPING = false
   M402 P0                                                                      ; Return the hotend to the temperature it had before probing
 

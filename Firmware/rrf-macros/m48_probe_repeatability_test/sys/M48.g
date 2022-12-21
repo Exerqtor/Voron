@@ -23,7 +23,7 @@ var SPD_CURRENT_CTRL    = true                                                 ;
 set var.bedX = var.bedX / 2
 set var.bedY = var.bedY / 2
 
-if exists global.Nozzle_CL
+if exists(global.Nozzle_CL)
   set var.Clearance = {global.Nozzle_CL}
 
 var Message = "Do you want to run a test with " ^ var.Samples ^ " samples?"
@@ -45,7 +45,7 @@ M561                                                                           ;
 M290 R0 S0                                                                     ; Reset baby stepping
 M84 E0                                                                         ; Disable extruder stepper
 
-if exists global.sb_leds
+if exists(global.sb_leds)
   set global.sb_leds = "homing"
 
 if var.SPD_CURRENT_CTRL
@@ -98,7 +98,7 @@ M400                                                                           ;
 ; ====================
 
 ; LED status
-if exists global.sb_leds
+if exists(global.sb_leds)
   set global.sb_leds = "leveling"
 
 M558 K0 F180 A1
@@ -132,10 +132,10 @@ set var.Message = "" ^ var.Samples ^ " samples complete, see console"
 M291 S1 R"Probe repeatability test" P{var.Message} T5                          ; Test done message
 
 ; If using Voron TAP, report that probing is completed
-if exists global.TAPPING
+if exists(global.TAPPING)
   set global.TAPPING = false
   M402 P0                                                                      ; Return the hotend to the temperature it had before probing
 
 ; LED status
-if exists global.sb_leds
+if exists(global.sb_leds)
   set global.sb_leds = "ready"
