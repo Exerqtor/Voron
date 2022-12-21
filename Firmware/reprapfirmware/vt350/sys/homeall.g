@@ -4,9 +4,6 @@
 ; LED status
 set global.sb_leds = "homing"
 
-; Relative positioning
-G91                                                                            ; Relative positioning
-
 ; Lower currents, speed & accel
 M98 P"/sys/lib/current/xy_current_low.g"                                       ; Set low XY currents
 M98 P"/sys/lib/current/z_current_low.g"                                        ; Set low Z currents
