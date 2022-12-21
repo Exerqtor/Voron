@@ -37,5 +37,4 @@ set global.first_layer_height = "none"
 ; LED status
 set global.sb_leds = "ready"
 
-
 set global.job_completion = 1
