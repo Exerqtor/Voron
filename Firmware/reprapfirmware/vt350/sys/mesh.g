@@ -1,9 +1,9 @@
-; /sys/mesh.g
+; /sys/mesh.g  v1.3
 ; Called as response to G29
 ; Used to probe a new bed mesh
 
 ; ====================
-; prepare to probe
+; Prepare to probe
 ; ====================
 
 ; Level the bed
@@ -27,7 +27,7 @@ G90                                                                            ;
 M400                                                                           ; Wait for moves to finish
 
 ; ====================
-; probing code
+; Probing code
 ; ====================
 
 ; Probe a new bed mesh!
@@ -40,7 +40,7 @@ G29 S1 P"default_heightmap.csv"                                                ;
 M400                                                                           ; Wait for moves to finish
 
 ; ====================
-; finish up
+; Finish up
 ; ====================
 
 ; Full currents, speed & accel
