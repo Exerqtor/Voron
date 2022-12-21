@@ -1,2 +1,2 @@
 ; sleep.g
-; called when M1 (Sleep) is being processed
+; Called when M1 (Sleep) is being processed
