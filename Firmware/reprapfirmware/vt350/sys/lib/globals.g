@@ -31,13 +31,6 @@ if !exists(global.e_current)
   global e_current = move.extruders[0].current
 
 ; ====================---------------------------------------------------------
-; Voron TAP settings
-; ====================
-
-if !exists(global.TAP_clearance)
-  global TAP_clearance = 5                                                     ; The Z distance from nozzle to bed surface, going lower than 5 will make the probe scary-close to the bed in most setups!
-
-; ====================---------------------------------------------------------
 ; Bed
 ; ====================
 
@@ -73,32 +66,42 @@ if !exists(global.paMaxY)
 if !exists(global.RunDaemon)
   global RunDaemon = true
 
+
 if !exists(global.initial_extruder)
   global initial_extruder = 0
+
 
 if !exists(global.first_layer_height)
   global first_layer_height = "none"
 
+
+  if !exists(global.Nozzle_CL)
+  global Nozzle_CL= 5                                                          ; The Z distance from nozzle to bed surface, going lower than 5 will make the probe scary-close to the bed in most setups!
+
+
 if !exists(global.unload_length)
   global unload_length = 18                                                    ; The length needed to clear the meltzone of the extruder (as speced by E3D for the Revo)
+
 
 if !exists(global.job_completion)
   global job_completion = 0
 
-if !exists(global.debug_mode)
-  global debug_mode = true
 
 if !exists(global.chamber_leds)
   global chamber_leds   = "off"
 
+
 if !exists(global.sb_leds)
   global sb_leds        = "boot"
+
 
 if !exists(global.Print_Probe)
   global Print_Probe = false
 
+
 if !exists(global.Adaptive_Probing)
   global Adaptive_Probing = false
+  
   
 if !exists(global.Adaptive_Purge)
   global Adaptive_Purge = true
@@ -107,4 +110,4 @@ if !exists(global.Adaptive_Purge)
 ; Output current values
 ; ====================
 
-echo "Debugging is : " , global.debugging
+;echo "Debugging is : " , global.debugging
