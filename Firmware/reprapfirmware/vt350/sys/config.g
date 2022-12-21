@@ -11,11 +11,7 @@
 M575 P1 S1 B57600                                                              ; Enable support for PanelDue
 
 ; Debugging
-global debugging = false                                                       ; Debugging on (true) or off (false)
-if global.debugging = true
-  M111 S1                                                                      ; Debugging on (S1)
-elif global.debugging = false
-  M111 S0                                                                      ; Debugging off (S0)
+M111 S0                                                                        ; Debugging off (S0) or on (S1)
 
 G21                                                                            ; Work in millimetres
 G90                                                                            ; Send absolute coordinates...
