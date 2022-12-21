@@ -27,10 +27,10 @@ set global.paMinY = 0
 set global.paMaxY = {global.bed_y}
 
 ; Tremp & extruder global handling
-set global.bed_temp = "N/A"
-set global.chamber_temp = "N/A"
-set global.hotend_temp = "N/A"
-set global.initial_extruder = "N/A"
+set global.bed_temp = 0
+set global.chamber_temp = 0
+set global.hotend_temp = 0
+set global.initial_extruder = 0
 
 set global.first_layer_height = "none"
 

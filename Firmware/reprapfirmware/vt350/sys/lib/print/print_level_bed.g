@@ -1,4 +1,4 @@
-; /sys/lib/print/print_level_bed.g  v2.2
+; /sys/lib/print/print_level_bed.g  v2.3
 ; Called as part of print_start.g	
 ; Used to make sure the bed is leveled
 
@@ -20,9 +20,9 @@ M98 P"/sys/lib/speed/speed_probing.g"                                          ;
 
 ; Lower Z relative to current position if needed
 if !move.axes[2].homed                                                         ; If Z ain't homed
-  G1 Z{global.TAP_clearance} F9000 H1                                          ; Lower Z(bed) relative to current position	
-elif move.axes[2].userPosition < {global.TAP_clearance}                        ; If Z is homed and less than global.TAP_clearance
-  G1 Z{global.TAP_clearance} F9000                                             ; Move to Z global.TAP_clearance
+  G1 Z{global.Nozzle_CL} F9000 H1                                              ; Lower Z(bed) relative to current position	
+elif move.axes[2].userPosition < {global.Nozzle_CL}                            ; If Z is homed and less than global.Nozzle_CL
+  G1 Z{global.Nozzle_CL} F9000                                                 ; Move to Z global.Nozzle_CL
 
 ; ====================---------------------------------------------------------
 ; Homing check
@@ -101,7 +101,7 @@ if global.bed_leveled = false
 
   ; Uncomment the following lines to lower Z(bed) after probing
   G90                                                                          ; Absolute positioning
-  G1 Z{global.TAP_clearance} F2400                                             ; Move to Z global.TAP_clearance
+  G1 Z{global.Nozzle_CL} F2400                                                 ; Move to Z global.Nozzle_CL
 
 
   ; Home Z
@@ -130,10 +130,12 @@ M98 P"/sys/lib/speed/speed_printing.g"                                         ;
 
 ; Uncomment the following lines to lower Z(bed) after probing
 G90                                                                            ; Absolute positioning
-G1 Z{global.TAP_clearance} F2400                                               ; Move to Z global.TAP_clearance
+G1 Z{global.Nozzle_CL} F2400                                                   ; Move to Z global.Nozzle_CL
 
-set global.probing = false
-M402 P0                                                                        ; Return the hotend to the temperature it had before probing
+; If using Voron TAP, report that probing is completed
+if exists global.TAPPING
+  set global.TAPPING = false
+  M402 P0                                                                      ; Return the hotend to the temperature it had before probing
 
 ; LED status
 set global.sb_leds = "ready"

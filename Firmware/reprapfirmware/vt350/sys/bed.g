@@ -1,4 +1,4 @@
-; bed.g
+; bed.g  v2.0
 ; Called as response to G32
 ; Used to level the bed
 
@@ -33,9 +33,9 @@ M98 P"/sys/lib/speed/speed_probing.g"                                          ;
 
 ; Lower Z relative to current position if needed
 if !move.axes[2].homed                                                         ; If Z ain't homed
-  G1 Z{global.TAP_clearance} F9000 H1                                          ; Lower Z(bed) relative to current position	
-elif move.axes[2].userPosition < {global.TAP_clearance}                        ; If Z is homed and less than global.TAP_clearance
-  G1 Z{global.TAP_clearance} F9000                                             ; Move to Z global.TAP_clearance
+  G1 Z{global.Nozzle_CL} F9000 H1                                              ; Lower Z(bed) relative to current position	
+elif move.axes[2].userPosition < {global.Nozzle_CL}                            ; If Z is homed and less than global.Nozzle_CL
+  G1 Z{global.Nozzle_CL} F9000                                                 ; Move to Z global.Nozzle_CL
 
 ; ====================---------------------------------------------------------
 ; Home all axes
@@ -82,7 +82,7 @@ M98 P"/sys/bed_probe_points.g"                                                 ;
 ; Fine leveling pass
 while true
   ; Probe near lead screws -
-  M558 K0 H2 F300:180 A3                                                      ; Reduce depth range, probe slower for better repeatability 
+  M558 K0 H2 F300:180 A3                                                       ; Reduce depth range, probe slower for better repeatability 
   M98 P"/sys/bed_probe_points.g"                                               ; Probe the bed
 
   ; Check results - exit loop if results are good
@@ -101,7 +101,7 @@ while true
 
 ; Uncomment the following lines to lower Z(bed) after probing
 G90                                                                            ; Absolute positioning
-G1 Z{global.TAP_clearance} F2400                                               ; Move to Z global.TAP_clearance
+G1 Z{global.Nozzle_CL} F2400                                                   ; Move to Z global.Nozzle_CL
 
 
 ; Home Z one last time now that the bed is leveled
@@ -124,8 +124,10 @@ G1 Z5 F2400                                                                    ;
 ;echo "global.bed_leveled. Value : " , global.bed_leveled
 M291 R"Bed leveling" P"Done" T5                                                ; Bed leveling done message
 
-set global.probing = false
-M402 P0                                                                        ; Return the hotend to the temperature it had before probing
+; If using Voron TAP, report that probing is completed
+if exists global.TAPPING
+  set global.TAPPING = false
+  M402 P0                                                                      ; Return the hotend to the temperature it had before probing
 
 ; LED status
 set global.sb_leds = "ready"

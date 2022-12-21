@@ -7,14 +7,14 @@ set global.sb_leds = "homing"
 ; Setup low speed & accel
 M98 P"/sys/lib/speed/speed_probing.g"                                          ; set low speed & accel
 
-; Lift Z relative to current position
+; Lower Z(bed) relative to current position
 M98 P"/sys/lib/current/z_current_low.g"                                        ; Set low Z currents
 if !move.axes[2].homed                                                         ; If Z ain't homed
   G91                                                                          ; Relative positioning
-  G1 Z{global.TAP_clearance} F9000 H1                                          ; Lower Z(bed) relative to current position	
+  G1 Z{global.Nozzle_CL} F9000 H1                                              ; Lower Z(bed) relative to current position	
   G90                                                                          ; Absolute positioning
-elif move.axes[2].userPosition < {global.TAP_clearance}                        ; If Z is homed and less than global.TAP_clearance
-  G1 Z{global.TAP_clearance} F9000                                             ; Move to Z global.TAP_clearance
+elif move.axes[2].userPosition < {global.Nozzle_CL}                            ; If Z is homed and less than global.Nozzle_CL
+  G1 Z{global.Nozzle_CL} F9000                                                 ; Move to Z global.Nozzle_CL
 M98 P"/sys/lib/current/z_current_high.g"                                       ; Restore normal Z currents
 
 ; Lower AB currents

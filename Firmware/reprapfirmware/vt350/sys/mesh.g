@@ -54,8 +54,10 @@ G1 Z{global.TAP_clearance} F2400                                               ;
 
 M291 R"Mesh Probing" P"Done" T5                                                ; Mesh probing done
 
-set global.probing = false
-M402 P0                                                                        ; Return the hotend to the temperature it had before probing
+; If using Voron TAP, report that probing is completed
+if exists global.TAPPING
+  set global.TAPPING = false
+  M402 P0                                                                      ; Return the hotend to the temperature it had before probing
 
 ;LED status
 set global.sb_leds = "ready"
