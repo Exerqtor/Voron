@@ -7,11 +7,12 @@
 ; ====================
 
 ; Change these to fit your printer
-var Samples             = 10                                                   ; The number of times to probe the bed during the test
+var Samples             = 10  ; (Max 32)                                       ; The number of times to probe the bed during the test (max 32 samples as of RRF 3.4.5!)
 
 var bedX                = 350                                                  ; Input your beds X axis size here (used to calculate bed center)
 var bedY                = 350                                                  ; Input your beds Y axis size here (used to calculate bed center)
 
+; Nozzle clearance (will be overridden if you have global.Nozzle_CL)
 var Clearance           = 5                                                    ; The "safe" clearance you want to have between the noszzle and bed before moving the printhead
 
 var SPD_CURRENT_CTRL    = true                                                 ; If you use my(or a similar) RRF config you can leave this "true", if not set it to "false"
@@ -56,7 +57,9 @@ if var.SPD_CURRENT_CTRL
 
 ; Lower Z relative to current position if needed
 if !move.axes[2].homed                                                         ; If Z ain't homed
+  G91                                                                          ; Relative positioning
   G1 Z{var.Clearance} F9000 H1                                                 ; Lower Z(bed) relative to current position	
+  G90                                                                          ; Absolute positioning
 elif move.axes[2].userPosition < {var.Clearance}                               ; If Z is homed and less than var.Clearance
   G1 Z{var.Clearance} F9000                                                    ; Move to Z var.Clearance
 
@@ -105,6 +108,7 @@ M558 K0 F180 A1
 
 var loopCounter = 0
 while true
+  echo "Sample number: " ^ {iterations + 1}
   G30 P{var.loopCounter} K0 Z-9999
   set var.loopCounter = iterations
   if iterations = var.Samples - 1

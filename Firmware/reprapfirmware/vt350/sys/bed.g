@@ -33,7 +33,9 @@ M98 P"/sys/lib/speed/speed_probing.g"                                          ;
 
 ; Lower Z relative to current position if needed
 if !move.axes[2].homed                                                         ; If Z ain't homed
+  G91                                                                          ; Relative positioning
   G1 Z{global.Nozzle_CL} F9000 H1                                              ; Lower Z(bed) relative to current position	
+  G90                                                                          ; Absolute positioning
 elif move.axes[2].userPosition < {global.Nozzle_CL}                            ; If Z is homed and less than global.Nozzle_CL
   G1 Z{global.Nozzle_CL} F9000                                                 ; Move to Z global.Nozzle_CL
 
