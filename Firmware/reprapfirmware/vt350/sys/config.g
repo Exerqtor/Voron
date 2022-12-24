@@ -33,22 +33,24 @@ M586 P2 S0                                                                     ;
 ; Driver config
 ; ====================
 
-; Drives for Z
-M569 P0.2 S0                                                                   ; Z1 (physical drive 2) goes backwards
-M569 P0.3 S0                                                                   ; Z2 (physical drive 3) goes backwards
-M569 P0.4 S0                                                                   ; Z3 (physical drive 4) goes backwards
+;          --- Drive map ---
+; (While looking at the printer top down)
 
-; --- Z drive map ---
-;    -------
-;   |  0.2  |
-;   |-------|
-;   |0.3|0.4|
-;    ---+---
-;     front
+;             0.0-----0.1
+;              |  0.2  |
+;              |-------|
+;              |0.3|0.4|
+;               ---+---
+;                Front
 
 ; Drives for XY
-M569 P0.0 S0                                                                   ; X (physical drive 0) goes backwards
-M569 P0.1 S0                                                                   ; Y (physical drive 1) goes backwards
+M569 P0.0 S0                                                                   ; X (B) (physical drive 0.0) goes backwards
+M569 P0.1 S0                                                                   ; Y (A) (physical drive 0.1) goes backwards
+
+; Drives for Z
+M569 P0.2 S0                                                                   ; Z1 (physical drive 0.2) goes backwards
+M569 P0.3 S0                                                                   ; Z2 (physical drive 0.3) goes backwards
+M569 P0.4 S0                                                                   ; Z3 (physical drive 0.4) goes backwards
 
 ; Drive for extruder
 M569 P121.0 S0                                                                 ; E (physical drive 121.0) goes backwards
