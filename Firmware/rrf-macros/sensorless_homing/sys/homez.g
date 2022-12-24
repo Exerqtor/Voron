@@ -1,4 +1,4 @@
-; /sys/homez.g
+; /sys/homez.g  v1.0
 ; Called to home the Z axis with sensor K0
 
 ; Nozzle clearance (gets overridden if you have global.Nozzle_CL)

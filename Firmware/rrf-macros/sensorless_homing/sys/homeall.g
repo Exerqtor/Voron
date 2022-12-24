@@ -1,9 +1,13 @@
-; /sys/homeall.g
+; /sys/homeall.g  v1.1
 ; Called to home all axes
 ; Configured for sensorless homing / stall detection on a Duet 3 Mini 5+
 
 ; Homing selection
 var SensorLessHoming    = true                                                 ; If enabled (true) sensorless XY homing will be used
+
+; Only needed for sensorless
+var X                   = 0.0                                                  ; The driver number for your X (B) stepper
+var Y                   = 0.1                                                  ; The driver number for your Y (A) stepper
 
 ; Nozzle clearance (gets overridden if you have global.Nozzle_CL)
 var Clearance           = 5                                                    ; The "safe" clearance you want to have between the noszzle and bed before moving the printhead
@@ -66,8 +70,8 @@ if !var.SensorLessHoming
 ; Sensorless
 if var.SensorLessHoming
   ; Enable stealthChop on XY steppers
-  M569 P0.0 D3 V10                                                             ; Set X axis driver in stealthChop mode
-  M569 P0.1 D3 V10                                                             ; Set Y axis driver in stealthChop mode
+  M569 P{var.X} D3 V10                                                         ; Set X axis driver in stealthChop mode
+  M569 P{var.Y} D3 V10                                                         ; Set Y axis driver in stealthChop mode
 
   ; Enable XY steppers
   M17 X Y                                                                      ; Enable steppers for stealthChop tuning
@@ -95,8 +99,8 @@ if var.SensorLessHoming
   G1 Y600 H1                                                                   ; Move slowly to Y axis max
 
   ; Disable stealthChop on XY steppers
-  M569 P0.0 D2                                                                 ; Set X axis driver in spread cycle mode
-  M569 P0.1 D2                                                                 ; Set Y axis driver in spread cycle mode
+  M569 P{var.X} D2                                                             ; Set X axis driver in spread cycle mode
+  M569 P{var.Y} D2                                                             ; Set Y axis driver in spread cycle mode
 
 G90                                                                            ; Absolute positioning
 
