@@ -12,7 +12,7 @@ var Samples             = 10  ; (Max 32)                                       ;
 var bedX                = 350                                                  ; Input your beds X axis size here (used to calculate bed center)
 var bedY                = 350                                                  ; Input your beds Y axis size here (used to calculate bed center)
 
-; Nozzle clearance (will be overridden if you have global.Nozzle_CL)
+; Nozzle clearance (gets overridden if you have global.Nozzle_CL)
 var Clearance           = 5                                                    ; The "safe" clearance you want to have between the noszzle and bed before moving the printhead
 
 var SPD_CURRENT_CTRL    = true                                                 ; If you use my(or a similar) RRF config you can leave this "true", if not set it to "false"
