@@ -1,4 +1,4 @@
-; /sys/homez.g  v1.0
+; /sys/homez.g  v1.1
 ; Called to home the Z axis with sensor K0
 
 ; Nozzle clearance (gets overridden if you have global.Nozzle_CL)
@@ -14,6 +14,10 @@ if exists(global.Nozzle_CL)
 if exists(global.sb_leds)
   set global.sb_leds = "homing"
 
+; ====================---------------------------------------------------------
+; Lower Z axis
+; ====================
+
 ; Do nothing if XY is not homed yet
 if move.axes[0].homed && move.axes[1].homed
   M98 P"/sys/lib/current/z_current_low.g"                                      ; Set low Z currents
@@ -24,6 +28,10 @@ if move.axes[0].homed && move.axes[1].homed
   elif move.axes[2].userPosition < {var.Clearance}                             ; If Z is homed and less than var.Clearance
     G1 Z{var.Clearance} F9000                                                  ; Move to Z var.Clearance
 
+; ====================---------------------------------------------------------
+; Home Z axis
+; ====================
+
   ; Lower currents
   M98 P"/sys/lib/current/xy_current_low.g"                                     ; Set low XY currents
 
@@ -32,6 +40,10 @@ if move.axes[0].homed && move.axes[1].homed
   M98 P"/sys/lib/speed/speed_probing.g"                                        ; Set low speed & accel
   G30 K0 Z-99999                                                               ; Probe the center of the bed
   M400                                                                         ; Wait for moves to finish
+
+; ====================---------------------------------------------------------
+; Finish up
+; ====================
 
   ; Full currents, speed & accel
   M98 P"/sys/lib/current/z_current_high.g"                                     ; Restore normal Z currents
