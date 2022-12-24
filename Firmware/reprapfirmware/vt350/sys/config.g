@@ -60,8 +60,9 @@ M92 X80.00 Y80.00 Z800.00                                                      ;
 M92 E568.83                                                                    ; Set Extruder steps per mm (Bondtech LGX Lite 562 stock)
 
 ; Drive currents
-M906 X1750 Y1750 Z1170 E550                                                    ; Set XYZ motor currents (mA)
-M906 I30                                                                       ; Set ide current percentage
+M906 X1750 Y1750 I40                                                           ; Set XY motor currents (mA) and ide current percentage
+M906 Z1170 I60                                                                 ; Set Z motor currents (mA) and ide current percentage
+M906 E550 I40                                                                  ; Set E motor currents (mA) and ide current percentage
 M84 S30                                                                        ; Set idle timeout
 
 ; ====================---------------------------------------------------------
