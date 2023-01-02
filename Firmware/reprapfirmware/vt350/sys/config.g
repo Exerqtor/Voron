@@ -63,9 +63,25 @@ M92 E568.83                                                                    ;
 
 ; Drive currents
 M906 X1750 Y1750 I40                                                           ; Set XY motor currents (mA) and ide current percentage
-M906 Z1170 I60                                                                 ; Set Z motor currents (mA) and ide current percentage
+M906 Z850 I40                                                                  ; Set Z motor currents (mA) and ide current percentage
 M906 E550 I40                                                                  ; Set E motor currents (mA) and ide current percentage
-M84 S30                                                                        ; Set idle timeout
+M84 X Y Z E0 S30                                                               ; Set idle timeout
+
+; Axis accelerations and speeds
+M566 X700.00 Y700.00 Z30.00 P1                                                 ; Set maximum instantaneous speed changes (mm/min) and jerk policy
+M203 X18000.00 Y18000.00 Z900.00                                               ; Set maximum speeds (mm/min)
+M201 X3500.00 Y3500.00 Z150.00                                                 ; Set accelerations (mm/s²)
+
+; Extruder accelerations and speeds
+M566 E8000.00 P1                                                               ; Set maximum instantaneous speed changes (mm/min) and jerk policy
+M203 E15000.00                                                                 ; Set maximum speeds (mm/min)
+M201 E1800.0                                                                   ; Set accelerations (mm/s²)
+
+; Reduced accelerations
+M201.1 X500 Y500 Z80 E500                                                      ; Set reduced acceleration for special move types (mm/s²)
+
+; Printing and travel accelerations
+M204 P1500 T3000                                                               ; Set printing acceleration and travel accelerations (mm/s²)
 
 ; ====================---------------------------------------------------------
 ; Movement

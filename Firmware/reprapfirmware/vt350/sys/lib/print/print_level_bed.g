@@ -13,10 +13,9 @@ M561                                                                           ;
 M290 R0 S0                                                                     ; Reset baby stepping
 M84 E0                                                                         ; Disable extruder stepper
 
-; Lower currents, speed & accel
+; Lower currents
 M98 P"/sys/lib/current/xy_current_low.g"                                       ; Set low XY currents
 M98 P"/sys/lib/current/z_current_low.g"                                        ; Set low Z currents
-M98 P"/sys/lib/speed/speed_probing.g"                                          ; Set low speed & accel
 
 ; Lower Z relative to current position if needed
 if !move.axes[2].homed                                                         ; If Z ain't homed
@@ -125,10 +124,9 @@ else
   ; Bed already leveled, no need to probe  
   M291 S1 R"Bed leveling" P"Bed allready leveled" T1
 
-; Full currents, speed & accel
-M98 P"/sys/lib/current/z_current_high.g"                                       ; Restore normal Z currents
+; Full currents
 M98 P"/sys/lib/current/xy_current_high.g"                                      ; Set high XY currents
-M98 P"/sys/lib/speed/speed_printing.g"                                         ; Restore normal speed & accels
+M98 P"/sys/lib/current/z_current_high.g"                                       ; Set high Z currents
 
 ; Uncomment the following lines to lower Z(bed) after probing
 G90                                                                            ; Absolute positioning

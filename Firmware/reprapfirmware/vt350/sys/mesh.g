@@ -13,10 +13,9 @@ M98 P"/sys/lib/print/print_level_bed.g"                                        ;
 ;LED status
 set global.sb_leds = "meshing"
 
-; Lower currents, speed & accel
+; Lower currents
 M98 P"/sys/lib/current/xy_current_low.g"                                       ; Set low XY currents
 M98 P"/sys/lib/current/z_current_low.g"                                        ; Set low Z currents
-M98 P"/sys/lib/speed/speed_probing.g"                                          ; Set low speed & accel
 
 ; Get the reference Z offset
 M98 P"/sys/lib/goto/bed_center.g"                                              ; Move to bed center
@@ -43,10 +42,9 @@ M400                                                                           ;
 ; Finish up
 ; ====================
 
-; Full currents, speed & accel
-M98 P"/sys/lib/current/z_current_high.g"                                       ; Restore normal Z currents
+; Full currents
 M98 P"/sys/lib/current/xy_current_high.g"                                      ; Set high XY currents
-M98 P"/sys/lib/speed/speed_printing.g"                                         ; Restore normal speed & accels
+M98 P"/sys/lib/current/z_current_high.g"                                       ; Set high Z currents
 
 ; Uncomment the following lines to lower Z(bed) after probing
 G90                                                                            ; Absolute positioning

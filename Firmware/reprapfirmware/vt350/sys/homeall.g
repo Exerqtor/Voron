@@ -4,10 +4,9 @@
 ; LED status
 set global.sb_leds = "homing"
 
-; Lower currents, speed & accel
+; Lower currents
 M98 P"/sys/lib/current/xy_current_low.g"                                       ; Set low XY currents
 M98 P"/sys/lib/current/z_current_low.g"                                        ; Set low Z currents
-M98 P"/sys/lib/speed/speed_probing.g"                                          ; Set low speed & accel
 
 ; Lower Z relative to current position if needed
 if !move.axes[2].homed                                                         ; If Z ain't homed
@@ -44,10 +43,9 @@ M98 P"/sys/lib/goto/bed_center.g"                                              ;
 G30 K0 Z-99999                                                                 ; Probe the center of the bed
 M400                                                                           ; Wait for moves to finish
 
-; Full currents, speed & accel
-M98 P"/sys/lib/current/z_current_high.g"                                       ; Restore normal Z currents
+; Full currents
 M98 P"/sys/lib/current/xy_current_high.g"                                      ; Set high XY currents
-M98 P"/sys/lib/speed/speed_printing.g"                                         ; Restore normal speed & accels
+M98 P"/sys/lib/current/z_current_high.g"                                       ; Set high Z currents
 
 ; Uncomment the following lines to lower Z(bed) after probing
 G90                                                                            ; Absolute positioning

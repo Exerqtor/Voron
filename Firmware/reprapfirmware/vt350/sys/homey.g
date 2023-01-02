@@ -4,11 +4,10 @@
 ; LED status
 set global.sb_leds = "homing"
 
-; Setup low speed & accel
-M98 P"/sys/lib/speed/speed_probing.g"                                          ; Set low speed & accel
+; Lower Z currents
+M98 P"/sys/lib/current/z_current_low.g"                                        ; Set low Z currents
 
 ; Lower Z(bed) relative to current position
-M98 P"/sys/lib/current/z_current_low.g"                                        ; Set low Z currents
 if !move.axes[2].homed                                                         ; If Z ain't homed
   G91                                                                          ; Relative positioning
   G1 Z{global.Nozzle_CL} F9000 H1                                              ; Lower Z(bed) relative to current position
@@ -31,11 +30,8 @@ G90                                                                            ;
 ; Move slowly to Y axis endstop once more (second pass)
 G1 Y600 F360 H1                                                                ; Move slowly to Y axis endstop once more (second pass)
 
-; Restore AB currents
-M98 P"/sys/lib/current/xy_current_high.g"                                      ; Restore normal XY currents
-
-; Restore normal speed & accel
-M98 P"/sys/lib/speed/speed_printing.g"                                         ; Restore normal speed & accel
+; Full currents
+M98 P"/sys/lib/current/xy_current_high.g"                                      ; Set high XY currents
 
 ; LED status
 set global.sb_leds = "ready"
