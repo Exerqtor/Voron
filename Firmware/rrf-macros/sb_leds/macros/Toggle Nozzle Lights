@@ -1,0 +1,22 @@
+; /macros/Toggle Chamber Lights  v2.0
+; Used to toggle build camber LEDs on / off
+
+; Save the current sb_leds status
+if exists(global.sb_leds)
+  if global.sb_leds = "n-off"
+    ; Don't save this status
+  elif global.sb_leds = "n-on"
+    ; Don't save this status
+  else
+    echo >"/sys/lib/led/sb_leds-restore.g" "; sb_leds status value to restore  v1.0"               ; create/overwrite file
+    echo >>"/sys/lib/led/sb_leds-restore.g" "set global.sb_leds = "^ """"^{global.sb_leds}^""""    ; save the current sb_leds status
+
+; Check if the LEDs are on or off, and act accordingly
+if global.sb_leds = "n-off"                                                    ; nozzle LEDs manually turned of
+  M98 P"/sys/lib/led/sb_leds-restore.g"                                        ; restore the sb_leds status from before they got manually turned off
+
+elif global.sb_leds = "n-on"                                                   ; nozzle LEDs manually turned on
+  set global.sb_leds    = "n-off"                                              ; set status to nozzle LEDs manually turned off
+
+else                                                                           ; what ever status other than manually on or off
+  set global.sb_leds    = "n-on"                                               ; set status to nozzle LEDs manually turned on
