@@ -20,6 +20,6 @@ like so:
 | Creator | Config title | Description | V0 | V1.8 | V2.4 | VSW | VT |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Exerqtor | [Duet 3 Config](./reprapfirmware/) | My RRF 3.4 config | :x: | :x: | :x: | :x: | :heavy_check_mark:
-|| [RRF Macros](./rrf-macros/) | RepRapFirmware macros for Voron printers| :x: | :x: | :x: | :x: | :heavy_check_mark: | |
+|| [RRF Macros](./rrf-macros/) | RepRapFirmware macros for Voron printers| - | - | - | - | - | |
 
 ---
