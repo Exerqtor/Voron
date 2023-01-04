@@ -83,10 +83,6 @@ if !exists(global.unload_length)
   global unload_length = 18                                                    ; The length needed to clear the meltzone of the extruder (as speced by E3D for the Revo)
 
 
-if !exists(global.job_completion)
-  global job_completion = 0
-
-
 if !exists(global.chamber_leds)
   global chamber_leds   = "off"
 
