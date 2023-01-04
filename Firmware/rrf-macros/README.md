@@ -24,5 +24,5 @@ like so:
 |  | [Nozzle Scrub](./nozzle_scrub/) | Script to clean your nozzle on a brush| - | - | - | - | - |
 |  | [TAP Temp Control](./tap_temp_control/) | Script to make sure the nozzle is bellow 150°C when probing| - | - | - | - | - |
 |  | [M48 Probe Repeatability Test](./m48_probe_repeatability_test/) | Script to test your Z probes repeatability| - | - | - | - | - |
-|  | [StealthBurner LED's](./sb_leds/) | NanoLED controll fort stealthburner toolhead| - | - | - | - | - |
+|  | [StealthBurner LED's](./sb_leds/) | NanoLED controll for stealthburner toolhead| - | - | - | - | - |
 
