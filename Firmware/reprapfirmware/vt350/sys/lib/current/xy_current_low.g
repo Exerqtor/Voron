@@ -16,6 +16,3 @@ M913 X{var.PCT} Y{var.PCT}                                                     ;
 
 if !exists(param.S)                                                            ; param.S passed stands for Silent (no echo message)
   echo "XY steppers at " ^ var.PCT ^ "% of max current!"
-
-if exists(global.xy_current)
-  set global.xy_current = move.axes[0].current

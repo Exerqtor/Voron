@@ -16,6 +16,3 @@ M913 Z{var.PCT}                                                                ;
 
 if !exists(param.S)                                                            ; param.S passed stands for Silent (no echo message)
   echo "Z steppers at " ^ var.PCT ^ "% of max current!"
-
-if exists(global.xy_current)
-  set global.z_current = move.axes[2].current
