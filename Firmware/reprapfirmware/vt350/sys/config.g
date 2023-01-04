@@ -1,4 +1,4 @@
-; Configuration file for Big Dipper (Duet 3 Mini 5+ with Duet 3 Expansion Mini 2+) and 1LC (firmware version 3.4.5)
+; Configuration file for Duet 3 Mini 5+ with Duet 3 Expansion Mini 2+ and 1LC (firmware version 3.5.0b1+)
 ; executed by the firmware on start-up
 
 ; For E3D Revo Micro, Bondtech LGX Lite & Voron TAP  --------------------------
