@@ -1,4 +1,4 @@
-; /sys/lib/led/sb_leds.g  v4.0
+; /sys/lib/led/sb_leds.g  v4.1
 ; Called at boot up and by daemon.g (via /sys/lib/led/sb_leds-state)
 ; Used for setting the leds on the Voron StealthBurner toolhead.
 
@@ -55,7 +55,7 @@ var n_w                 = 0
 ;    ready
 ;    busy
 ;    heating
-;    leveling
+;    tramming
 ;    homing
 ;    cleaning
 ;    meshing
@@ -98,8 +98,8 @@ if global.sb_leds = "heating"
   set global.sb_logo    = "heating"
   set global.sb_nozzle  = "heating"
 
-if global.sb_leds = "leveling"
-  set global.sb_logo    = "leveling"
+if global.sb_leds = "tramming"
+  set global.sb_logo    = "tramming"
   set global.sb_nozzle  = "on"
 
 if global.sb_leds = "homing"
@@ -206,7 +206,7 @@ if global.sb_logo = "homing"                                                   ;
   set var.l_b           = 51
   set var.l_w           = 0
 
-if global.sb_logo = "leveling"                                                 ; R128 U26 B102 W0 / Light Pink
+if global.sb_logo = "tramming"                                                 ; R128 U26 B102 W0 / Light Pink
   set var.l_r           = 128
   set var.l_u           = 26
   set var.l_b           = 102
