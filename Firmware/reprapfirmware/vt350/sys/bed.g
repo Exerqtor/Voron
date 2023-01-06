@@ -1,4 +1,4 @@
-; bed.g  v2.0
+; bed.g  v2.1
 ; Called as response to G32
 ; Used to tram the bed
 

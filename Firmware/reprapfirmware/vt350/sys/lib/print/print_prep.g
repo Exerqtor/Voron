@@ -1,6 +1,6 @@
-; /sys/lib/print/print_prep.g  v1.0
+; /sys/lib/print/print_prep.g  v1.1
 ; Called as part of print_start.g	
-; Used to make sure all axis is homed and that the bed is leveled
+; Used to make sure all axis is homed and that the bed is trammed
 
 ; LED status
 set global.sb_leds = "homing"
@@ -60,24 +60,24 @@ G30 K0 Z-99999                                                                 ;
 M400                                                                           ; Wait for moves to finish
 
 ; ====================---------------------------------------------------------
-; Check if bed is leveled
+; Check if bed is trammed
 ; ====================
 
-; If the bed isn't leveled
-if global.bed_leveled = false
+; If the bed isn't trammed
+if global.bed_trammed = false
 
   ; LED status
-  set global.sb_leds = "leveling"
+  set global.sb_leds = "tramming"
 
   ; Report whats going on
-  M291 R"Bed leveling" P"Please wait..." T0                                      ; Leveling bed message
+  M291 R"Bed tramming" P"Please wait..." T0                                    ; Tramming bed message
 
   ; ====================-------------------------------------------------------
   ; Probing code
   ; ====================
 
-  ; Coarse leveling pass  
-  M558 K0 H10 F300 A1                                                          ; Increase the depth range, gets the bed mostly level immediately
+  ; Coarse tramming pass  
+  M558 K0 H10 F300 A1                                                          ; Increase the depth range, gets the bed mostly trammed immediately
   M98 P"/sys/bed_probe_points.g"                                               ; Probe the bed
 
   ; Probe the bed
@@ -92,9 +92,9 @@ if global.bed_leveled = false
 
     ; Check pass limit - abort if pass limit reached
     if iterations = 5                                                          ; If probed more than 5 times
-      M291 P"Bed Leveling Aborted" R"Pass Limit Reached"                       ; Abort probing, something wrong
-      set global.bed_leveled = false                                           ; Set global state
-      abort "Bed Leveling Aborted - Pass Limit Reached"                        ; Abort probing, something wrong
+      M291 P"Bed tramming aborted" R"Pass Limit Reached"                       ; Abort probing, something wrong
+      set global.bed_trammed = false                                           ; Set global state
+      abort "Bed tramming aborted - Pass Limit Reached"                        ; Abort probing, something wrong
 
   ; ====================-------------------------------------------------------
   ; Finish up
@@ -111,18 +111,17 @@ if global.bed_leveled = false
   M98 P"/sys/lib/speed/speed_probing.g"                                        ; Set low speed & accel
   G30 K0 Z-99999                                                               ; Probe the center of the bed
 
-  set global.bed_leveled = true                                                ; set global state
+  set global.bed_trammed = true                                                ; set global state
 
-  ;echo "global.bed_leveled. Value : " , global.bed_leveled
-  M291 R"Bed leveling" P"Done" T5                                              ; bed leveling done message
+  M291 R"Bed tramming" P"Done" T5                                              ; bed tramming done message
 
 else
   ; ====================-------------------------------------------------------
-  ; Response if leveled
+  ; Response if trammed
   ; ====================
 
-  ; Bed already leveled, no need to probe  
-  M291 S1 R"Bed leveling" P"Bed allready leveled" T1
+  ; Bed already trammed, no need to probe  
+  M291 S1 R"Bed tramming" P"Bed allready trammed" T1
 
 ; Full currents
 M98 P"/sys/lib/current/xy_current_high.g"                                      ; Set high XY currents

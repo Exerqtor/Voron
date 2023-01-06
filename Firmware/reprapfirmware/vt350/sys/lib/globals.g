@@ -40,8 +40,8 @@ if !exists(global.bed_x)
 if !exists(global.bed_y)
   global bed_y = 350                                                           ; Define the bed size on y-axis(print area from 0 to max) change this to your KNOWN max print size
 
-if !exists(global.bed_leveled)
-  global bed_leveled = false                                                   ; Used to tell if the bed has been leveled or not
+if !exists(global.bed_trammed)
+  global bed_trammed = false                                                   ; Used to tell if the bed has been trammed or not
 
 ; ====================---------------------------------------------------------
 ; Print area
