@@ -1,4 +1,4 @@
-; /sys/lib/print/print_purge.g  v2.0
+; /sys/lib/print/print_purge.g  v2.1
 ; Called when "M98 P"/sys/lib/print/print_purge.g" is sent
 ; Used to purge the nozzle before a print
 
@@ -35,8 +35,11 @@ elif global.paMinX >= 1
 var prepurge_speed = (var.flow_rate / 2.405)
 var purge_move_speed = {2.31 * var.size * var.flow_rate / (var.purge_amount * 2.405)}
 
-; Display message about the purge coordinates
-M291 P"Purge location, X min: " ^ var.x_origin ^ "; Y min: " ^ var.y_origin ^ "; Purge move speed: " ^ var.purge_move_speed ^ "; Prepurge speed: " ^ var.prepurge_speed T6
+; Generate message
+var msg = "Purge location, X min: " ^ var.x_origin ^ "; Y min: " ^ var.y_origin ^ "; Purge move speed: " ^ var.purge_move_speed ^ "; Prepurge speed: " ^ var.prepurge_speed
+
+; Info message
+M291 P{var.msg} T6
 
 ; ====================---------------------------------------------------------
 ; Purging code
