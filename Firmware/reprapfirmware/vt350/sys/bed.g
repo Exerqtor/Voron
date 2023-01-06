@@ -1,26 +1,26 @@
 ; bed.g  v2.0
 ; Called as response to G32
-; Used to level the bed
+; Used to tram the bed
 
 ; ====================---------------------------------------------------------
 ; Question code
 ; ====================
 
-; Ask to make sure you want to level the bed or not
-if global.bed_leveled 
-  M291 S3 R"Bed leveling" P"The bed is allready leveled, want to re-level it?"
+; Ask to make sure you want to tram the bed or not
+if global.bed_trammed 
+  M291 S3 R"Bed tramming" P"The bed is allready trammed, want to tram it again?"
 else
-  M291 S3 R"Bed leveling" P"Are you sure you want to level the bed?"
+  M291 S3 R"Bed tramming" P"Are you sure you want to tram the bed?"
 
 ; LED status
-set global.sb_leds = "leveling"
+set global.sb_leds = "tramming"
 
 ; ====================---------------------------------------------------------
 ; Prepare to probe
 ; ====================
 
 ; Report whats going on
-M291 R"Bed leveling" P"Please wait..." T0                                      ; Leveling bed message
+M291 R"Bed tramming" P"Please wait..." T0                                      ; Tramming bed message
 
 M561                                                                           ; Clear any bed transform
 M290 R0 S0                                                                     ; Reset baby stepping
@@ -73,14 +73,14 @@ G30 K0 Z-99999                                                                 ;
 M400                                                                           ; Wait for moves to finish
 
 ; ====================---------------------------------------------------------
-; Leveling code
+; Tramming code
 ; ====================
 
-; Coarse leveling pass
-M558 K0 H10 F300 A1                                                            ; Increase the depth range, gets the bed mostly level immediately
+; Coarse tramming pass
+M558 K0 H10 F300 A1                                                            ; Increase the depth range, gets the bed mostly trammed immediately
 M98 P"/sys/bed_probe_points.g"                                                 ; Probe the bed
 
-; Fine leveling pass
+; Fine tramming pass
 while true
   ; Probe near lead screws -
   M558 K0 H2 F300:180 A3                                                       ; Reduce depth range, probe slower for better repeatability 
@@ -92,9 +92,9 @@ while true
 
   ; Check pass limit - abort if pass limit reached
   if iterations = 5                                                            ; If probed more than 5 times
-    M291 P"Bed Leveling Aborted!" R"Pass Limit Reached!"                       ; Abort probing, something wrong
-    set global.bed_leveled = false                                             ; Set global state
-    abort "Bed Leveling Aborted! - Pass Limit Reached!"                        ; Abort probing, something wrong
+    M291 P"Bed tramming aborted!" R"Pass Limit Reached!"                       ; Abort probing, something wrong
+    set global.bed_trammed = false                                             ; Set global state
+    abort "Bed tramming aborted! - Pass Limit Reached!"                        ; Abort probing, something wrong
 
 ; ====================---------------------------------------------------------
 ; Finish up
@@ -105,13 +105,13 @@ G90                                                                            ;
 G1 Z{global.Nozzle_CL} F2400                                                   ; Move to Z global.Nozzle_CL
 
 
-; Home Z one last time now that the bed is leveled
+; Home Z one last time now that the bed is trammed
 M98 P"/sys/lib/goto/bed_center.g"                                              ; Move to bed center
 M98 P"/sys/lib/speed/speed_probing.g"                                          ; Set low speed & accel
 G30 K0 Z-99999                                                                 ; Probe the center of the bed
 M400                                                                           ; Wait for moves to finish
 
-set global.bed_leveled = true                                                  ; Set global state
+set global.bed_trammed = true                                                  ; Set global state
 
 ; Full currents
 M98 P"/sys/lib/current/xy_current_high.g"                                      ; Set high XY currents
@@ -122,8 +122,7 @@ M98 P"/sys/lib/current/z_current_high.g"                                       ;
 G90                                                                            ; Absolute positioning
 G1 Z5 F2400                                                                    ; Move to Z 10
 
-;echo "global.bed_leveled. Value : " , global.bed_leveled
-M291 R"Bed leveling" P"Done" T5                                                ; Bed leveling done message
+M291 R"Bed tramming" P"Done" T5                                                ; Bed tramming done message
 
 ; If using Voron TAP, report that probing is completed
 if exists(global.TAPPING)
