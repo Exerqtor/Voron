@@ -31,16 +31,16 @@ set var.bedY = var.bedY / 2
 if exists(global.Nozzle_CL)
   set var.Clearance = {global.Nozzle_CL}
 
-var Message = "How many samples do you want to take? (3-32)"
+var msg = "How many samples do you want to take? (3-32)"
 
 ; Ask to make sure you want to level the bed or not
-M291 S6 J1 R"Probe repeatability test" P{var.Message} L3 H32 F10
+M291 S6 J1 R"Probe repeatability test" P{var.msg} L3 H32 F10
 
 var Samples = {input}
 
-set var.Message = "Doing " ^ var.Samples ^ " samples. Please wait..."
+set var.msg = "Doing " ^ var.Samples ^ " samples. Please wait..."
 
-M291 S1 R"Probe repeatability test" P{var.Message} T5
+M291 S1 R"Probe repeatability test" P{var.msg} T5
 
 M561                                                                           ; Clear any bed transform
 M290 R0 S0                                                                     ; Reset baby stepping
@@ -116,9 +116,9 @@ if fileexists("/sys/lib/current/z_current_high.g")
 else
   M913 Z100                                                                    ; Set Z motors to var.100% of their max current
 
-set var.Message = "" ^ var.Samples ^ " samples complete, see console"
+set var.msg = "" ^ var.Samples ^ " samples complete, see console"
 
-M291 S1 R"Probe repeatability test" P{var.Message} T5                          ; Test done message
+M291 S1 R"Probe repeatability test" P{var.msg} T5                              ; Test done message
 
 ; If using Voron TAP, report that probing is completed
 if exists(global.TAPPING)
