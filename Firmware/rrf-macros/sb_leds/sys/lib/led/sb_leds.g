@@ -293,14 +293,14 @@ M150 R{var.l_r} U{var.l_u} B{var.l_b} W{var.l_w} S1 F1
 M150 R{var.n_r} U{var.n_u} B{var.n_b} W{var.n_w} S2
 
 ; Create/ovewrite sb_leds-state.g with the new status
-echo >"/sys/lib/led/sb_leds-state.g" "; /sys/lib/led/sb_leds-state.g  v1.0"                                                ; create/overwrite file and save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g" "; Created by sb_leds.g to store the current/active LED colors "                     ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g" "; Called by daemon.g to check if global.sb_leds status has changed since last run"  ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g"                                                                                      ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g" "var sb_leds = "^ """"^{global.sb_leds}^""""                                         ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g"                                                                                      ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g" "if var.sb_leds = global.sb_leds"                                                    ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g" "  ; Same status, do nothing"                                                        ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g" "else"                                                                               ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g" "  ; New status, change colors"                                                      ; save line to sb_leds-state
-echo >>"/sys/lib/led/sb_leds-state.g" "  M98 P""/sys/lib/led/sb_leds.g"""                                                  ; save line to sb_leds-state
+echo >"/sys/lib/led/sb_leds-state.g" "; /sys/lib/led/sb_leds-state.g  v1.0"                                                ; Create/overwrite file and save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "; Created by sb_leds.g to store the current/active LED colors "                     ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "; Called by daemon.g to check if global.sb_leds status has changed since last run"  ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g"                                                                                      ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "var sb_leds = "^ """"^{global.sb_leds}^""""                                         ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g"                                                                                      ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "if var.sb_leds = global.sb_leds"                                                    ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "  ; Same status, do nothing"                                                        ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "else"                                                                               ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "  ; New status, change colors"                                                      ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "  M98 P""/sys/lib/led/sb_leds.g"""                                                  ; Save line to sb_leds-state
