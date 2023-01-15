@@ -1,5 +1,5 @@
-; /sys/retractprobe.g  v2.0
+; /sys/retractprobe.g  v3.0
 ; Used to controll nozzle temps while probing with Voron TAP
 
-if global.probing = false
-  G10 S{global.hotend_temp} P0                                               ; Set hotend temperature to global.hotend_temp
+if global.TAPPING = false
+  M98 P"/sys/lib/he_temp.g"                                                    ; Restore hotend temp from before probing started

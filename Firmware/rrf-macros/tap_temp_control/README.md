@@ -1,4 +1,6 @@
 # CHANGELOG
+- 15.01.2023: v3.0 New way of handeling how the active hotend temp (before probing) gets stored and restored (after probing). Global name change from `probing` too `TAPPING`.
+Changed from using echo messages to "standard" `M291` if the nozzle is to hot.
 - 19.12.2022: v2.0 Streamlined the code to make the hotend temperature stable while probing. This calls for redoing all macros related to probing, so read thru the instructions again!
 - 17.12.2022: v1.1 Made a fix for the echo spaming in the initial release.
 - 17.12.2022: Initial release.
@@ -13,7 +15,7 @@
 - Place the two files in the /sys/ folder on your printer.
 - Add the following two lines at  the end of all your macro's that in some shape way or form probes with K0 (homeall.g, homez.g, bed,g, mesh,g etc...)
 ```
-set global.probing = false
+set global.Tapping = false
 M402 P0                                 ; Return the hotend to the temperature it had before probing
 ```
 
