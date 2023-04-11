@@ -13,13 +13,14 @@
 ###### Description:
 - Modifed Voron Triden r1 rear Z carrier to house a MGN12H block instead of MGN9H.
 - One version for IGUS chains (2bolt), and one version for the generic Chinese ones (3bolt).
-- Rail stop that's been sized to accommodate for a MGN12.
+- Rail stop that's been sized to accommodate for a MGN12 rail.
+-WobbleX implementation. 
 
-You will loose a tiny bit of Z travel, otherwise it's not much to "negative".
+You will loose a tiny bit of Z travel, otherwise it's not much to "negative" (quite substantial loss of Z travel with WobbleX, but that's not isolated to this mod, it's just the nature of the beast). 
 
 ###### Pictures:
-![](./pics/WobbleX-MGN12H-v1.png)
 ![](./pics/1.png)
+![](./pics/WobbleX-MGN12H-v1.png)
 
 ###### To-do List
 - Nothing that i can think of.
