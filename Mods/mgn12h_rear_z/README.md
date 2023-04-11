@@ -1,4 +1,5 @@
 # CHANGELOG
+- 11.04.2023: WobbleX v1.
 - 30.11.2022: Initial release.
 
 ## MGN12H rear Z carrier for Trident
@@ -17,6 +18,7 @@
 You will loose a tiny bit of Z travel, otherwise it's not much to "negative".
 
 ###### Pictures:
+![](./pics/WobbleX-MGN12H-v1.png
 ![](./pics/1.png)
 
 ###### To-do List
