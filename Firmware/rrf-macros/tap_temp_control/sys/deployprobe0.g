@@ -6,20 +6,20 @@
 ; ====================
 
 ; Temperature settings, change these as you see fit!
-var Probe_Temp          = 150                                                  ; The temperature you wish the nozzle to have while probing
-var Tolerance           = 5                                                    ; Probing will start at this amount of degrees ABOVE var.Probe_Temp (if the hotend is already cooling down)
+var Probe_Temp = 150                                                           ; The temperature you wish the nozzle to have while probing
+var Tolerance = 5                                                              ; Probing will start at this amount of degrees ABOVE var.Probe_Temp (if the hotend is already cooling down)
 
 ; Don't touch anything bellow this point!
 ; ====================---------------------------------------------------------
 ; Prep phase
 ; ====================
 
-var Max_Temp            = {var.Probe_Temp + var.Tolerance}                     ; Calculate var.Max_Temp
-var Actual_Temp         = (heat.heaters[1].current)                            ; The current/actual hotend themp when a probe is initialized
-var Target_Temp         = (heat.heaters[1].active)                             ; The active/target hotend temp when a probe is initialized
+var Max_Temp = {var.Probe_Temp + var.Tolerance}                               ; Calculate var.Max_Temp
+var Actual_Temp = (heat.heaters[1].current)                                   ; The current/actual hotend themp when a probe is initialized
+var Target_Temp = (heat.heaters[1].active)                                    ; The active/target hotend temp when a probe is initialized
 
 if !exists(global.TAPPING)
-  global TAPPING        = false
+  global TAPPING = false
 
 if global.TAPPING = false
   ; Create/ovewrite he_temps.g to store Tool 0 active temp
