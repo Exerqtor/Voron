@@ -1,4 +1,5 @@
 # CHANGELOG
+- 11.04.2023: Counterbore fix all the carriages & WobbleX v1.5.
 - 11.04.2023: WobbleX v1.
 - 30.11.2022: Initial release.
 
