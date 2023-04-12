@@ -11,10 +11,10 @@ Couldn't find any "clean" mods for adding mesh to the middle fan support, so i m
 - [For a reference to how to do the mesh part look at Eddies clip from 6:20](https://www.youtube.com/watch?v=K6sHfXldK4k&t=441s). 
 
 ###### Pictures:
-![](./pics/1.png)
-![](./pics/2.png)
-![](./pics/3.png)
-![](./pics/4.png)
+![](./pics/1.jpg)
+![](./pics/2.jpg)
+![](./pics/3.jpg)
+![](./pics/4.jpg)
 
 ###### Printing:
 - Default voron settings, no additional supports needed (other than the build in ones)!
