@@ -1,4 +1,4 @@
-# V2 Skirts with mesh
+# V2.4r2 Skirts with mesh
 
 ## CHANGELOG
 - 13.04.2023: Initial release.
