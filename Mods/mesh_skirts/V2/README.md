@@ -11,7 +11,7 @@
 - [For a reference to how this works look at Eddies clip from 4:54.](https://www.youtube.com/watch?v=K6sHfXldK4k&t=294s)
 
 ###### Pictures:
-![](./pics/1.png)
+![](./pics/1.PNG)
 
 ###### Printing:
 - Default voron settings, no additional supports needed (other than the build in ones)!
