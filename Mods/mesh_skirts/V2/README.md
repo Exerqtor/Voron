@@ -9,9 +9,8 @@
 - [Regarding the middle fans you can use this.](https://github.com/Exerqtor/Voron/tree/main/Mods/mesh_skirts/Middle_Fan_Support)
 
 # !!Caution!!
-# The two "parts" are meant to be printed TOGETHER!
-# - [For a reference to how this works, take a  look at Eddies video from  about 4:54.](https://www.youtube.com/watch?v=K6sHfXldK4k&t=294s)
-# !!Caution!!
+## - The two "parts" are meant to be printed TOGETHER!
+## - [For a reference to how this works, take a  look at Eddies video from  about 4:54.](https://www.youtube.com/watch?v=K6sHfXldK4k&t=294s)
 
 ###### Pictures:
 ![](./pics/1.PNG)
