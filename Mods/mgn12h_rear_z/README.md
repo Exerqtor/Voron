@@ -1,4 +1,5 @@
 # CHANGELOG
+- 15.04.2023: WobbleX v1.7, resized the pin holes too 2.9mm (the old/stock was 3.1mm and the pins would be loose and fall out).
 - 15.04.2023: WobbleX v1.6, added recess for the WobbleX balls (missing in stock/MGN9H release too).
 - 11.04.2023: Counterbore fix for all carriages & WobbleX v1.5.
 - 11.04.2023: WobbleX v1.
