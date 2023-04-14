@@ -24,6 +24,7 @@ You will loose a tiny bit of Z travel, otherwise it's not much to "negative" (qu
 ###### Pictures:
 ![](./pics/1.png)
 ![](./pics/WobbleX-MGN12H-v1.png)
+![](./pics/WobbleX-MGN12H-v1.7.png)
 
 ###### To-do List
 - Nothing that i can think of.
