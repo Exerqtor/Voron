@@ -1,4 +1,5 @@
 # CHANGELOG
+- 18.04.2022: v2, This is the first of a "rewamp" of this mod, cleaned up the cad, added the option for meshed backing, adjusted some clearances. More to come!
 - 16.07.2022: Initial release, this is NOT the finished or polished "product" but it works! I will update the design and publish the CAD (with updated STL's ofc) as soon as i can!
 This is ONLY for the left side on a 350mm Trident!
 
@@ -20,11 +21,11 @@ When I saw it I finally got the creative juices flowing and jumped right on it. 
 using allready, so I got to work putting this together into something usefull. And well, this is how it ended up. The 350mm variant can store 7 Revo nozzles (only 350mm avalible at the time of writing this).
 
 ###### Pictures:
-![](./pics/7n_350mm_2c.png)
+![](./pics/1.png)
 ![](./pics/IMG_20220703_004401.jpg)
 ![](./pics/IMG_20220703_004448.jpg)
 
 ###### To-do List
 - Add a "stopper" for the nozzle holder so that it stops in the middle of the opening.
-- Improve on some tolerances.
+- Add left & rear versions for 350mm.
 - Add support for 300mm & 250mm printers.
