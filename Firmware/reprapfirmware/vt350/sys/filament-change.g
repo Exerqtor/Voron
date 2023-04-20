@@ -1,4 +1,4 @@
-; /sys/filament-change.g
+; /sys/filament-change.g  v1.6
 ; Called when M600 is sent
 ; Used to do a filament change while printing
 
@@ -13,7 +13,7 @@ G1 E2 F800                                                                     ;
 G1 E{-(global.unload_length)} F800                                             ; Retract filament from meltzone
 M400                                                                           ; Wait for moves to finish
 M98 P"/sys/lib/beep/xl.g"                                                      ; Beep
-M291 R"Mid-print Filament Change" P"Change and purge filament. Resume when after complete." S2
-G0 Z-40                                                                        ; Drop back down to printing height
-G1 E40 F200                                                                    ; Purge 40mm of filament
+M291 R"Manual Filament Change" P"Change & prime filament, then press OK." S2
+G1 E60 F200                                                                    ; Purge 60mm of filament
+G1 Z-40 F800                                                                   ; Drop back down to printing height
 G90                                                                            ; Absolute positioning
