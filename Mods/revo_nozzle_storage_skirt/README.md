@@ -1,4 +1,5 @@
 # CHANGELOG
+- 20.04.2023: Did a brainfart when i exported the MM lid, and didn't select all tha parts to export as one .stl. now that's fixed.
 - 18.04.2023: v2, This is the first of a "rewamp" of this mod, cleaned up the cad, added the option for meshed backing, adjusted some clearances. More to come!
 - 16.07.2022: Initial release, this is NOT the finished or polished "product" but it works! I will update the design and publish the CAD (with updated STL's ofc) as soon as i can!
 This is ONLY for the left side on a 350mm Trident!
