@@ -7,8 +7,6 @@
 ;LED status
 set global.sb_leds = "heating"
 
-set global.job_completion = 0
-
 G21                                                                            ; Set units to millimeters
 G90                                                                            ; Use absolute coordinates
 M83                                                                            ; Use relative distances for extrusion

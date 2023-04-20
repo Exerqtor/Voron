@@ -10,8 +10,5 @@ var PCT                 = 100                                                  ;
 
 M913 X{var.PCT} Y{var.PCT}                                                     ; Set X Y motors to var.PCT % of their max current
 
-if !exists(param.S)                                                            ; param.S passed stands for Silent (no echo message)
+if exists(param.M)                                                             ; param.M passed stands for Message (post echo message)
   echo "XY steppers at " ^ var.PCT ^ "% of max current!"
-
-if exists(global.xy_current)
-  set global.xy_current = move.axes[0].current

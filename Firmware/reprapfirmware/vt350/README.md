@@ -1,7 +1,8 @@
 # CHANGELOG
+- 06.01.2023: Sensorless XY homing option, and added in more of my other macros. It's also some changes done here and there (mostly code cleaning and some RRF 3.5 adaption)
 - 19.12.2022: Initial release.
 
-## "Complete" RRF 3.4.5 setup for a 350mm VT
+## "Complete" RRF 3.5 setup for a 350mm VT
 
 ###### Description:
 - This is the setup i'm running on VT.842, i will try to keep it up to date as good as i can. But as allways read through and try to understand what's going on before you deploy ANYTHING.
@@ -19,6 +20,14 @@
 ###### Instalation and dependencies:
 - Read through and understand every file and make the changes needed for your printer (i can't stress this enough).
 - Copy everything to your printers SD-card.
+### If the top of a macro contains this text, DON'T use it with anything older than what it's stating!
+```
+ ;---/
+; -/--/--/--/--/--/--/--/--/--/--/--/--/--/--/--/--
+; THIS MACRO ONLY WORKS WITH RRF 3.5.0b1 AND LATER!!
+;--/--/--/--/--/--/--/--/--/--/--/--/--/--/--/--/--
+;-/
+```
 
 ###### To-do List
 - Keep everything up-to-date.

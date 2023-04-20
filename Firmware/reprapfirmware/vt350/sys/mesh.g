@@ -1,4 +1,4 @@
-; /sys/mesh.g  v1.3
+; /sys/mesh.g  v1.4
 ; Called as response to G29
 ; Used to probe a new bed mesh
 
@@ -7,8 +7,8 @@
 ; ====================
 
 ; Level the bed
-set global.bed_leveled = false                                                 ; Set leveled state to false to make it re-level before mesh probing.
-M98 P"/sys/lib/print/print_level_bed.g"                                        ; Level the bed if it's not allready done
+set global.bed_trammed = false                                                 ; Set trammed state to false to make it re-level before mesh probing.
+M98 P"/sys/lib/print/print_prep.g"                                             ; Tram the bed if it's not allready done
 
 ;LED status
 set global.sb_leds = "meshing"

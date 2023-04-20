@@ -1,89 +1,9 @@
-; /sys/lib/led/sb_leds.g  v3.1
-; Called by daemon.g
-; Used for setting the status leds on the Voron StealthBurner toolhead.
-
-; NOTE THAT THIS IS BASED ON THE KLIPPER MACRO, BUT MORE OR LESS BUILT UP FROM SCRATCH TO FIT RRF! 
-; SOME BUGGS MIGHT STILL EXSIST, LET ME KNOW IF YOU FIND ANY OR IF YOU HAVE ANY IDEAS FOR IMPROVEMENT!
+; /sys/lib/led/sb_leds.g  v4.1
+; Called at boot up and by daemon.g (via /sys/lib/led/sb_leds-state)
+; Used for setting the leds on the Voron StealthBurner toolhead.
 
 ; You will need to configure a neopixel (or other addressable led, such as dotstar).
 ; See "https://docs.duet3d.com/User_manual/Reference/Gcodes#m150-set-led-colours" for configuration details.
-
-; ====================---------------------------------------------------------
-; Instructions
-; ====================
-; How to use all this stuff:
-
-;  1.  Navigate to the /sys/lib/led/ folder on your printer and add this file (sb_leds.g) to the directory.
-
-;        Note: If you haven't got /sys/lib/led/ yet simply make a new folder inside /sys/ with the name
-;              "lib" open the newly created "lib" folder and creat yet another folder inside it called
-;              "led" before you do the step above. Why i choose to use /sys/lib/ is explained in my
-;              github page: https://github.com/Exerqtor/Voron/tree/main/Firmware/reprapfirmware/sys/lib
-
-;  2.  Define and setup your LEDs by editing the settings below
-
-;        Note: RGB and RGBW are different and must be defined explicitly.  RGB and RGBW are also not able to
-;              be mix-and-matched in the same chain. A separate data line would be needed for proper functioning.
-
-;              RGBW LEDs will have a visible yellow-ish phosphor section to the chip.  If your LEDs do not have
-;              this yellow portion, you have RGB LEDs.
-
-;  3.  Save your the changes you've done to this file.
-
-;        Note: The RED and BLUE are set to 255 to make it easier for users and supporters to detect
-;              misconfigurations or miswiring. The default color format is for Neopixels with a dedicated
-;              white LED. On startup, all three SB LEDs should light up a bright pink color.
-
-;              If you get random colors across your LEDs, change the "X" parameter bellow according to
-;              the duet docs and save the changes you've made. Once you've found the correct X parameneter
-;              all LED's to be a steady bright pink. If your NEOPIXEL's aren't RGBW omit the W for each
-;              status farther down.
-
-;  4.  Now go to /sys/ and open "daemon.g" and copy "M98 P"/sys/lib/led/sb_leds.g" ; Run Stealthburner Neopixel macro"
-;      to the end of the file and save it.
-
-;        Note: To edit "daemon.g" while running on the machine you have to first rename the file, open it, add the
-;              and save the changes needed, close the file and rename it back to "daemon.g".
-
-;              The "daemon.g" that's part of my RRF setup can be used If you haven't got "deamon.g" running 
-;              on your printer already. Mine depends on a loop triggered by the variable global.RunDeamon
-;              so that you don't have to rename it two times each time you want to stop or edit the file.
-;              This on the other hand also means you have to add; global RunDeamon = True to the end of  your config.g.
-;              And then add the macro: "Toggle deamon" , or make your own variant if you want to.
-
-;              The "daemon.g" attached here is setup to loop once second. If you're unsure what "daemon.g" is 
-;              read up in here: https://docs.duet3d.com/en/User_manual/Tuning/Macros#daemong
-
-;  5.  Now if all the LEDs light up a bright pink color you should be done for the next step which is to add "ready"
-;      status to the end of your config.g so that it goes to "ready" on next reboot: global sb_leds = "ready" .
-
-;        Note: If you still haven't got all of the LED's to light up pink by now you have to fix that before you add the 
-;              variable declaration mentioned over!
-
-;        Note: If you use the init.g AND globals.g from my RRF setup the variable is already defined there, so you don't 
-;              need to put it in your config.g
-
-;  6.  Once you have confirmed that the LEDs are set up correctly, you must now decide where you want these
-;      macros called up...which means adding them to your existing gcode macros.  NOTHING will happen unless
-;      you add: set global.sb_leds = "?????" to your existing gcode macros
-
-;        Example: Add: set global.sb_leds = "leveling" to the beginning of your QGL gcode macro, and then
-;                 add: set global.sb_leds = "ready" to the end of it to set the logo LED and nozzle LEDs back to the `ready` state.
-
-;        Example: add: set global.sb_leds = "cleaning" to the beginning of your nozzle-cleaning macro, and then; set global.sb_leds = "ready"
-;                 to the end of it to return the LEDs back to `ready` state.
-
-;        Note: If you use my RRF config these status changes have been added already, you can of course add more if you feel like it.
-
-;  7.  Feel free to change colors of each macro, create new ones if you have a need to.  The macros provided below
-;      are just an example of what is possible.
-
-;  8  To wrap it all up you can add the Toggle Nozzle Lights macro if you want to be able to toggle on/off the nozzle lights independant
-;     of what the status set them them to be.
-; ====================
-; End of Instructions
-; ====================---------------------------------------------------------
-
 
 ; ====================---------------------------------------------------------
 ; Neopixel configuration
@@ -135,7 +55,7 @@ var n_w                 = 0
 ;    ready
 ;    busy
 ;    heating
-;    leveling
+;    tramming
 ;    homing
 ;    cleaning
 ;    meshing
@@ -178,8 +98,8 @@ if global.sb_leds = "heating"
   set global.sb_logo    = "heating"
   set global.sb_nozzle  = "heating"
 
-if global.sb_leds = "leveling"
-  set global.sb_logo    = "leveling"
+if global.sb_leds = "tramming"
+  set global.sb_logo    = "tramming"
   set global.sb_nozzle  = "on"
 
 if global.sb_leds = "homing"
@@ -286,7 +206,7 @@ if global.sb_logo = "homing"                                                   ;
   set var.l_b           = 51
   set var.l_w           = 0
 
-if global.sb_logo = "leveling"                                                 ; R128 U26 B102 W0 / Light Pink
+if global.sb_logo = "tramming"                                                 ; R128 U26 B102 W0 / Light Pink
   set var.l_r           = 128
   set var.l_u           = 26
   set var.l_b           = 102
@@ -365,8 +285,22 @@ if global.sb_nozzle = "cold"                                                   ;
 ; ====================---------------------------------------------------------
 ; Activate leds according to selected status / mode
 ; ====================
+
 ; Logo LED
 M150 R{var.l_r} U{var.l_u} B{var.l_b} W{var.l_w} S1 F1
 
 ; Nozzle LEDs
 M150 R{var.n_r} U{var.n_u} B{var.n_b} W{var.n_w} S2
+
+; Create/ovewrite sb_leds-state.g with the new status
+echo >"/sys/lib/led/sb_leds-state.g" "; /sys/lib/led/sb_leds-state.g  v1.0"                                                ; Create/overwrite file and save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "; Created by sb_leds.g to store the current/active LED colors "                     ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "; Called by daemon.g to check if global.sb_leds status has changed since last run"  ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g"                                                                                      ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "var sb_leds = "^ """"^{global.sb_leds}^""""                                         ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g"                                                                                      ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "if var.sb_leds = global.sb_leds"                                                    ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "  ; Same status, do nothing"                                                        ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "else"                                                                               ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "  ; New status, change colors"                                                      ; Save line to sb_leds-state
+echo >>"/sys/lib/led/sb_leds-state.g" "  M98 P""/sys/lib/led/sb_leds.g"""                                                  ; Save line to sb_leds-state

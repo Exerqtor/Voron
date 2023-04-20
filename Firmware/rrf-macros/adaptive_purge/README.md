@@ -1,4 +1,5 @@
 # CHANGELOG
+- 06.01.2023: v2.0 - Cleaned up the code, and removed option to turn on/off the adaptive purge function.
 - 15.12.2022: v1.4 - Added a `M400  ; Wait for moves to finish` between the purging lines and SB LED status change so that the status don't change before the purge moves are finished.,
 - 09.12.2022: v1.3 - Changed the of the globals that define the print area from `pamMinY` to `paMinY` etc. Also added an extra "layer of security" if for some reason the print area haven't been declared and `paMinX`  is still set to "0" it will purge at the default position. 
 - 28.11.2022: Initial release.
@@ -7,7 +8,6 @@
 
 ###### Description:
 - Rather than having a static purge line (or what ever), this macro makes a littel Voron logo right beside the actual print. 
-- Enabling / disabling of the macro is done with global.Adaptive_Purge. true = enabled, false = disabled. When disabled the logo get's purged the same place each time (X/Y 10 by default).
 
 ###### Instalation and dependencies:
 - Create a folder structure like shown here ( sys/lib/print).
@@ -43,7 +43,7 @@ set global.paMaxY = {global.bed_y}
 ![](./pics/1.png)
 
 ###### To-do List
-- Update the Readme with some better instructions and take some pictures.
+- Make a simple purge somewhere if the print is to big to fit a logo.
 - Iron out bugs (if any).
 
 ##### Credits:

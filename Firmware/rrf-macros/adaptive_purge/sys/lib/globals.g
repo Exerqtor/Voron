@@ -29,10 +29,3 @@ if !exists(global.paMinY)
 
 if !exists(global.paMaxY)
   global paMaxY = {global.bed_y}                                               ; The Y axis print area maximum
-
-; ====================---------------------------------------------------------
-; MISC
-; ====================
-
-if !exists(global.Adaptive_Purge)
-  global Adaptive_Purge = true
