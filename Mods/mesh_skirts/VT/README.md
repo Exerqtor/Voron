@@ -13,7 +13,7 @@
 ## - The two "parts" of each skirt segment are meant to be printed TOGETHER!
 ## - [For a reference to how this works, take a  look at Eddies video from  about 4:54.](https://www.youtube.com/watch?v=K6sHfXldK4k&t=294s)
 
-## - I've had some issues with the second/top-part not printing to nicely to the "meshed" first/llower-part if i run on my stock print & cooling settings, so to mitigate this I inserted some extra code (in my slicer) at the start and end of layer 4 (the first layer of the second/top-part start):
+## - I've had some issues laying down the second/top-part on the "meshed" first/lower-part if I run on my stock print & cooling settings, so to mitigate this I inserted some extra code (in my slicer) at the start and end of layer 4 (the first layer of the second/top-part start):
 __Layer 4 start:__
 ```
 M220 S50    ; Speed factor override percentage
