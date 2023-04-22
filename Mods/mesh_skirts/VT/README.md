@@ -1,6 +1,7 @@
 # Trident r1 Skirts with mesh
 
 ## CHANGELOG
+- 16.04.2023: [I found a fault in the official CAD & .stl. Fixed in this update, refere to the issue I made.](https://github.com/VoronDesign/Voron-Trident/issues/117)
 - 16.04.2023: Initial release.
 
 ###### Description:
