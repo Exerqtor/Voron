@@ -1,8 +1,6 @@
-# CHANGELOG
+# Trident PTFE Guides
+## CHANGELOG
 - 01.12.2022: Initial release.
-
-## Trident PTFE Guides
-##### Credits:
 
 ###### Printing:
 - Default voron settings, correct orientation, no supports needed!
