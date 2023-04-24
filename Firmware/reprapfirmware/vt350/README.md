@@ -9,8 +9,8 @@
 - The setup allready contains most of my RRF macros, but again check whats going on before you impliment anything.
 
 ## VT.842! has the following specs:
-- Fysetc Big Dipper v1.1 (Duet 3 Mini 5+ with Duet 3 Expansion Mini 2+).
-- Fysetc 5" PanelDue v3.
+- Duet 3 Mini 5+ with Duet 3 Expansion Mini 2+.
+- 5" PanelDue v3.
 - Duet3D 1LC v1.2 toolboard.
 - E3D Revo Micro.
 - Bondtech LGX Lite.
