@@ -1,5 +1,6 @@
 # MGN12H rear Z carrier for Trident
 ## CHANGELOG
+- 25.04.2023: Variable pin sizes for WobbleX carriers, since it's been some issues with the pin sizes being either for small or large I've made a little test model so you can determine what suits you best. When you've found the right size for you then you choose the corresponding set of carriers.
 - 15.04.2023: WobbleX v1.7, resized the pin holes too 2.9mm (the old/stock was 3.1mm and the pins would be loose and fall out).
 - 15.04.2023: WobbleX v1.6, added recess for the WobbleX balls (missing in stock/MGN9H release too).
 - 11.04.2023: Counterbore fix for all carriages & WobbleX v1.5.
