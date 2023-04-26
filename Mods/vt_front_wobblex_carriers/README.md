@@ -1,5 +1,6 @@
 # Trident front WobbleX carriers
 ## CHANGELOG
+- 26.04.2023: Variable pin sizes for WobbleX carriers, since it's been some issues with the pin sizes being either too small or large I've made a little test model so you can determine what suits you best. When you've found the right size for you then you choose the corresponding set of carriers & TR8 adapters.
 - 23.04.2023: Initial release.
 
 ###### Printing:
