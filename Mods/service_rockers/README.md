@@ -4,8 +4,8 @@
 - 18.04.2023: Initial release.
 
 ###### Description:
-- Since it's been a couple issues with the stock rear [WobbleX](https://github.com/MirageC79/Interfaces-for-WobbleX-integration/tree/main/Voron/Trident) Z carrier, which i have fixed for my MGN12H version i figured i could apply the same fixes to the MGN9H so that it's out there for those who need it. So here you go, enjoy!
-- It's also been some issues with the pin sizes being either too small or large I've made a little test model so you can determine what suits you best. When you've found the right size for you then you choose the corresponding set of carriers & TR8 adapters.
+- I've added the posibility to have the voron logos in an accent color, also fixed a couple faults in the design, added some filets/champfers and redesigned the print-in-place support.
+- I'm adding both a plane/solid version (no accent colored logo), and one mulit material.
 
 ###### Printing:
 - Default voron settings (i used adaptive cubic infll @40% to save some print time), correct orientation, no supports needed!
