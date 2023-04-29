@@ -12,8 +12,8 @@
 - Default voron settings (i used adaptive cubic infll @40% to save some print time), correct orientation, no supports needed!
 
 ###### Bom:
-- 4x M5x8mm BHCS (or SHCS)
-- 4x M5 T-slot nuts (T-nut)
+- 4x M3x8mm BHCS (or SHCS)
+- 4x M3 T-slot nuts (T-nut)
 
 ###### Pictures:
 ![](./pics/1.png)
