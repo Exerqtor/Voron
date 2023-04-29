@@ -1,5 +1,6 @@
 # Voron VT & V2 Service rockers
 ## CHANGELOG
+- 29.04.2023: Braces, to help with som sideways stability i've made a couple braces to "pop-in" to the lower rear extrusion that help prop up the service supports.
 - 20.04.2023: Tweaked the logo a bit so it's more pronounced and the MM prints better. 
 - 18.04.2023: Initial release.
 
@@ -17,6 +18,10 @@
 ###### Pictures:
 ![](./pics/1.png)
 ![](./pics/2.png)
+
+The braces:
+![](./pics/3.png)
+![](./pics/4.png)
 
 ###### To-do List
 - Nothing that i can think of.
