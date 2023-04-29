@@ -18,19 +18,6 @@ if !exists(global.chamber_temp)
   global chamber_temp = 0
 
 ; ====================---------------------------------------------------------
-; Stepper currents
-; ====================
-
-if !exists(global.xy_current)
-  global xy_current = move.axes[0].current
-
-if !exists(global.z_current)
-  global z_current = move.axes[2].current
-
-if !exists(global.e_current)
-  global e_current = move.extruders[0].current
-
-; ====================---------------------------------------------------------
 ; Bed
 ; ====================
 
@@ -66,37 +53,47 @@ if !exists(global.paMaxY)
 if !exists(global.RunDaemon)
   global RunDaemon = true
 
+if !exists(global.FilamentCHG)
+  global FilamentCHG = false
+
+if !exists(global.input_shaper)
+  global input_shaper = (move.shaping.type)
+
+if !exists(global.def_print_accel)
+  global def_print_accel = (move.printingAcceleration)
+
+if !exists(global.low_accel)
+  global low_accel = 1000
+
+if !exists(global.accel_control)
+  global accel_control = true
 
 if !exists(global.initial_extruder)
   global initial_extruder = 0
 
+if !exists(global.line_type)
+  global line_type = "N/A"
 
 if !exists(global.first_layer_height)
   global first_layer_height = "none"
 
+if !exists(global.layer_number)
+  global layer_number = 0
 
   if !exists(global.Nozzle_CL)
   global Nozzle_CL= 5                                                          ; The Z distance from nozzle to bed surface, going lower than 5 will make the probe scary-close to the bed in most setups!
 
-
 if !exists(global.unload_length)
   global unload_length = 18                                                    ; The length needed to clear the meltzone of the extruder (as speced by E3D for the Revo)
 
-
 if !exists(global.chamber_leds)
-  global chamber_leds   = "off"
-
+  global chamber_leds   = 0
 
 if !exists(global.sb_leds)
   global sb_leds        = "boot"
 
-
 if !exists(global.Print_Probe)
   global Print_Probe = false
-
-
-if !exists(global.Adaptive_Purge)
-  global Adaptive_Purge = true
 
 ; ====================---------------------------------------------------------
 ; Output current values
