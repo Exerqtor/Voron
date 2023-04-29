@@ -1,4 +1,4 @@
-#Voron VT & V2 Service rockers
+# Voron VT & V2 Service rockers
 ## CHANGELOG
 - 20.04.2023: Tweaked the logo a bit so it's more pronounced and the MM prints better. 
 - 18.04.2023: Initial release.
