@@ -14,6 +14,7 @@
 ###### Bom:
 For "standard" carriers:
 - Same as stock Trident except a MGN12H rail set.
+
 For WobbleX carriers:
 - 1x WobbleX WS8
 - Stock Voron Trident screws etc.
