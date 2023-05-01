@@ -7,7 +7,8 @@
 - Default voron settings, correct orientation, no supports needed!
 
 ###### Bom:
-- Same as stock Trident.
+- 1x WobbleX WS8
+- Stock Voron Trident screws etc.
 
 ###### Description:
 - Since it's been a couple issues with the stock rear [WobbleX](https://github.com/MirageC79/Interfaces-for-WobbleX-integration/tree/main/Voron/Trident) Z carrier, which i have fixed for my MGN12H version i figured i could apply the same fixes to the MGN9H so that it's out there for those who need it. So here you go, enjoy!
