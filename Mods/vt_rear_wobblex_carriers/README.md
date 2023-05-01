@@ -1,5 +1,6 @@
 # Trident rear WobbleX carriers
 ## CHANGELOG
+- 01.05.2023: Opened up the center hole (where the leadscrew goes through) too 13mm to allow for more leadscrew movement wiithout interfering witht he carrier body.
 - 26.04.2023: Initial release.
 
 ###### Printing:
