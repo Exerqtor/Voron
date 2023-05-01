@@ -12,7 +12,11 @@
 - Default voron settings, correct orientation, no supports needed!
 
 ###### Bom:
+For "standard" carriers:
 - Same as stock Trident except a MGN12H rail set.
+For WobbleX carriers:
+- 1x WobbleX WS8
+- Stock Voron Trident screws etc.
 
 ###### Description:
 - Modifed Voron Triden r1 rear Z carrier to house a MGN12H block instead of MGN9H.
