@@ -17,5 +17,9 @@
 ![](./pics/1.png)
 ![](./pics/2.png)
 
+10.5mm(old) vs 13mm(new)
+
+![](./pics/3.png)
+
 ###### To-do List
 - Nothing that i can think of.
