@@ -17,6 +17,7 @@ For "standard" carriers:
 
 For WobbleX carriers:
 - 1x WobbleX WS8
+- 1x MGN12H rail set
 - Stock Voron Trident screws etc.
 
 ###### Description:
