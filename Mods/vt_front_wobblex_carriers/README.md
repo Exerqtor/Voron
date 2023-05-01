@@ -9,6 +9,7 @@
 
 ###### Bom:
 - 3x WobbleX WS8
+- Stock Voron Trident screws etc.
 
 ###### Description:
 - Solid front Z carriers to be used with [WobbleX WS8](https://github.com/MirageC79/Interfaces-for-WobbleX-integration/tree/main/Voron/Trident)
