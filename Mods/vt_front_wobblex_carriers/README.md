@@ -8,7 +8,7 @@
 - Default voron settings, correct orientation, no supports needed!
 
 ###### Bom:
-- Same as stock Trident except a MGN12H rail set.
+- Same as stock Trident.
 
 ###### Description:
 - Solid front Z carriers to be used with [WobbleX WS8](https://github.com/MirageC79/Interfaces-for-WobbleX-integration/tree/main/Voron/Trident)
