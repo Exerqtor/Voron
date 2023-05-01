@@ -8,7 +8,7 @@
 - Default voron settings, correct orientation, no supports needed!
 
 ###### Bom:
-- 3x WobbleX WS8
+- 2x WobbleX WS8
 - Stock Voron Trident screws etc.
 
 ###### Description:
