@@ -1,5 +1,5 @@
 # CHANGELOG
-- 19.05.2023: v2.2 - Further cleanup and.
+- 19.05.2023: v2.2 - Further cleanup.
 - 06.01.2023: v2.0 - Cleaned up the code, and removed option to turn on/off the adaptive purge function.
 - 15.12.2022: v1.4 - Added a `M400  ; Wait for moves to finish` between the purging lines and SB LED status change so that the status don't change before the purge moves are finished.,
 - 09.12.2022: v1.3 - Changed the of the globals that define the print area from `pamMinY` to `paMinY` etc. Also added an extra "layer of security" if for some reason the print area haven't been declared and `paMinX`  is still set to "0" it will purge at the default position. 
