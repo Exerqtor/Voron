@@ -1,4 +1,4 @@
-; /sys/lib/print/print_purge.g  v2.1
+; /sys/lib/print/print_purge.g  v2.2
 ; Called when "M98 P"/sys/lib/print/print_purge.g" is sent
 ; Used to purge the nozzle before a print
 
@@ -18,25 +18,36 @@ var size                  = 10                                                 ;
 var distance_to_object_x  = 15                                                 ; Distance in x to the print area
 var distance_to_object_y  = 0                                                  ; Distance in y to the print area
 var travel_speed          = 300                                                ; Travel speed
+var purge_temp_min        = {global.hotend_temp - 5}                           ; Minimum nozzle temperature to permit a purge. Otherwise, print will abort
+
 
 ; Don't touch anyting beyond this point(unless you know what you're doing)!!
 ; ====================---------------------------------------------------------
 ; Prep phase
 ; ====================
 
+; Placeholders
+var x_origin = var.x_default
+var y_origin = var.y_default
+var msg = "N/A"
+
 if exists(global.unload_length)
   set var.prime_dist = {global.unload_length + 1}
 if global.paMinX = 0
-  var x_origin = var.x_default
-  var y_origin = var.y_default
+  set var.x_origin = var.x_default
+  set var.y_origin = var.y_default
 elif global.paMinX >= 1
-  var x_origin = {global.paMinX - var.distance_to_object_x - var.size}
-  var y_origin = {global.paMinY - var.distance_to_object_y - var.size}
+  set var.x_origin = {global.paMinX - var.distance_to_object_x - var.size}
+  set var.y_origin = {global.paMinY - var.distance_to_object_y - var.size}
+  
 var prepurge_speed = (var.flow_rate / 2.405)
 var purge_move_speed = {2.31 * var.size * var.flow_rate / (var.purge_amount * 2.405)}
 
+if exists(global.hotend_temp)
+  set var.purge_temp_min        = {global.hotend_temp - 5}                     ; Minimum nozzle temperature to permit a purge. Otherwise, print will abort
+
 ; Generate message
-var msg = "Purge location, X min: " ^ var.x_origin ^ "; Y min: " ^ var.y_origin ^ "; Purge move speed: " ^ var.purge_move_speed ^ "; Prepurge speed: " ^ var.prepurge_speed
+set var.msg = "Purge location, X min: " ^ var.x_origin ^ "; Y min: " ^ var.y_origin ^ "; Purge move speed: " ^ var.purge_move_speed ^ "; Prepurge speed: " ^ var.prepurge_speed
 
 ; Info message
 M291 P{var.msg} T6
@@ -44,6 +55,18 @@ M291 P{var.msg} T6
 ; ====================---------------------------------------------------------
 ; Purging code
 ; ====================
+
+; Purge if the temp is up to min temp. If not, it will wait, or if active temp is 0 it will abort
+if heat.heaters[1].current < var.purge_temp_min
+  ;To cold to purge, wait for temp to raise
+  M116 H1                                                                    ; Wait hotend to reach it's temperature
+elif heat.heaters[1].current > var.purge_temp_min
+  ; Hot enough to purge, proceed to purge
+
+if heat.heaters[1].active = 0
+  ; Something wrong, abort print
+  echo "Tool 0 active temp set to 0, aborting print!"
+  abort
 
 ; LED status
 if exists(global.sb_leds)
@@ -75,7 +98,7 @@ G1 E.5 F2100                                                                   ;
 
 ; Purge third line of logo
 G1 X{var.x_origin + var.size} Y{var.y_origin + var.size / 2}  E{var.purge_amount / 4} F{var.purge_move_speed * 60}
-G1 E-.5 F2100                                                                  ; Retract
+;G1 E-.5 F2100                                                                  ; Retract
 G92 E0                                                                         ; Reset extruder distance
 G0 Z{var.z_height * 2}                                                         ; Z hop
 M400                                                                           ; Wait for moves to finish

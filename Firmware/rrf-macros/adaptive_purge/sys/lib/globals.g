@@ -8,7 +8,7 @@
 ; Bed
 ; ====================
 
-if !exists()
+if !exists(global.bed_x)
   global bed_x = 350                                                           ; Defines the bed size on x-axis(print area from 0 to max) change this to your KNOWN max print size
 
 if !exists(global.bed_y)
