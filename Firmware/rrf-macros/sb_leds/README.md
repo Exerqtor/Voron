@@ -1,8 +1,9 @@
 # CHANGELOG
+- 07.06.2023: v5.0 Changed the macro set to accomidate changes made in RRF 3.5b3 onward. This involves that you have to do changes according to your specific printer/setup inside `sb_leds.g` for it to work.
 - 04.01.2023: v4.0 
 - 04.01.2023: Initial release.
 
-## StealthBurner LED's for RRF 3.4 and newer
+## StealthBurner LED's for RRF 3.5 and newer
 
 ###### Description:
 - This macro is made to controll the Nanoleds on a stealthburner toolhed for those who run RRF.

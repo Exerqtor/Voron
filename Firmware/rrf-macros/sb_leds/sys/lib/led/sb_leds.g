@@ -1,4 +1,4 @@
-; /sys/lib/led/sb_leds.g  v4.1
+; /sys/lib/led/sb_leds.g  v5.0
 ; Called at boot up and by daemon.g (via /sys/lib/led/sb_leds-state)
 ; Used for setting the leds on the Voron StealthBurner toolhead.
 
@@ -9,18 +9,21 @@
 ; Neopixel configuration
 ; ====================
 ; Define your LED type
-if !exists(global.sb_leds)
-  M150 X3                            ; set LED type to RGBW NeoPixel
 
-;--------------------------------------------------------------------------------------------------------------------------------------
+var strip_number  = 0
+var pin_name      = "led"
+var led_type      = 2
+
+
+;------------------------------------------------------------------------------
 ; This section is required.  Do Not Delete or mess with it.
-;--------------------------------------------------------------------------------------------------------------------------------------
+;------------------------------------------------------------------------------
+
+M950 E{var.strip_number} C{var.pin_name} T{var.led_type}
+
 ; ====================---------------------------------------------------------
 ; Placeholders
 ; ====================
-if global.sb_leds = "boot"
-  M150 X3                            ; set LED type to RGBW NeoPixel
-
 if !exists(global.sb_leds)
   global sb_leds        = "pink"
 
@@ -40,10 +43,9 @@ var n_u                 = 0
 var n_b                 = 0
 var n_w                 = 0
 
-;--------------------------------------------------------------------------------------------------------------------------------------
+;------------------------------------------------------------------------------
 ; This section can be played with "as you please"
-;--------------------------------------------------------------------------------------------------------------------------------------
-; ====================---------------------------------------------------------
+; ====================
 ; Avalible statuses to use in macros etc.
 ; ====================
 
@@ -279,21 +281,20 @@ if global.sb_nozzle = "cold"                                                   ;
   set var.n_b           = 255
   set var.n_w           = 77
 
-;--------------------------------------------------------------------------------------------------------------------------------------
+;------------------------------------------------------------------------------
 ; This section is required.  Do Not Delete or mess with it.
-;--------------------------------------------------------------------------------------------------------------------------------------
 ; ====================---------------------------------------------------------
 ; Activate leds according to selected status / mode
 ; ====================
 
 ; Logo LED
-M150 R{var.l_r} U{var.l_u} B{var.l_b} W{var.l_w} S1 F1
+M150 E0 R{var.l_r} U{var.l_u} B{var.l_b} W{var.l_w} S1 F1
 
 ; Nozzle LEDs
-M150 R{var.n_r} U{var.n_u} B{var.n_b} W{var.n_w} S2
+M150 E0 R{var.n_r} U{var.n_u} B{var.n_b} W{var.n_w} S2 F0
 
 ; Create/ovewrite sb_leds-state.g with the new status
-echo >"/sys/lib/led/sb_leds-state.g" "; /sys/lib/led/sb_leds-state.g  v1.0"                                                ; Create/overwrite file and save line to sb_leds-state
+echo >"/sys/lib/led/sb_leds-state.g" "; /sys/lib/led/sb_leds-state.g  v2.0"                                                ; Create/overwrite file and save line to sb_leds-state
 echo >>"/sys/lib/led/sb_leds-state.g" "; Created by sb_leds.g to store the current/active LED colors "                     ; Save line to sb_leds-state
 echo >>"/sys/lib/led/sb_leds-state.g" "; Called by daemon.g to check if global.sb_leds status has changed since last run"  ; Save line to sb_leds-state
 echo >>"/sys/lib/led/sb_leds-state.g"                                                                                      ; Save line to sb_leds-state
