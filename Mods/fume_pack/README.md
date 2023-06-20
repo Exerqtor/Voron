@@ -1,6 +1,7 @@
 # fume pack
 
 ## CHANGELOG
+- 20.06.2023: DXF Files. I've exported & upload DXF files to cut the rear panels, these will “only” include the fan holes and the bolt pattern for the 5-bolt version. The wiring holes and/or extra bolt holes for 13-bolt version must be drilled by hand. This includes all standard sizes pluss a “custom” 350x350mm variant (350mm with 350mm Z-axis).
 - 04.12.2022: [Version 1.2.1 "Main bodies" ](https://github.com/Exerqtor/Voron/tree/main/Mods/fume_pack/changelog/v1.2.1): I had to add little feature on the outside of the main bodies to compensate for the lost wall thickness introduced due to the detachable backplate in v1.2.
 - 03.12.2022: [Version 1.2 "Main bodies"](https://github.com/Exerqtor/Voron/tree/main/Mods/fume_pack/changelog/v1.2): to have some more flexibility in regards of different cartridges I've made the "plate" on the main body bellow the exhaust vent a separate piece.
 Future releases might call for the plate to be swaped out infavor of a new design, but that's way better than having to reprint the whole main housing.
@@ -10,7 +11,7 @@ It's got built in supports for the overhanging parts in the main body so it shou
 - 01.12.2022: Initial release, refere to description..
 
 ###### Description:
-Since the "fume pack" is directly dervied from ["Pepe pack v2.2"](https://github.com/Exerqtor/Voron/tree/main/Mods/pepe_pack_v2) I will only mention the changes done from that point and forrward:
+Since the "fume pack" is directly dervied from ["Pepe pack v2.2"](https://github.com/Exerqtor/Voron/tree/main/Mods/pepe_pack_v2) I will only mention the changes done from that point and forward:
 - Ground-up rework of the carbon container/cartridge/basket (what ever you eant to call it) to closer resemble the Nevermore Micro V5 Duo.  In other words should "fume pack" do the job exactly like a stock V5 Duo, if not better since the basket has a somewhat larger surface area of carbon for the air to pass thru.
 - With the new cartridge the carbon abmount is roughly cut in two compared to "pepe pack" and now pretty much the same as aevermore Micro V5 Duo.
 - Redesign of the fan lid, with deeper holes in the main body to accept 8mm bolts.
@@ -24,6 +25,8 @@ I want to point out that the fans need to be cut up to work as intended(for thos
 - [This is how the fans is supposed to look after cutting](https://raw.githubusercontent.com/Exerqtor/Voron/main/Mods/fume_pack/pics/fancut1.png). 
 
 Regarding cutting the fans i will try to either make a little guide, or at least a cuting guide so you can mark of where to cut them correctly.
+
+The fan holes in the rear panel should be 38mm, some wiggle room is allowed (within reason).
 
 ## And finally, choose the main body who suits your needs the best, both "5-bolt" and "13-bolt" version have three variants with PTFE holes either on all three sides, both sides OR rear only (like stock Voron) 
 
