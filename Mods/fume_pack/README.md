@@ -1,6 +1,7 @@
 # fume pack
 
 ## CHANGELOG
+- 24.06.2023: DXF changes, the mounting holes have been changed to 4mm. And files for Voron 2.4, this meant changing all the DXF file names to "VT" & "V2" respectively.
 - 20.06.2023: DXF Files. I've exported & upload DXF files to cut the rear panels, these will “only” include the fan holes and the bolt pattern for the 5-bolt version. The wiring holes and/or extra bolt holes for 13-bolt version must be drilled by hand. This includes all standard sizes pluss a “custom” 350x350mm variant (350mm with 350mm Z-axis).
 - 04.12.2022: [Version 1.2.1 "Main bodies" ](https://github.com/Exerqtor/Voron/tree/main/Mods/fume_pack/changelog/v1.2.1): I had to add little feature on the outside of the main bodies to compensate for the lost wall thickness introduced due to the detachable backplate in v1.2.
 - 03.12.2022: [Version 1.2 "Main bodies"](https://github.com/Exerqtor/Voron/tree/main/Mods/fume_pack/changelog/v1.2): to have some more flexibility in regards of different cartridges I've made the "plate" on the main body bellow the exhaust vent a separate piece.
