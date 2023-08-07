@@ -2,7 +2,7 @@
 ## CHANGELOG
 - 08.07.2023: Merged all my Wobblex mods into this one repo to make it easier (it was split into one repo for front, one for rear + one for rear-MGN12H before). This also brings the release of the leadscrew top supprts!
 - 06.08.2023: Changed the Wobblex logo from an Emboss to a Deboss to better fit with the "Voron ethos", since all offical Voron logos are debossed rather than embossed.
-- 01.05.2023: Opened up the center hole (where the leadscrew goes through) too 13mm to allow for more leadscrew movement wiithout interfering witht he carrier body.
+- 01.05.2023: Opened up the center hole (where the leadscrew goes through) too 13mm to allow for more leadscrew movement without interfering witht he carrier body.
 - 25.04.2023: Variable pin sizes for WobbleX carriers, since it's been some issues with the pin sizes being either too small or large I've made a little test model so you can determine what suits you best. When you've found the right size for you then you choose the corresponding set of carriers & TR8 adapters.
 - 23.04.2023: Initial release.
 - 15.04.2023: WobbleX v1.7, resized the pin holes too 2.9mm (the old/stock was 3.1mm and the pins would be loose and fall out).
