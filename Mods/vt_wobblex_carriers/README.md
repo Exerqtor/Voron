@@ -26,6 +26,8 @@ if you have leadscrews that's got a 5mm "nubbin" at the top you should be able t
 
 You will loose a tiny bit of Z travel, otherwise it's not much to "negative" (quite substantial loss of Z travel with WobbleX, but that's not isolated to this mod, it's just the nature of the beast). 
 
+For those who choose to run MGN12H in the rear i've also added a a modifed rail stop to fit the MGN12 rail!
+
 ###### Pictures:
 ![](./pics/front_1.png)
 ![](./pics/front_2.png)
