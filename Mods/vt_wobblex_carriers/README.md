@@ -38,7 +38,8 @@ For those who choose to run MGN12H in the rear i've also added a a modifed rail 
 
 10.5mm(old) vs 13mm(new)
 
-![](./pics/4.png)
+![](./pics/front_4.png)
+![](./pics/rear_3.png)
 
 The pin test block
 
