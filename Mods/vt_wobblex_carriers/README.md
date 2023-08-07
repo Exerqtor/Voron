@@ -35,13 +35,16 @@ For those who choose to run MGN12H in the rear i've also added a a modifed rail 
 ![](./pics/rear_1.png)
 ![](./pics/rear_2.png)
 ![](./pics/rear_MGN12H-v1.7.png)
+
 10.5mm(old) vs 13mm(new)
 
 ![](./pics/4.png)
+
 The pin test block
 
 ![](./pics/test.png)
-The top supprts
+
+The top supports
 
 ![](./pics/top_supports_1.png)
 
