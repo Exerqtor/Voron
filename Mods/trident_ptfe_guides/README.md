@@ -1,5 +1,6 @@
 # Trident PTFE Guides
 ## CHANGELOG
+- 23.09.2023: Added another set with 40mm radius as supposed to the first release that was 50mm. The two types are named `R40` & `R50` respectively.
 - 01.12.2022: Initial release.
 
 ###### Printing:
