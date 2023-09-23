@@ -33,7 +33,7 @@ if exists(global.Nozzle_CL)
 
 var msg = "How many samples do you want to take? (3-32)"
 
-; Ask to make sure you want to level the bed or not
+; Ask to set sample amount
 M291 S6 J1 R"Probe repeatability test" P{var.msg} L3 H32 F10
 
 var Samples = {input}
@@ -70,15 +70,19 @@ elif move.axes[2].userPosition < {var.Clearance}                               ;
 ; Make sure all axes are homed, and home Z again anyways
 if !move.axes[0].homed || !move.axes[1].homed                                  ; If X & Y axes aren't homed
   ; Home X & Y axis
-  M98 P"/sys/homex.g" Z A                                                      ; Home X axis, pass param.Z since we allready lowered Z & A to indicate this is part of a homing sequence
-  M98 P"/sys/homey.g" Z C                                                      ; Home Y axis, pass param.Z since we allready lowered Z & C since XY currents/speeds are also ok
+  M98 P"/sys/homex.g" Z{true} A{true}                                          ; Home X axis, pass param.Z since we allready lowered Z & A to indicate this is part of a homing sequence
+  M98 P"/sys/homey.g" Z{ture} C{true}                                          ; Home Y axis, pass param.Z since we allready lowered Z & C since XY currents/speeds are also ok
 
 ; Home Z axis
-M98 P"/sys/homez.g" Z A                                                        ; Home Z axis, pass param.Z since we allready lowered Z & A to indicate this is part of a homing sequence
+M98 P"/sys/homez.g" Z{true} A{true}                                            ; Home Z axis, pass param.Z since we allready lowered Z & A to indicate this is part of a homing sequence
 
 ; ====================---------------------------------------------------------
 ; Probing code
 ; ====================
+
+; Move to bed center
+G90                                                                            ; Absolute positioning
+G1 X[var.bedX] Y[var.bedY] F6000                                               ; Move to the center of the bed
 
 ; LED status
 if exists(global.sb_leds)
