@@ -26,7 +26,8 @@ if !exists(global.sb_leds)
 ```
 - Within /sys/lib/ create yet another folder called `led` (if you don't have it allready).
 - Inside /sys/lib/led/ you upload `sb_leds.g`, `sb_leds-state.g` & `sb_leds-restore.g`.
-- Now open/edit `sb_leds.g` and follow the instructions inside to configure the macro according to your board and how you want the different states, colors etc. to interact, then sace/close.
+- Now open/edit `sb_leds.g` and follow the instructions inside to configure the macro according to your board and how you want the different states, colors etc. to interact, then save/close.
+- Upload `Toggle Nozzle Lights` to where you want it within your Macro system for DWC / PanelDue, this is just to toggle the nozzle leds manually.
 - Go back to /sys/ and open `config.g` and the following code at the end of the file:
 ```
 M98 P"/sys/lib/init.g"                                                         ; Iniate external configs
