@@ -13,7 +13,7 @@ install procedure to make sure you're up to date), renamed the colors to be more
 ###### Instalation and dependencies:
 - Connect to your printer with DWC.
 - Create a new folder in /sys/ on your SD-card called `lib` (if you don't have it allready).
-- Create a new file in /sys/lib/ called `inits.g` (if you don't have it allready).
+- Create a new file in /sys/lib/ called `init.g` (if you don't have it allready).
 - Open `init.g` and add the follwing lines then save/close the file:
 ```
 M98 P"/sys/lib/globals.g"                                                      ; setup global variables
