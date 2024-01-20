@@ -32,7 +32,7 @@ if !exists(global.sb_leds)
 M98 P"/sys/lib/init.g"                                                         ; Iniate external configs
 ```
 Once that's been added save/close & choose "Restart Mainboard" when asked by DWC.
-- Once the machine reboots go to /sys/ and open `daemon.g` and add the following lines (within the loop if you run a loop), save & close:
+- When the machine reboots go to /sys/ and open `daemon.g` and add the following lines (within the loop if you run a loop), save & close:
 ```
 ;Check sb_leds status
 var SB_LEDS = true                                                             ; Turn on(true) / off(false) the Stealthburner led "system"
@@ -44,9 +44,9 @@ var SB_LEDS = true                                                             ;
 When the printer reboots this time you can do a last check to see that all the needed components are in place by going to the "Object Model"(Browser) Plugin in DWC (might have to be enabled through
 Settings->Plugins->Object Model Browser->Start). When you're in "Object Model"(Browser) expand "globals" and look for `sb_leds="booted"`, `sb_logo="n/a"` & `sb_nozzle="n/a"`. 
 
-If they're there you should be good to go and check that the it's actually working, go to console and type `set global.sb_leds = "ready"`, this should now switch on the leds to what you defined them to be in `sb_leds.g` earlier.
+- If all three globals are there you should be good to go and check that the it's actually working, go to console and type `set global.sb_leds = "ready"`, this should now switch on the leds to what you defined them to be in `sb_leds.g` earlier.
 
-Assuming you now have both the logo and nozzle LEDs set to the color you choose you can start to adding the "triggers" to your other macros. For instance at the start of your homing macro's put:
+- Assuming you now have both the logo and nozzle LEDs set to the color you choose you can start to adding the "triggers" to your other macros. For instance at the start of your homing macro's put:
 ```
 ; LED status
 if exists(global.sb_leds)
@@ -60,7 +60,7 @@ if exists(global.sb_leds)
 ```
 By this point i guess you get the drift on how this is setup to work, so no need to explain anything more.
 
-If you have issues, please create a thread on the duet forum, tag me and i will get on it as soon as i can!
+**If you have issues, please create a thread on the duet forum, tag me and i will get on it as soon as i can!**
 
 ###### To-do List
 - Improve readme.md, by adding troubleshooting steps.
