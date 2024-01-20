@@ -1,9 +1,9 @@
-; /sys/lib/led/sb_leds.g  v5.0
+; /sys/lib/led/sb_leds.g  v5.1
 ; Called at boot up and by daemon.g (via /sys/lib/led/sb_leds-state)
 ; Used for setting the leds on the Voron StealthBurner toolhead.
 
-; You will need to configure a neopixel (or other addressable led, such as dotstar).
-; See "https://docs.duet3d.com/User_manual/Reference/Gcodes#m150-set-led-colours" for configuration details.
+; You will need to configure this macro according to your board(s) and leds.
+; See "https://docs.duet3d.com/en/User_manual/Reference/Gcodes#m950-create-heater-fan-spindle-or-gpioservo-pin" for configuration details.
 
 ; ====================---------------------------------------------------------
 ; Neopixel configuration
@@ -13,13 +13,14 @@
 var strip_number  = 0
 var pin_name      = "led"
 var led_type      = 2
-
+var led_count     = 3
 
 ;------------------------------------------------------------------------------
 ; This section is required.  Do Not Delete or mess with it.
 ;------------------------------------------------------------------------------
 
-M950 E{var.strip_number} C{var.pin_name} T{var.led_type}
+if global.sb_leds = "booting"
+  M950 E{var.strip_number} C{var.pin_name} T{var.led_type} U{var.led_count}
 
 ; ====================---------------------------------------------------------
 ; Placeholders
@@ -80,6 +81,10 @@ var n_w                 = 0
 ; Status dependant configuration
 ; ====================
 
+if global.sb_leds = "break-in"
+  set global.sb_logo    = "orange"
+  set global.sb_nozzle  = "green"
+
 if global.sb_leds = "pink"
   set global.sb_logo    = "pink"
   set global.sb_nozzle  = "pink"
@@ -89,54 +94,54 @@ if global.sb_leds = "off"
   set global.sb_nozzle  = "off"
 
 if global.sb_leds = "ready"
-  set global.sb_logo    = "standby"
-  set global.sb_nozzle  = "standby"
+  set global.sb_logo    = "dim_gray"
+  set global.sb_nozzle  = "dim_red"
 
 if global.sb_leds = "busy"
-  set global.sb_logo    = "busy"
-  set global.sb_nozzle  = "on"
+  set global.sb_logo    = "light_red"
+  set global.sb_nozzle  = "bright_white"
 
 if global.sb_leds = "heating"
-  set global.sb_logo    = "heating"
-  set global.sb_nozzle  = "heating"
+  set global.sb_logo    = "yellow"
+  set global.sb_nozzle  = "yellow"
 
 if global.sb_leds = "tramming"
-  set global.sb_logo    = "tramming"
-  set global.sb_nozzle  = "on"
+  set global.sb_logo    = "light_pink"
+  set global.sb_nozzle  = "bright_white"
 
 if global.sb_leds = "homing"
-  set global.sb_logo    = "homing"
-  set global.sb_nozzle  = "on"
+  set global.sb_logo    = "teal"
+  set global.sb_nozzle  = "bright_white"
 
 if global.sb_leds = "cleaning"
-  set global.sb_logo    = "cleaning"
-  set global.sb_nozzle  = "on"
+  set global.sb_logo    = "light_blue"
+  set global.sb_nozzle  = "bright_white"
 
 if global.sb_leds = "meshing"
-  set global.sb_logo    = "meshing"
-  set global.sb_nozzle  = "on"
+  set global.sb_logo    = "green"
+  set global.sb_nozzle  = "bright_white"
 
 if global.sb_leds = "calibrating_z"
-  set global.sb_logo    = "calibrating_z"
-  set global.sb_nozzle  = "on"
+  set global.sb_logo    = "bright_pink"
+  set global.sb_nozzle  = "bright_white"
 
 if global.sb_leds = "printing"
-  set global.sb_logo    = "printing"
-  set global.sb_nozzle  = "on"
+  set global.sb_logo    = "red"
+  set global.sb_nozzle  = "bright_white"
 
 if global.sb_leds = "hot"
-  set global.sb_logo    = "hot"
-  set global.sb_nozzle  = "hot"
+  set global.sb_logo    = "red"
+  set global.sb_nozzle  = "red"
 
 if global.sb_leds = "cold"
-  set global.sb_logo    = "cold"
-  set global.sb_nozzle  = "cold"
+  set global.sb_logo    = "light_blue"
+  set global.sb_nozzle  = "light_blue"
 
 if global.sb_leds = "l-off"
   set global.sb_logo    = "off" 
 
 if global.sb_leds = "n-on"
-  set global.sb_nozzle  = "on"
+  set global.sb_nozzle  = "bright_white"
 
 if global.sb_leds = "n-off"
   set global.sb_nozzle  = "off"
@@ -172,67 +177,67 @@ if global.sb_logo = "off"                                                      ;
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_logo = "standby"                                                  ; R3 U3 B3 W3 / Dim gray
+if global.sb_logo = "dim_gray"                                                 ; R3 U3 B3 W3 / Dim gray
   set var.l_r           = 3
   set var.l_u           = 3
   set var.l_b           = 3
   set var.l_w           = 3
 
-if global.sb_logo = "busy"                                                     ; R102 U0 B0 W0 / Light red
+if global.sb_logo = "light_red"                                                ; R102 U0 B0 W0 / Light red
   set var.l_r           = 102
   set var.l_u           = 0
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_logo = "cleaning"                                                 ; R0 U51 B128 W0 / Light blue
+if global.sb_logo = "light_blue"                                               ; R0 U51 B128 W0 / Light blue
   set var.l_r           = 0
   set var.l_u           = 51
   set var.l_b           = 128
   set var.l_w           = 0
 
-if global.sb_logo = "calibrating_z"                                            ; R204 U0 B89 W0 / Strong pink
+if global.sb_logo = "bright_pink"                                              ; R204 U0 B89 W0 / Bright pink
   set var.l_r           = 204
   set var.l_u           = 0
   set var.l_b           = 89
   set var.l_w           = 0
 
-if global.sb_logo = "heating"                                                  ; R77 U46 B0 W0 / Yellow
+if global.sb_logo = "yellow"                                                   ; R77 U46 B0 W0 / Yellow
   set var.l_r           = 77
   set var.l_u           = 46
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_logo = "homing"                                                   ; R0 U153 B51 W0 / Teal
+if global.sb_logo = "teal"                                                     ; R0 U153 B51 W0 / Teal
   set var.l_r           = 0
   set var.l_u           = 153
   set var.l_b           = 51
   set var.l_w           = 0
 
-if global.sb_logo = "tramming"                                                 ; R128 U26 B102 W0 / Light Pink
+if global.sb_logo = "light_pink"                                               ; R128 U26 B102 W0 / Light Pink
   set var.l_r           = 128
   set var.l_u           = 26
   set var.l_b           = 102
   set var.l_w           = 0
 
-if global.sb_logo = "meshing"                                                  ; R51 U255 B0 W0 / Green
+if global.sb_logo = "green"                                                    ; R51 U255 B0 W0 / Green
   set var.l_r           = 51
   set var.l_u           = 255
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_logo = "printing"                                                 ; R255 U0 B0 W0 / Red
+if global.sb_logo = "red"                                                      ; R255 U0 B0 W0 / Red
   set var.l_r           = 255
   set var.l_u           = 0
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_logo = "hot"                                                      ; R255 U0 B0 W0 / Bright Red
+if global.sb_logo = "orange"                                                   ; R255 U165 B0 W0 / Orange
   set var.l_r           = 255
-  set var.l_u           = 0
+  set var.l_u           = 165
   set var.l_b           = 0
   set var.l_w           = 0
 
-if global.sb_logo = "cold"                                                     ; R77 U0 B77 W0 / Light Pink
+if global.sb_logo = "light_blue"                                               ; R77 U0 B77 W0 / Light blue
   set var.l_r           = 0
   set var.l_u           = 0
   set var.l_b           = 255
@@ -251,31 +256,37 @@ if global.sb_nozzle = "off"                                                    ;
   set var.n_b           = 0
   set var.n_w           = 0
 
-if global.sb_nozzle = "on"                                                     ; R204 U204 B204 W255 / White
+if global.sb_nozzle = "bright_white"                                           ; R204 U204 B204 W255 / Bright white
   set var.n_r           = 204
   set var.n_u           = 204
   set var.n_b           = 204
   set var.n_w           = 255
 
-if global.sb_nozzle = "standby"                                                ; R153 U0 B0 W0 / Red
+if global.sb_nozzle = "dim_red"                                                ; R153 U0 B0 W0 / Red
   set var.n_r           = 153
   set var.n_u           = 0
   set var.n_b           = 0
   set var.n_w           = 0
 
-if global.sb_nozzle = "heating"                                                ; R204 U89 B0 W0 / Yellow
+if global.sb_nozzle = "yellow"                                                 ; R204 U89 B0 W0 / Yellow
   set var.n_r           = 204
   set var.n_u           = 89
   set var.n_b           = 0
   set var.n_w           = 0
 
-if global.sb_nozzle = "hot"                                                    ; R255 U0 B0 W0 / Bright Red
+if global.sb_nozzle = "red"                                                    ; R255 U0 B0 W0 / Red
   set var.n_r           = 255
   set var.n_u           = 0
   set var.n_b           = 0
   set var.n_w           = 0
+  
+if global.sb_nozzle = "green"                                                  ; R51 U255 B0 W0 / Green
+  set var.n_r           = 51
+  set var.n_u           = 255
+  set var.n_b           = 0
+  set var.n_w           = 0
 
-if global.sb_nozzle = "cold"                                                   ; R77 U0 B77 W0 / Light Pink
+if global.sb_nozzle = "light_blue"                                             ; R0 U0 B77 W0 / Light blue
   set var.n_r           = 0
   set var.n_u           = 0
   set var.n_b           = 255
@@ -305,3 +316,6 @@ echo >>"/sys/lib/led/sb_leds-state.g" "  ; Same status, do nothing"             
 echo >>"/sys/lib/led/sb_leds-state.g" "else"                                                                               ; Save line to sb_leds-state
 echo >>"/sys/lib/led/sb_leds-state.g" "  ; New status, change colors"                                                      ; Save line to sb_leds-state
 echo >>"/sys/lib/led/sb_leds-state.g" "  M98 P""/sys/lib/led/sb_leds.g"""                                                  ; Save line to sb_leds-state
+
+if global.sb_leds = "booting"
+  set global.sb_leds = "booted"
