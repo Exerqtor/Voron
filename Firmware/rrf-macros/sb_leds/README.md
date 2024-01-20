@@ -53,10 +53,11 @@ if exists(global.sb_leds)
   set global.sb_leds = "homing"
 ```
 And at the end of the macro put:
+```
 ; LED status
 if exists(global.sb_leds)
   set global.sb_leds = "ready"
-
+```
 By this point i guess you get the drift on how this is setup to work, so no need to explain anything more.
 
 If you have issues, please create a thread on the duet forum, tag me and i will get on it as soon as i can!
