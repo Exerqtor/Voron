@@ -1,6 +1,6 @@
 # CHANGELOG
 - 20.01.2024: v5.1 (`sb_leds.g`) Added the "U" parameter for `M950` introduced in RRF 3.5.0-b4 that defines the numbers of LEDs, added in check to only run `M950`   at startup (check out the 
-install procedure to make sure you're up to date), renamed the colors to reflect be more logical and added instructions + cleanup to readme.md.
+install procedure to make sure you're up to date), renamed the colors to be more logical and added instructions + cleanup to readme.md.
 - 07.06.2023: v5.0 Changed the macro set to accomidate changes made in RRF 3.5.0-b3 onward. This involves that you have to do changes according to your specific printer/setup inside `sb_leds.g` for it to work.
 - 04.01.2023: v4.0 
 - 04.01.2023: Initial release.
