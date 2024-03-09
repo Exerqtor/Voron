@@ -31,6 +31,25 @@ if !exists(global.bed_trammed)
   global bed_trammed = false                                                   ; Used to tell if the bed has been trammed or not
 
 ; ====================---------------------------------------------------------
+; Motion
+; ====================
+
+if !exists(global.def_Xjrk)
+  global def_Xjrk = move.axes[0].jerk                                          ; Store the default X axis jerk set in config.g
+  
+if !exists(global.def_Yjrk)
+  global def_Yjrk = move.axes[1].jerk                                          ; Store the default Y axis jerk set in config.g
+
+if !exists(global.def_PACC)
+  global def_PACC = move.printingAcceleration                                  ; Store the default printing Acceleration set in config.g
+
+if !exists(global.def_TACC)
+  global def_TACC = move.travelAcceleration                                    ; Store the default travel Acceleration set in config.g
+
+if !exists(global.def_PA)
+  global def_PA = move.extruders[0].pressureAdvance                            ; Store the default Pressure Advance set in config.g
+
+; ====================---------------------------------------------------------
 ; Print area
 ; ====================
 
@@ -56,23 +75,8 @@ if !exists(global.RunDaemon)
 if !exists(global.FilamentCHG)
   global FilamentCHG = false
 
-if !exists(global.input_shaper)
-  global input_shaper = (move.shaping.type)
-
-if !exists(global.def_print_accel)
-  global def_print_accel = (move.printingAcceleration)
-
-if !exists(global.low_accel)
-  global low_accel = 1000
-
-if !exists(global.accel_control)
-  global accel_control = true
-
 if !exists(global.initial_extruder)
   global initial_extruder = 0
-
-if !exists(global.line_type)
-  global line_type = "N/A"
 
 if !exists(global.first_layer_height)
   global first_layer_height = "none"
@@ -80,23 +84,17 @@ if !exists(global.first_layer_height)
 if !exists(global.layer_number)
   global layer_number = 0
 
-  if !exists(global.Nozzle_CL)
+if !exists(global.Nozzle_CL)
   global Nozzle_CL= 5                                                          ; The Z distance from nozzle to bed surface, going lower than 5 will make the probe scary-close to the bed in most setups!
 
 if !exists(global.unload_length)
   global unload_length = 18                                                    ; The length needed to clear the meltzone of the extruder (as speced by E3D for the Revo)
 
 if !exists(global.chamber_leds)
-  global chamber_leds   = 0
+  global chamber_leds = 0
 
 if !exists(global.sb_leds)
-  global sb_leds        = "boot"
+  global sb_leds = "booting"
 
 if !exists(global.Print_Probe)
-  global Print_Probe = false
-
-; ====================---------------------------------------------------------
-; Output current values
-; ====================
-
-;echo "Debugging is : " , global.debugging
+  global Print_Probe = true
