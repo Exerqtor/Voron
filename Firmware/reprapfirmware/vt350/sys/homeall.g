@@ -1,60 +1,75 @@
-; /sys/homeall.g
+; /sys/homeall.g  v2.9
 ; Called to home all axes
+; Configured for sensorless homing / stall detection on a Duet 3 Mini 5+ and LDO-42STH48-2504AC steppers on XY
 
-; LED status
-set global.sb_leds = "homing"
+;---/
+; -/--/--/--/--/--/--/--/--/--/--/--/--/--/--/--/--
+; THIS MACRO ONLY WORKS WITH RRF 3.5.0b1 AND LATER!!
+;--/--/--/--/--/--/--/--/--/--/--/--/--/--/--/--/--
+;-/
 
-; Lower currents
-M98 P"/sys/lib/current/xy_current_low.g"                                       ; Set low XY currents
-M98 P"/sys/lib/current/z_current_low.g"                                        ; Set low Z currents
+; ====================---------------------------------------------------------
+; Settings section
+; ====================
+; Nozzle clearance (gets overridden if you have global.Nozzle_CL)
+var Clearance           = 5                                                    ; The "safe" clearance you want to have between the noszzle and bed before moving the printhead
 
-; Lower Z relative to current position if needed
-if !move.axes[2].homed                                                         ; If Z ain't homed
+; Don't touch anyting beyond this point(unless you know what you're doing)!!
+; ====================---------------------------------------------------------
+; Prep phase
+; ====================
+; Nozzle clearance
+if exists(global.Nozzle_CL)
+  set var.Clearance = {global.Nozzle_CL}
+
+; Lower Z currents
+if fileexists("/sys/lib/current/z_current_low.g")
+  M98 P"/sys/lib/current/z_current_low.g"                                      ; Set low Z currents
+else
+  M913 Z60                                                                     ; Set Z motors to 60% of their max current
+
+; ====================---------------------------------------------------------
+; Lower Z axis
+; ====================
+var z_clear = false                                                            ; Create a variable to indicate if the bed is lowered enough to clear the nozzle or not
+
+; Lower Z if needed
+if !move.axes[2].homed                                                         ; If Z isn't homed
   G91                                                                          ; Relative positioning
-  G1 Z{global.Nozzle_CL} F9000 H1                                              ; Lower Z(bed) relative to current position	
+  G1 Z{var.Clearance} F9000 H1                                                 ; Lower Z(bed) relative to current position
   G90                                                                          ; Absolute positioning
-elif move.axes[2].userPosition < {global.Nozzle_CL}                            ; If Z is homed and less than global.Nozzle_CL
-  G1 Z{global.Nozzle_CL} F9000                                                 ; Move to Z global.Nozzle_CL
+  set var.z_clear = true                                                       ; The nozzle is now clear of the bed
 
-; Coarse home X or Y
-G1 X600 Y600 F2400 H1                                                          ; Move quickly to X or Y endstop(first pass)
+elif move.axes[2].userPosition < {var.Clearance}                               ; If Z is homed but less than var.Clearance
+  G1 Z{var.Clearance} F9000                                                    ; Move to Z var.Clearance
+  set var.z_clear = true                                                       ; The nozzle is now clear of the bed
 
-; Coarse home X
-G1 X600 H1                                                                     ; Move quickly to X endstop(first pass)
-
-; Coarse home Y
-G1 Y600 H1                                                                     ; Move quickly to Y endstop(first pass)
-
-; Move away from the endstops
-G91                                                                            ; Relative positioning
-G1 X-5 Y-5 F9000                                                               ; Go back a few mm
-G90                                                                            ; Absolute positioning
-
-; Fine home X
-G1 X600 F360 H1                                                                ; Move slowly to X axis endstop(second pass)
-
-; Fine home Y
-G1 Y600 H1                                                                     ; Move slowly to Y axis endstop(second pass)
-
-G90                                                                            ; Absolute positioning
-
-; Home Z
-M98 P"/sys/lib/goto/bed_center.g"                                              ; Move to bed center
-G30 K0 Z-99999                                                                 ; Probe the center of the bed
-M400                                                                           ; Wait for moves to finish
-
+; ====================---------------------------------------------------------
+; Home all axis
+; ====================
+if var.z_clear
+  M98 P"/sys/homex.g" Z{true} A{true}                                          ; Home X axis, pass param.Z since we allready lowered Z & A to indicate this is part of a homing sequence
+  M98 P"/sys/homey.g" Z{true} C{true}                                          ; Home Y axis, pass param.Z since we allready lowered Z & C since XY currents/speeds are also ok
+  M98 P"/sys/homez.g" Z{true} C{true}                                          ; Home Z axis, pass param.Z since we allready lowered Z & C since XY currents/speeds are also ok
+    
+elif
+  M98 P"/sys/homex.g" A{true}                                                  ; Home X axis, pass param.A to indicate this is part of a homing sequence
+  M98 P"/sys/homey.g" C{true}                                                  ; Home Y axis, pass param.C since XY currents/speeds are also ok
+  M98 P"/sys/homez.g" C{true}                                                  ; Home Z axis, pass param.C since XY currents/speeds are also ok
+  
+; ====================---------------------------------------------------------
+; Finish up
+; ====================
 ; Full currents
-M98 P"/sys/lib/current/xy_current_high.g"                                      ; Set high XY currents
-M98 P"/sys/lib/current/z_current_high.g"                                       ; Set high Z currents
-
-; Uncomment the following lines to lower Z(bed) after probing
-G90                                                                            ; Absolute positioning
-G1 Z{global.Nozzle_CL} F2400                                                   ; Move to Z global.Nozzle_CL
-
-; If using Voron TAP, report that probing is completed
-if exists(global.TAPPING)
-  set global.TAPPING = false
-  M402 P0                                                                      ; Return the hotend to the temperature it had before probing
-
+if fileexists("/sys/lib/current/xy_current_high.g")
+  M98 P"/sys/lib/current/xy_current_high.g"                                    ; Set high XY currents
+else
+  M913 X100 Y100                                                               ; Set X Y motors to var.100% of their max current
+if fileexists("/sys/lib/current/z_current_high.g")
+  M98 P"/sys/lib/current/z_current_high.g"                                     ; Set high Z currents
+else
+  M913 Z100                                                                    ; Set Z motors to var.100% of their max current
+  
 ;LED status
-set global.sb_leds = "ready"
+if exists(global.sb_leds)
+  set global.sb_leds = "ready"
