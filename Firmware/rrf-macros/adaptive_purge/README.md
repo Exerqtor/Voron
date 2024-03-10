@@ -15,7 +15,7 @@
 - Place the different files in the coresponding folders.
 - Setup the creation of the globals we need to run the macro.
 - Setup your slicer to define the coordinate globals as needed.
-- Add `M98 P"/sys/lib/print/print_probe.g"` at the point of your startup routine where you want the machine to perform the purge (last thing before laying the first actual print line). 
+- Add `M98 P"/sys/lib/print/print_purge.g"` at the point of your startup routine where you want the machine to perform the purge (last thing before laying the first actual print line). 
 
 At the bottom of your config.g add `M98 P"/sys/lib/init.g"` . 
 When that's done make sure you add init.g and globals.g in your /sys/lib/ folder (if you allready have these files make sure to add the lines from this macro setup).
