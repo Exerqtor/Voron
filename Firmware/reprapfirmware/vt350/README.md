@@ -1,5 +1,5 @@
 # CHANGELOG
-- 10.03.2024: Updated pause.g, resume.g, filament_change.g, deployprobe0.g, retractprobe0.g
+- 10.03.2024: Updated pause.g, resume.g, filament_change.g, deployprobe0.g, retractprobe0.g, toolchange macros
 - 09.03.2024: Updated homing files, config.g, init.g, globals.g, fw_retraction.g, daemon.g, bed_probe_points.g, cancel.g & stop.g
 - 06.01.2023: Sensorless XY homing option, and added in more of my other macros. It's also some changes done here and there (mostly code cleaning and some RRF 3.5 adaption)
 - 19.12.2022: Initial release.
