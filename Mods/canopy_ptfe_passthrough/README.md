@@ -24,12 +24,14 @@ And this is what it ended up with making, it removes the logo from the rear (or 
 **Without guide:**
 
 - 4x M3x6mm BHCS
+- 4x M3x5x4mm Heat sets
 - 1x "UM2-style" PTFE connector
 
 **With PTFE guide:**
 
 - 2x M3x6mm BHCS
 - 2x M3x8mm BHCS
+- 4x M3x5x4mm Heat sets
 - 1x M5x10mm BHCS
 - 1x MR85 bearing
 - 1x "UM2-style" PTFE connector
