@@ -33,9 +33,11 @@
 Front side
 
 ![](./pics/4.png)
+
 Back side
 
 ![](./pics/5.png)
+
 Result:
 
 ![](./pics/6.png)
@@ -48,6 +50,7 @@ Result:
 If you've gone with both infill and fuzz you will end up with something like this:
 
 ![](./pics/7.png)
+
 This is the sliced view of mine when I use 40% Support Cubic infill on the handle, 40% 3D Honeycomb on the infill modifier & Countor fuzzy skin on the fuzz modifier:
 
 ![](./pics/8.png)
