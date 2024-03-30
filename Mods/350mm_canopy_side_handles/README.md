@@ -4,7 +4,7 @@
 
 ![](./pics/photo1.jpg)
 
-###### Description:
+### Description:
 - Wanted I didn't want to remove the handles on my Trident when I started to print ,["JSmith17's Canopy"](https://www.printables.com/model/568090-voron-24-canopy) but didn't like the avalible options.
 - I've been using the original “Sturdy Handles” before and they've done their job, so i saw JSB's "X-Handle”["JSB's X-Handle"](https://www.printables.com/model/350891-voron-24-x-handle)  and started working on a way to add compatibility for those on the Canopy.
 
@@ -20,12 +20,12 @@
 
 *I've also made a version of the handle that's stripped of the “X” since I just don't understand why it's there at all other than nonsensical “branding” (?) , to each their own i guess!*
 
-###### Pictures:
+### Pictures:
 ![](./pics/1.png)
 ![](./pics/2.png)
 ![](./pics/3.png)
 
-#### Printing:
+### Printing:
 **Canopy sides:**
 - Default voron settings, correct orientation.
 - You **MUST** add supports, I went for organic/three supports like this: 
