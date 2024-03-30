@@ -2,6 +2,8 @@
 ### CHANGELOG
 - 30.03.2024: Initial release.
 
+![](./pics/photo1.jpg)
+
 ### Description:
 - I'm running both a Nevermore Stealthmax (which have sub-ideal PTFE routing) and ["JSmith17's Canopy"](https://www.printables.com/model/568090-voron-24-canopy) on my Trident so I thought I'd make a better and more elegant way to route the PTFE-tube.
 And this is what it ended up with making, it removes the logo from the rear (or where ever you want your PTFE tube to enter) middle Canopy section and adds a “UM2-style” PTFE connector to it. 
@@ -10,6 +12,8 @@ And this is what it ended up with making, it removes the logo from the rear (or 
 ### Pictures:
 ![](./pics/1.png)
 ![](./pics/2.png)
+![](./pics/photo2.jpg)
+![](./pics/photo3.jpg)
 
 ### Printing:
 - Default voron settings, correct orientation.
