@@ -1,5 +1,5 @@
 # 2.4 & Trident  350mmCanopy side handles
-## CHANGELOG
+### CHANGELOG
 - 30.03.2024: Initial release.
 
 ![](./pics/photo1.jpg)
@@ -47,7 +47,7 @@ This is the sliced view of mine when I use 40% Support Cubic infill on the handl
 ![](./pics/8.png)
 ![](./pics/9.png)
 
-###### Bom (per side):
+### Bom (per side):
 **Canopy sides:**
 - 2x M3x8 SHCS (I choose to use low profile ones)
 - 2x M3 Roll-in T-nuts
