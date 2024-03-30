@@ -29,11 +29,15 @@
 **Canopy sides:**
 - Default voron settings, correct orientation.
 - You **MUST** add supports, I went for organic/three supports like this: 
+
 Front side
+
 ![](./pics/4.png)
 Back side
+
 ![](./pics/5.png)
 Result:
+
 ![](./pics/6.png)
 
 **Handles:**
@@ -42,8 +46,10 @@ Result:
 - Add "Infill.stl" as a modifier to the handle and adjust the infill properties of the modifier.(if you want to add other infill properties to the stress sones).
 - Add "Fuzz.stl" as a modifier to the handle and enable fuzzy skin (contour) to the modifier (if you want to add texture to the handle).
 If you've gone with both infill and fuzz you will end up with something like this:
+
 ![](./pics/7.png)
 This is the sliced view of mine when I use 40% Support Cubic infill on the handle, 40% 3D Honeycomb on the infill modifier & Countor fuzzy skin on the fuzz modifier:
+
 ![](./pics/8.png)
 ![](./pics/9.png)
 
