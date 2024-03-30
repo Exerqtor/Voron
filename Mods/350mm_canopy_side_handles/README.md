@@ -1,10 +1,10 @@
 # 2.4 & Trident  350mmCanopy side handles
-### CHANGELOG
+### **CHANGELOG:**
 - 30.03.2024: Initial release.
 
 ![](./pics/photo1.jpg)
 
-### Description:
+### **Description:**
 - Wanted I didn't want to remove the handles on my Trident when I started to print ,["JSmith17's Canopy"](https://www.printables.com/model/568090-voron-24-canopy) but didn't like the avalible options.
 - I've been using the original “Sturdy Handles” before and they've done their job, so i saw JSB's "X-Handle”["JSB's X-Handle"](https://www.printables.com/model/350891-voron-24-x-handle)  and started working on a way to add compatibility for those on the Canopy.
 
@@ -20,12 +20,12 @@
 
 *I've also made a version of the handle that's stripped of the “X” since I just don't understand why it's there at all other than nonsensical “branding” (?) , to each their own i guess!*
 
-### Pictures:
+### **Pictures:**
 ![](./pics/1.png)
 ![](./pics/2.png)
 ![](./pics/3.png)
 
-### Printing:
+### **Printing:**
 **Canopy sides:**
 - Default voron settings, correct orientation.
 - You **MUST** add supports, I went for organic/three supports like this: 
@@ -47,7 +47,7 @@ This is the sliced view of mine when I use 40% Support Cubic infill on the handl
 ![](./pics/8.png)
 ![](./pics/9.png)
 
-### Bom (per side):
+### **Bom (per side):**
 **Canopy sides:**
 - 2x M3x8 SHCS (I choose to use low profile ones)
 - 2x M3 Roll-in T-nuts
@@ -56,5 +56,5 @@ This is the sliced view of mine when I use 40% Support Cubic infill on the handl
 - 2x M5x16mm  BHCS
 - 2x M5 Roll-in T-nuts
 
-###### To-do List
+###### **To-do List:**
 - Nothing that i can think of.
