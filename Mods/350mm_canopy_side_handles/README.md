@@ -5,7 +5,7 @@
 ![](./pics/photo1.jpg)
 
 ### **Description:**
-- Wanted I didn't want to remove the handles on my Trident when I started to print ,["JSmith17's Canopy"](https://www.printables.com/model/568090-voron-24-canopy) but didn't like the avalible options.
+- I didn't want to remove the handles on my Trident when I started to print ,["JSmith17's Canopy"](https://www.printables.com/model/568090-voron-24-canopy) but didn't like the avalible options.
 - I've been using the original “Sturdy Handles” before and they've done their job, so i saw ["JSB's X-Handle"](https://www.printables.com/model/350891-voron-24-x-handle)  and started working on a way to add compatibility for those on the Canopy.
 
 **Canopy:**
