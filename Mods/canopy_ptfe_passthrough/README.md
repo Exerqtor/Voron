@@ -27,7 +27,7 @@ And this is what it ended up with making, it removes the logo from the rear (or 
 - 2x M3x6mm BHCS
 - 2x M3x8mm BHCS
 - 1x M5x10mm BHCS
-- 1x MR82 bearing
+- 1x MR85 bearing
 - 1x "UM2-style" PTFE connector
 
 ### To-do List
