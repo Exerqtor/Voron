@@ -5,7 +5,7 @@
 ![](./pics/photo1.jpg)
 
 ### Description:
-- I didn't want to re-print the rear corners of  ["JSmith17's Canopy"](https://www.printables.com/model/568090-voron-24-canopy) in case for when i eventually add exhaust fans, so i made these blockoff plates instead.
+- I didn't want to re-print the rear corners of  ["JSmith17's Canopy"](https://www.printables.com/model/568090-voron-24-canopy) in case I eventually add exhaust fans, so i made these blockoff plates instead.
 
 ### Pictures:
 ![](./pics/1.png)
