@@ -11,6 +11,7 @@
 **Canopy:**
 - Moved the mounting holes inward one “octagon”.
 - Made the needed cutouts for the handles to sit within.
+
 **X-Handle:**
 - Removed the top mounting bolts in favour of a “lip” that goes into the 2020 extrusion like the original “sturdy handles”
 - Added M3x20mm BHCS to mitigate a weak spot in the design where the handle meets the top part, where it "allways" cracked.
@@ -24,7 +25,7 @@
 ![](./pics/2.png)
 ![](./pics/3.png)
 
-###### Printing:
+#### Printing:
 **Canopy sides:**
 - Default voron settings, correct orientation.
 - You **MUST** add supports, I went for organic/three supports like this: 
