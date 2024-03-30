@@ -60,6 +60,7 @@ This is the sliced view of mine when I use 40% Support Cubic infill on the handl
 **Canopy sides:**
 - 2x M3x8 SHCS (I choose to use low profile ones)
 - 2x M3 Roll-in T-nuts
+
 **Handles:**
 - 4x M3x20mm SHCS (for the handle reinforcement)
 - 2x M5x16mm  BHCS
