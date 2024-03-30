@@ -19,7 +19,7 @@ And this is what it ended up with making, it removes the logo from the rear (or 
 - Default voron settings, correct orientation.
 - Supports needed on the Canopy part, refere to the "Canopy sides" description from my ["Canopy side handles mod"](https://github.com/Exerqtor/Voron/tree/main/Mods/350mm_canopy_side_handles).
 
-### Bom:
+### BOM
 
 **Without guide:**
 
