@@ -1,4 +1,4 @@
-# Filament runout sensor for Stealthburners with Bondtech LGX lite (v1 & v2)
+# Filament runout sensor for Bondtech LGX lite (v1 & v2)
 
 ## CHANGELOG
 - 16.02.2025: Initial release.
