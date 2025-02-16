@@ -45,3 +45,4 @@ I've been testing different iderations of this for well over a year at this poin
 
 ##### Credits:
 - Olof Ogland
+- [ERCF project](https://github.com/Enraged-Rabbit-Community/ERCF_v2) for much of the sensor geometry.
