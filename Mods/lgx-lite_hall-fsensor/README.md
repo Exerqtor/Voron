@@ -39,7 +39,6 @@ I've been testing different iderations of this for well over a year at this poin
 ![](./pics/1.png)
 ![](./pics/2.png)
 ![](./pics/3.png)
-![](./pics/4.png)
 
 ###### To-do List
 - Nothing that i can think of.
