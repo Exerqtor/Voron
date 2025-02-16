@@ -44,4 +44,4 @@ I've been testing different iderations of this for well over a year at this poin
 - Nothing that i can think of.
 
 ##### Credits:
-- 
+- Olof Ogland
