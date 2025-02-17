@@ -28,7 +28,7 @@ I've been testing different iderations of this for well over a year at this poin
   - If needed use a exacto knife to remove any print debris from the hall sensor slot so that it seats fully.
 - Tighten down the screw while making sure the AH3364Q-P-B is still seated properly in the sensor housing.
 - Insert the magnet and then the washer in their locations.
-  - If the magnet feels a little loose when you put it in it's better to add a tiny drop of CA-glue or nail polish to secure it.
+  - If the magnet feels a little loose when you put it in it's best to add a tiny drop of CA-glue or nail polish to secure it.
 - Snip off a stump of 1.75mm filament and insert it into the hole in the side of the sensor body to retain the washer (and trim it to size, but leave enough that you can still use some pliers to remove it).
 - Do a bench test with some filament and check that it can pass through the sensor without any issues.
 - If you haven't done so allready you should now solder on some wires to the hall sensor before you bend the pins flush to the sensor body (like shown in the renders).
