@@ -12,7 +12,7 @@
 - 2x 6mm FHCS - Needs to be stainless to avoid interference with the HALL sensor.
 - 1x 3mm DIN washer - Needs to be steel to interact properly with the HALL sensor.
 - 1x AH3364Q-P-B hall sensor - "Name brand" one from a reputable vendor  is adviced (but not a must).
-- 1x 6x3mm magnet. - Both N35 & N52 does the job, but N52 works the best.
+- 1x 6x3mm magnet - Both N35 & N52 does the job, but N52 works the best.
 
 ###### Description:
 - Initial design by Olof at Bondtech, and we've been collaborating to get it to it's current form. 
